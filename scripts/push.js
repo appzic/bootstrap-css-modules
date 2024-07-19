@@ -54,7 +54,7 @@ async function main() {
 	exec("git push");
 	exec(`git tag v${VERSION}`);
 	exec("git push --tag");
-	exec("npm publish");
+	exec("npm publish --access public");
 	rimrafSync("temp");
 }
 
