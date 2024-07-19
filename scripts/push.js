@@ -45,9 +45,16 @@ function mkCSSModules() {
 async function main() {
 	exec("mkdir -p dist");
 	updateVersion();
+	exec("npm i");
 	mkCSSModules();
 	exec("npm run typed-css");
 	exec("npm run format");
+	exec("git add .");
+	exec(`git commit -m "v${VERSION}"`);
+	exec("git push");
+	exec(`git tag v${VERSION}`);
+	exec("git push --tag");
+	exec("npm publish");
 	rimrafSync("temp");
 }
 
