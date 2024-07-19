@@ -1,0 +1,11 @@
+# ignore everything
+*
+
+# include these:
+!LICENSE
+!README.md
+!dist/
+!dist/**/*
+
+# exclude hidden files from the includes:
+.*

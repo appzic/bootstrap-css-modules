@@ -1,0 +1,9 @@
+*
+
+!package.json
+!package-lock.json
+!scripts/
+!scripts/**/*
+!dist/
+!dist/**/*
+!README.md
