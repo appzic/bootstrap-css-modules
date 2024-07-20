@@ -16,7 +16,13 @@
 	},
 	"author": "Yasitha Nadeeshan",
 	"license": "MIT",
-	"keywords": [],
+	"keywords": [
+		"css",
+		"css-framework",
+		"bootstrap",
+		"css-modules",
+		"typescript"
+	],
 	"bugs": {
 		"url": "https://github.com/appzic/bootstrap-css-modules/issues"
 	},
