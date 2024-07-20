@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { exec } from "node:child_process";
+import { execSync } from "node:child_process";
 import { rimrafSync } from "rimraf";
 import postcss from "postcss";
 import safeParser from "postcss-safe-parser";
@@ -43,18 +43,18 @@ function mkCSSModules() {
 }
 
 async function main() {
-	exec("mkdir -p dist");
+	execSync("mkdir -p dist");
 	updateVersion();
-	exec("npm i");
+	execSync("npm i");
 	mkCSSModules();
-	exec("npm run typed-css");
-	exec("npm run format");
-	exec("git add .");
-	exec(`git commit -m "v${VERSION}"`);
-	exec("git push");
-	exec(`git tag v${VERSION}`);
-	exec("git push --tag");
-	exec("npm publish --access public");
+	execSync("npm run typed-css");
+	execSync("npm run format");
+	execSync("git add .");
+	execSync(`git commit -m "v${VERSION}"`);
+	execSync("git push");
+	execSync(`git tag v${VERSION}`);
+	execSync("git push --tag");
+	execSync("npm publish --access public");
 	rimrafSync("temp");
 }
 

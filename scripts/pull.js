@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { exec } from "node:child_process";
+import { execSync } from "node:child_process";
 import axios from "axios";
 import unzipper from "unzipper";
 
@@ -22,7 +22,7 @@ async function unzip() {
 }
 
 async function main() {
-	exec("mkdir -p temp");
+	execSync("mkdir -p temp");
 	await download();
 	await unzip();
 }
