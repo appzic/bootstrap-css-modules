@@ -47,7 +47,7 @@ class Push {
 
 	run() {
 		execSync("mkdir -p dist");
-		mkCSSModules();
+		this.mkCSSModules();
 		execSync("npm run typed-css");
 		execSync("npm run format");
 		execSync("npm i");
