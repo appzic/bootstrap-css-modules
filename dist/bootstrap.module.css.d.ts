@@ -9,11 +9,13 @@ declare const styles: {
 	readonly below: string;
 	readonly blockMessage: string;
 	readonly blue: string;
+	readonly borderedTable: string;
 	readonly brand: string;
 	readonly breadcrumb: string;
 	readonly btn: string;
 	readonly clearfix: string;
 	readonly close: string;
+	readonly condensedTable: string;
 	readonly container: string;
 	readonly containerFluid: string;
 	readonly content: string;
@@ -36,6 +38,7 @@ declare const styles: {
 	readonly helpInline: string;
 	readonly heroUnit: string;
 	readonly hide: string;
+	readonly hover: string;
 	readonly important: string;
 	readonly in: string;
 	readonly info: string;
@@ -87,7 +90,9 @@ declare const styles: {
 	readonly pageHeader: string;
 	readonly pagination: string;
 	readonly pillContent: string;
+	readonly pillPane: string;
 	readonly pills: string;
+	readonly pillsVertical: string;
 	readonly popover: string;
 	readonly primary: string;
 	readonly pullLeft: string;
@@ -129,6 +134,7 @@ declare const styles: {
 	readonly spanTwoThirds: string;
 	readonly success: string;
 	readonly tabContent: string;
+	readonly tabPane: string;
 	readonly tabs: string;
 	readonly title: string;
 	readonly topbar: string;
