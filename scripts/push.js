@@ -14,10 +14,6 @@ class Push {
 				src: `temp/bootstrap-${this.version}/dist/css/bootstrap.css`,
 				dist: `dist/bootstrap.module.css`,
 			},
-			{
-				src: `temp/bootstrap-${this.version}/dist/css/bootstrap-theme.css`,
-				dist: `dist/bootstrap-theme.module.css`,
-			},
 		];
 	}
 
