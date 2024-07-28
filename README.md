@@ -27,6 +27,7 @@
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Sponsors](#sponsors)
 
 ## Introduction
 
@@ -76,3 +77,14 @@ We welcome contributions from the community! Please take a look at our [CONTRIBU
 ## License
 
 Bootstrap CSS Modules is licensed under the [MIT](https://github.com/appzic/bootstrap-css-modules/blob/main/LICENSE) License.
+
+## Sponsors
+
+<p align="center" style="align: center;">
+    <a href="https://appzic.com" style="margin-right: 10px">
+        <img alt="appzic logo" src="https://github.com/user-attachments/assets/e1b84838-7eb7-489f-9460-79fd351051f1">
+    </a>
+    <a href="https://vecpad.com">
+        <img alt="vecpad logo" src="https://github.com/user-attachments/assets/3d780ecf-e416-4fbc-b918-b01d1b24e392">
+    </a>
+</p>
