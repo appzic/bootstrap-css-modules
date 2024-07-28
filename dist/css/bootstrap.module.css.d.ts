@@ -10,6 +10,12 @@ declare const styles: {
 	readonly alertWarning: string;
 	readonly arrow: string;
 	readonly badge: string;
+	readonly bgDanger: string;
+	readonly bgInfo: string;
+	readonly bgPrimary: string;
+	readonly bgSuccess: string;
+	readonly bgWarning: string;
+	readonly blockquoteReverse: string;
 	readonly bottom: string;
 	readonly bottomLeft: string;
 	readonly bottomRight: string;
@@ -252,6 +258,7 @@ declare const styles: {
 	readonly collapse: string;
 	readonly collapsing: string;
 	readonly container: string;
+	readonly containerFluid: string;
 	readonly controlLabel: string;
 	readonly danger: string;
 	readonly disabled: string;
@@ -261,10 +268,13 @@ declare const styles: {
 	readonly dropdownBackdrop: string;
 	readonly dropdownHeader: string;
 	readonly dropdownMenu: string;
+	readonly dropdownMenuLeft: string;
+	readonly dropdownMenuRight: string;
 	readonly dropdownToggle: string;
 	readonly dropup: string;
 	readonly fade: string;
 	readonly formControl: string;
+	readonly formControlFeedback: string;
 	readonly formControlStatic: string;
 	readonly formGroup: string;
 	readonly formHorizontal: string;
@@ -479,6 +489,7 @@ declare const styles: {
 	readonly h5: string;
 	readonly h6: string;
 	readonly hasError: string;
+	readonly hasFeedback: string;
 	readonly hasSuccess: string;
 	readonly hasWarning: string;
 	readonly helpBlock: string;
@@ -497,6 +508,7 @@ declare const styles: {
 	readonly imgRounded: string;
 	readonly imgThumbnail: string;
 	readonly in: string;
+	readonly info: string;
 	readonly initialism: string;
 	readonly inputGroup: string;
 	readonly inputGroupAddon: string;
@@ -519,8 +531,12 @@ declare const styles: {
 	readonly left: string;
 	readonly listGroup: string;
 	readonly listGroupItem: string;
+	readonly listGroupItemDanger: string;
 	readonly listGroupItemHeading: string;
+	readonly listGroupItemInfo: string;
+	readonly listGroupItemSuccess: string;
 	readonly listGroupItemText: string;
+	readonly listGroupItemWarning: string;
 	readonly listInline: string;
 	readonly listUnstyled: string;
 	readonly media: string;
@@ -535,7 +551,9 @@ declare const styles: {
 	readonly modalDialog: string;
 	readonly modalFooter: string;
 	readonly modalHeader: string;
+	readonly modalLg: string;
 	readonly modalOpen: string;
+	readonly modalSm: string;
 	readonly modalTitle: string;
 	readonly nav: string;
 	readonly navDivider: string;
@@ -617,6 +635,7 @@ declare const styles: {
 	readonly textDanger: string;
 	readonly textHide: string;
 	readonly textInfo: string;
+	readonly textJustify: string;
 	readonly textLeft: string;
 	readonly textMuted: string;
 	readonly textPrimary: string;
