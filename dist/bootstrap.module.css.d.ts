@@ -394,7 +394,7 @@ declare const styles: {
 	readonly embedResponsive_16by9: string;
 	readonly embedResponsive_1by1: string;
 	readonly embedResponsive_21by9: string;
-	readonly embedResponsive_3by4: string;
+	readonly embedResponsive_4by3: string;
 	readonly fade: string;
 	readonly figure: string;
 	readonly figureCaption: string;
@@ -553,6 +553,11 @@ declare const styles: {
 	readonly lead: string;
 	readonly listGroup: string;
 	readonly listGroupFlush: string;
+	readonly listGroupHorizontal: string;
+	readonly listGroupHorizontalLg: string;
+	readonly listGroupHorizontalMd: string;
+	readonly listGroupHorizontalSm: string;
+	readonly listGroupHorizontalXl: string;
 	readonly listGroupItem: string;
 	readonly listGroupItemAction: string;
 	readonly listGroupItemDanger: string;
@@ -758,6 +763,7 @@ declare const styles: {
 	readonly modalContent: string;
 	readonly modalDialog: string;
 	readonly modalDialogCentered: string;
+	readonly modalDialogScrollable: string;
 	readonly modalFooter: string;
 	readonly modalHeader: string;
 	readonly modalLg: string;
@@ -1399,8 +1405,10 @@ declare const styles: {
 	readonly roundedBottom: string;
 	readonly roundedCircle: string;
 	readonly roundedLeft: string;
+	readonly roundedLg: string;
 	readonly roundedPill: string;
 	readonly roundedRight: string;
+	readonly roundedSm: string;
 	readonly roundedTop: string;
 	readonly rounded_0: string;
 	readonly row: string;
@@ -1420,6 +1428,7 @@ declare const styles: {
 	readonly srOnly: string;
 	readonly srOnlyFocusable: string;
 	readonly stickyTop: string;
+	readonly stretchedLink: string;
 	readonly tabContent: string;
 	readonly tabPane: string;
 	readonly table: string;
@@ -1444,6 +1453,7 @@ declare const styles: {
 	readonly tableWarning: string;
 	readonly textBlack_50: string;
 	readonly textBody: string;
+	readonly textBreak: string;
 	readonly textCapitalize: string;
 	readonly textCenter: string;
 	readonly textDanger: string;
