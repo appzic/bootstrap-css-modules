@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Grid v5.3.1 (https://getbootstrap.com/)
+ * Bootstrap Grid v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -108,7 +108,7 @@
 
 .rowCols_3 > * {
 	flex: 0 0 auto;
-	width: 33.3333333333%;
+	width: 33.33333333%;
 }
 
 .rowCols_4 > * {
@@ -123,7 +123,7 @@
 
 .rowCols_6 > * {
 	flex: 0 0 auto;
-	width: 16.6666666667%;
+	width: 16.66666667%;
 }
 
 .colAuto {
@@ -313,7 +313,7 @@
 	}
 	.rowColsSm_3 > * {
 		flex: 0 0 auto;
-		width: 33.3333333333%;
+		width: 33.33333333%;
 	}
 	.rowColsSm_4 > * {
 		flex: 0 0 auto;
@@ -325,7 +325,7 @@
 	}
 	.rowColsSm_6 > * {
 		flex: 0 0 auto;
-		width: 16.6666666667%;
+		width: 16.66666667%;
 	}
 	.colSmAuto {
 		flex: 0 0 auto;
@@ -482,7 +482,7 @@
 	}
 	.rowColsMd_3 > * {
 		flex: 0 0 auto;
-		width: 33.3333333333%;
+		width: 33.33333333%;
 	}
 	.rowColsMd_4 > * {
 		flex: 0 0 auto;
@@ -494,7 +494,7 @@
 	}
 	.rowColsMd_6 > * {
 		flex: 0 0 auto;
-		width: 16.6666666667%;
+		width: 16.66666667%;
 	}
 	.colMdAuto {
 		flex: 0 0 auto;
@@ -651,7 +651,7 @@
 	}
 	.rowColsLg_3 > * {
 		flex: 0 0 auto;
-		width: 33.3333333333%;
+		width: 33.33333333%;
 	}
 	.rowColsLg_4 > * {
 		flex: 0 0 auto;
@@ -663,7 +663,7 @@
 	}
 	.rowColsLg_6 > * {
 		flex: 0 0 auto;
-		width: 16.6666666667%;
+		width: 16.66666667%;
 	}
 	.colLgAuto {
 		flex: 0 0 auto;
@@ -820,7 +820,7 @@
 	}
 	.rowColsXl_3 > * {
 		flex: 0 0 auto;
-		width: 33.3333333333%;
+		width: 33.33333333%;
 	}
 	.rowColsXl_4 > * {
 		flex: 0 0 auto;
@@ -832,7 +832,7 @@
 	}
 	.rowColsXl_6 > * {
 		flex: 0 0 auto;
-		width: 16.6666666667%;
+		width: 16.66666667%;
 	}
 	.colXlAuto {
 		flex: 0 0 auto;
@@ -989,7 +989,7 @@
 	}
 	.rowColsXxl_3 > * {
 		flex: 0 0 auto;
-		width: 33.3333333333%;
+		width: 33.33333333%;
 	}
 	.rowColsXxl_4 > * {
 		flex: 0 0 auto;
@@ -1001,7 +1001,7 @@
 	}
 	.rowColsXxl_6 > * {
 		flex: 0 0 auto;
-		width: 16.6666666667%;
+		width: 16.66666667%;
 	}
 	.colXxlAuto {
 		flex: 0 0 auto;
