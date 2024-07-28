@@ -18,6 +18,7 @@ declare const styles: {
 	readonly disabled: string;
 	readonly divider: string;
 	readonly error: string;
+	readonly fill: string;
 	readonly focused: string;
 	readonly formStacked: string;
 	readonly green: string;
@@ -26,6 +27,7 @@ declare const styles: {
 	readonly headerSortUp: string;
 	readonly helpBlock: string;
 	readonly helpInline: string;
+	readonly heroUnit: string;
 	readonly info: string;
 	readonly inlineInputs: string;
 	readonly inner: string;
@@ -41,7 +43,6 @@ declare const styles: {
 	readonly inputsList: string;
 	readonly large: string;
 	readonly left: string;
-	readonly logo: string;
 	readonly medium: string;
 	readonly menu: string;
 	readonly mini: string;
