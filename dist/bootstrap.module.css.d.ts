@@ -954,8 +954,6 @@ declare const styles: {
 	readonly modalFullscreenXxlDown: string;
 	readonly modalHeader: string;
 	readonly modalLg: string;
-	readonly modalOpen: string;
-	readonly modalScrollbarMeasure: string;
 	readonly modalSm: string;
 	readonly modalStatic: string;
 	readonly modalTitle: string;
@@ -1153,13 +1151,13 @@ declare const styles: {
 	readonly navbarToggler: string;
 	readonly navbarTogglerIcon: string;
 	readonly offcanvas: string;
-	readonly offcanvasBackdrop: string;
 	readonly offcanvasBody: string;
 	readonly offcanvasBottom: string;
 	readonly offcanvasEnd: string;
 	readonly offcanvasHeader: string;
 	readonly offcanvasStart: string;
 	readonly offcanvasTitle: string;
+	readonly offcanvasTop: string;
 	readonly offsetLg_0: string;
 	readonly offsetLg_1: string;
 	readonly offsetLg_10: string;
