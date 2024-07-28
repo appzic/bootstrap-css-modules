@@ -12,7 +12,7 @@ class Push {
 		this.ioFiles = [
 			{
 				src: `temp/bootstrap-${this.version}/bootstrap-${this.version}.css`,
-				dist: `dist/bootstrap-${this.version}.module.css`,
+				dist: `dist/bootstrap.module.css`,
 			},
 		];
 	}
