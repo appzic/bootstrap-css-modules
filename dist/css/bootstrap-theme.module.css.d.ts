@@ -35,6 +35,7 @@ declare const styles: {
 	readonly progressBar: string;
 	readonly progressBarDanger: string;
 	readonly progressBarInfo: string;
+	readonly progressBarStriped: string;
 	readonly progressBarSuccess: string;
 	readonly progressBarWarning: string;
 	readonly thumbnail: string;
