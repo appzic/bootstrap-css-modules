@@ -12,6 +12,7 @@ declare const styles: {
 	readonly controlGroup: string;
 	readonly controlList: string;
 	readonly controls: string;
+	readonly controlsRow: string;
 	readonly divider: string;
 	readonly dividerVertical: string;
 	readonly dlHorizontal: string;
@@ -41,8 +42,10 @@ declare const styles: {
 	readonly navbarFixedTop: string;
 	readonly navbarForm: string;
 	readonly navbarInner: string;
+	readonly navbarInverse: string;
 	readonly navbarSearch: string;
 	readonly navbarStatic: string;
+	readonly navbarStaticTop: string;
 	readonly offset1: string;
 	readonly offset10: string;
 	readonly offset11: string;
