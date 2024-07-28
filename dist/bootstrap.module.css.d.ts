@@ -241,6 +241,7 @@ declare const styles: {
 	readonly inputXlarge: string;
 	readonly inputXxlarge: string;
 	readonly invisible: string;
+	readonly ir: string;
 	readonly item: string;
 	readonly label: string;
 	readonly labelImportant: string;
