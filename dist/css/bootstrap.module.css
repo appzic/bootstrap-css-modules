@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -286,10 +286,10 @@ th {
 	-moz-osx-font-smoothing: grayscale;
 }
 .glyphiconAsterisk:before {
-	content: "\2a";
+	content: "\002a";
 }
 .glyphiconPlus:before {
-	content: "\2b";
+	content: "\002b";
 }
 .glyphiconEuro:before,
 .glyphiconEur:before {
@@ -2690,6 +2690,10 @@ output {
 .formControl::-webkit-input-placeholder {
 	color: #999;
 }
+.formControl::-ms-expand {
+	background-color: transparent;
+	border: 0;
+}
 .formControl[disabled],
 .formControl[readonly],
 fieldset[disabled] .formControl {
@@ -3108,7 +3112,7 @@ select[multiple].inputLg {
 }
 @media (min-width: 768px) {
 	.formHorizontal .formGroupLg .controlLabel {
-		padding-top: 14.333333px;
+		padding-top: 11px;
 		font-size: 18px;
 	}
 }
@@ -3216,9 +3220,6 @@ fieldset[disabled] a.btn {
 .open > .dropdownToggle.btnDefault {
 	background-image: none;
 }
-.btnDefault.disabled,
-.btnDefault[disabled],
-fieldset[disabled] .btnDefault,
 .btnDefault.disabled:hover,
 .btnDefault[disabled]:hover,
 fieldset[disabled] .btnDefault:hover,
@@ -3227,13 +3228,7 @@ fieldset[disabled] .btnDefault:hover,
 fieldset[disabled] .btnDefault:focus,
 .btnDefault.disabled.focus,
 .btnDefault[disabled].focus,
-fieldset[disabled] .btnDefault.focus,
-.btnDefault.disabled:active,
-.btnDefault[disabled]:active,
-fieldset[disabled] .btnDefault:active,
-.btnDefault.disabled.active,
-.btnDefault[disabled].active,
-fieldset[disabled] .btnDefault.active {
+fieldset[disabled] .btnDefault.focus {
 	background-color: #fff;
 	border-color: #ccc;
 }
@@ -3282,9 +3277,6 @@ fieldset[disabled] .btnDefault.active {
 .open > .dropdownToggle.btnPrimary {
 	background-image: none;
 }
-.btnPrimary.disabled,
-.btnPrimary[disabled],
-fieldset[disabled] .btnPrimary,
 .btnPrimary.disabled:hover,
 .btnPrimary[disabled]:hover,
 fieldset[disabled] .btnPrimary:hover,
@@ -3293,13 +3285,7 @@ fieldset[disabled] .btnPrimary:hover,
 fieldset[disabled] .btnPrimary:focus,
 .btnPrimary.disabled.focus,
 .btnPrimary[disabled].focus,
-fieldset[disabled] .btnPrimary.focus,
-.btnPrimary.disabled:active,
-.btnPrimary[disabled]:active,
-fieldset[disabled] .btnPrimary:active,
-.btnPrimary.disabled.active,
-.btnPrimary[disabled].active,
-fieldset[disabled] .btnPrimary.active {
+fieldset[disabled] .btnPrimary.focus {
 	background-color: #337ab7;
 	border-color: #2e6da4;
 }
@@ -3348,9 +3334,6 @@ fieldset[disabled] .btnPrimary.active {
 .open > .dropdownToggle.btnSuccess {
 	background-image: none;
 }
-.btnSuccess.disabled,
-.btnSuccess[disabled],
-fieldset[disabled] .btnSuccess,
 .btnSuccess.disabled:hover,
 .btnSuccess[disabled]:hover,
 fieldset[disabled] .btnSuccess:hover,
@@ -3359,13 +3342,7 @@ fieldset[disabled] .btnSuccess:hover,
 fieldset[disabled] .btnSuccess:focus,
 .btnSuccess.disabled.focus,
 .btnSuccess[disabled].focus,
-fieldset[disabled] .btnSuccess.focus,
-.btnSuccess.disabled:active,
-.btnSuccess[disabled]:active,
-fieldset[disabled] .btnSuccess:active,
-.btnSuccess.disabled.active,
-.btnSuccess[disabled].active,
-fieldset[disabled] .btnSuccess.active {
+fieldset[disabled] .btnSuccess.focus {
 	background-color: #5cb85c;
 	border-color: #4cae4c;
 }
@@ -3414,9 +3391,6 @@ fieldset[disabled] .btnSuccess.active {
 .open > .dropdownToggle.btnInfo {
 	background-image: none;
 }
-.btnInfo.disabled,
-.btnInfo[disabled],
-fieldset[disabled] .btnInfo,
 .btnInfo.disabled:hover,
 .btnInfo[disabled]:hover,
 fieldset[disabled] .btnInfo:hover,
@@ -3425,13 +3399,7 @@ fieldset[disabled] .btnInfo:hover,
 fieldset[disabled] .btnInfo:focus,
 .btnInfo.disabled.focus,
 .btnInfo[disabled].focus,
-fieldset[disabled] .btnInfo.focus,
-.btnInfo.disabled:active,
-.btnInfo[disabled]:active,
-fieldset[disabled] .btnInfo:active,
-.btnInfo.disabled.active,
-.btnInfo[disabled].active,
-fieldset[disabled] .btnInfo.active {
+fieldset[disabled] .btnInfo.focus {
 	background-color: #5bc0de;
 	border-color: #46b8da;
 }
@@ -3480,9 +3448,6 @@ fieldset[disabled] .btnInfo.active {
 .open > .dropdownToggle.btnWarning {
 	background-image: none;
 }
-.btnWarning.disabled,
-.btnWarning[disabled],
-fieldset[disabled] .btnWarning,
 .btnWarning.disabled:hover,
 .btnWarning[disabled]:hover,
 fieldset[disabled] .btnWarning:hover,
@@ -3491,13 +3456,7 @@ fieldset[disabled] .btnWarning:hover,
 fieldset[disabled] .btnWarning:focus,
 .btnWarning.disabled.focus,
 .btnWarning[disabled].focus,
-fieldset[disabled] .btnWarning.focus,
-.btnWarning.disabled:active,
-.btnWarning[disabled]:active,
-fieldset[disabled] .btnWarning:active,
-.btnWarning.disabled.active,
-.btnWarning[disabled].active,
-fieldset[disabled] .btnWarning.active {
+fieldset[disabled] .btnWarning.focus {
 	background-color: #f0ad4e;
 	border-color: #eea236;
 }
@@ -3546,9 +3505,6 @@ fieldset[disabled] .btnWarning.active {
 .open > .dropdownToggle.btnDanger {
 	background-image: none;
 }
-.btnDanger.disabled,
-.btnDanger[disabled],
-fieldset[disabled] .btnDanger,
 .btnDanger.disabled:hover,
 .btnDanger[disabled]:hover,
 fieldset[disabled] .btnDanger:hover,
@@ -3557,13 +3513,7 @@ fieldset[disabled] .btnDanger:hover,
 fieldset[disabled] .btnDanger:focus,
 .btnDanger.disabled.focus,
 .btnDanger[disabled].focus,
-fieldset[disabled] .btnDanger.focus,
-.btnDanger.disabled:active,
-.btnDanger[disabled]:active,
-fieldset[disabled] .btnDanger:active,
-.btnDanger.disabled.active,
-.btnDanger[disabled].active,
-fieldset[disabled] .btnDanger.active {
+fieldset[disabled] .btnDanger.focus {
 	background-color: #d9534f;
 	border-color: #d43f3a;
 }
@@ -3937,6 +3887,7 @@ tbody.collapse.in {
 	border-radius: 0;
 }
 .btnGroupVertical > .btn:first-child:not(:last-child) {
+	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
@@ -3944,6 +3895,7 @@ tbody.collapse.in {
 .btnGroupVertical > .btn:last-child:not(:first-child) {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
+	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
 .btnGroupVertical > .btnGroup:not(:first-child):not(:last-child) > .btn {
@@ -4000,6 +3952,9 @@ tbody.collapse.in {
 	float: left;
 	width: 100%;
 	margin-bottom: 0;
+}
+.inputGroup .formControl:focus {
+	z-index: 3;
 }
 .inputGroupLg > .formControl,
 .inputGroupLg > .inputGroupAddon,
@@ -4916,7 +4871,7 @@ fieldset[disabled] .navbarInverse .btnLink:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-	z-index: 3;
+	z-index: 2;
 	color: #23527c;
 	background-color: #eee;
 	border-color: #ddd;
@@ -4927,7 +4882,7 @@ fieldset[disabled] .navbarInverse .btnLink:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-	z-index: 2;
+	z-index: 3;
 	color: #fff;
 	cursor: default;
 	background-color: #337ab7;
@@ -5148,6 +5103,8 @@ a.badge:focus {
 }
 .container .jumbotron,
 .containerFluid .jumbotron {
+	padding-right: 15px;
+	padding-left: 15px;
 	border-radius: 6px;
 }
 .jumbotron .container {
@@ -6337,7 +6294,6 @@ button.close {
 	opacity: 0.5;
 }
 .modalHeader {
-	min-height: 16.42857143px;
 	padding: 15px;
 	border-bottom: 1px solid #e5e5e5;
 }
@@ -6730,6 +6686,7 @@ button.close {
 	color: #fff;
 	text-align: center;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0);
 	filter: alpha(opacity=50);
 	opacity: 0.5;
 }
@@ -6879,16 +6836,16 @@ button.close {
 	.carouselControl .iconNext {
 		width: 30px;
 		height: 30px;
-		margin-top: -15px;
+		margin-top: -10px;
 		font-size: 30px;
 	}
 	.carouselControl .glyphiconChevronLeft,
 	.carouselControl .iconPrev {
-		margin-left: -15px;
+		margin-left: -10px;
 	}
 	.carouselControl .glyphiconChevronRight,
 	.carouselControl .iconNext {
-		margin-right: -15px;
+		margin-right: -10px;
 	}
 	.carouselCaption {
 		right: 20%;
@@ -6927,6 +6884,8 @@ button.close {
 .pager:after,
 .panelBody:before,
 .panelBody:after,
+.modalHeader:before,
+.modalHeader:after,
 .modalFooter:before,
 .modalFooter:after {
 	display: table;
@@ -6946,6 +6905,7 @@ button.close {
 .navbarCollapse:after,
 .pager:after,
 .panelBody:after,
+.modalHeader:after,
 .modalFooter:after {
 	clear: both;
 }
