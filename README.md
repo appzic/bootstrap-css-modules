@@ -56,13 +56,15 @@ npm install @appzic/bootstrap-css-modules
 
 ```jsx
 import React from "react";
-import bs from "@appzic/bootstrap-css-modules/dist/css/bootstrap.module.css";
+import bs from "@appzic/bootstrap-css-modules/dist/bootstrap.module.css";
 
 const Component = () => {
 	return (
-		<div className={`${bs.row}`}>
-			<div class={`${bs.span6} ${bs.columns}`}>...</div>
-			<div class={`${bs.span10} ${bs.columns}`}>...</div>
+		<div className={`${bs.containerFluid}`}>
+			<div class={`${bs.row}`}>
+				<div class={`${bs.col6}`}>...</div>
+				<div class={`${bs.col6}`}>...</div>
+			</div>
 		</div>
 	);
 };
