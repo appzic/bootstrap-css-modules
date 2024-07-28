@@ -1,6 +1,6 @@
 {
 	"name": "@appzic/bootstrap-css-modules",
-	"version": "5.0.0-beta2",
+	"version": "5.0.0-beta3",
 	"description": "Bootstrap made easy with CSS modules for modular, scoped styling in your web applications",
 	"main": "index.js",
 	"type": "module",

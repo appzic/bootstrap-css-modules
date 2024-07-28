@@ -804,6 +804,7 @@ declare const styles: {
 	readonly listGroupItemSecondary: string;
 	readonly listGroupItemSuccess: string;
 	readonly listGroupItemWarning: string;
+	readonly listGroupNumbered: string;
 	readonly listInline: string;
 	readonly listInlineItem: string;
 	readonly listUnstyled: string;
@@ -1151,6 +1152,14 @@ declare const styles: {
 	readonly navbarText: string;
 	readonly navbarToggler: string;
 	readonly navbarTogglerIcon: string;
+	readonly offcanvas: string;
+	readonly offcanvasBackdrop: string;
+	readonly offcanvasBody: string;
+	readonly offcanvasBottom: string;
+	readonly offcanvasEnd: string;
+	readonly offcanvasHeader: string;
+	readonly offcanvasStart: string;
+	readonly offcanvasTitle: string;
 	readonly offsetLg_0: string;
 	readonly offsetLg_1: string;
 	readonly offsetLg_10: string;

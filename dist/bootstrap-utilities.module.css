@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Utilities v5.0.0-beta2 (https://getbootstrap.com/)
+ * Bootstrap Utilities v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -462,10 +462,6 @@
 
 .borderWhite {
 	border-color: #fff !important;
-}
-
-.border_0 {
-	border-width: 0 !important;
 }
 
 .border_1 {
@@ -1138,6 +1134,10 @@
 	padding-left: 3rem !important;
 }
 
+.fontMonospace {
+	font-family: var(--bs-font-monospace) !important;
+}
+
 .fs_1 {
 	font-size: calc(1.375rem + 1.5vw) !important;
 }
@@ -1190,16 +1190,20 @@
 	font-weight: bolder !important;
 }
 
-.textLowercase {
-	text-transform: lowercase !important;
+.lh_1 {
+	line-height: 1 !important;
 }
 
-.textUppercase {
-	text-transform: uppercase !important;
+.lhSm {
+	line-height: 1.25 !important;
 }
 
-.textCapitalize {
-	text-transform: capitalize !important;
+.lhBase {
+	line-height: 1.5 !important;
+}
+
+.lhLg {
+	line-height: 2 !important;
 }
 
 .textStart {
@@ -1214,6 +1218,45 @@
 	text-align: center !important;
 }
 
+.textDecorationNone {
+	text-decoration: none !important;
+}
+
+.textDecorationUnderline {
+	text-decoration: underline !important;
+}
+
+.textDecorationLineThrough {
+	text-decoration: line-through !important;
+}
+
+.textLowercase {
+	text-transform: lowercase !important;
+}
+
+.textUppercase {
+	text-transform: uppercase !important;
+}
+
+.textCapitalize {
+	text-transform: capitalize !important;
+}
+
+.textWrap {
+	white-space: normal !important;
+}
+
+.textNowrap {
+	white-space: nowrap !important;
+}
+
+/* rtl:begin:remove */
+.textBreak {
+	word-wrap: break-word !important;
+	word-break: break-word !important;
+}
+
+/* rtl:end:remove */
 .textPrimary {
 	color: #0d6efd !important;
 }
@@ -1270,22 +1313,6 @@
 	color: inherit !important;
 }
 
-.lh_1 {
-	line-height: 1 !important;
-}
-
-.lhSm {
-	line-height: 1.25 !important;
-}
-
-.lhBase {
-	line-height: 1.5 !important;
-}
-
-.lhLg {
-	line-height: 2 !important;
-}
-
 .bgPrimary {
 	background-color: #0d6efd !important;
 }
@@ -1332,37 +1359,6 @@
 
 .bgGradient {
 	background-image: var(--bs-gradient) !important;
-}
-
-.textWrap {
-	white-space: normal !important;
-}
-
-.textNowrap {
-	white-space: nowrap !important;
-}
-
-.textDecorationNone {
-	text-decoration: none !important;
-}
-
-.textDecorationUnderline {
-	text-decoration: underline !important;
-}
-
-.textDecorationLineThrough {
-	text-decoration: line-through !important;
-}
-
-/* rtl:begin:remove */
-.textBreak {
-	word-wrap: break-word !important;
-	word-break: break-word !important;
-}
-
-/* rtl:end:remove */
-.fontMonospace {
-	font-family: var(--bs-font-monospace) !important;
 }
 
 .userSelectAll {
