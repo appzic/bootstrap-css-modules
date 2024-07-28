@@ -512,6 +512,7 @@ declare const styles: {
 	readonly h_25: string;
 	readonly h_50: string;
 	readonly h_75: string;
+	readonly hasValidation: string;
 	readonly hide: string;
 	readonly imgFluid: string;
 	readonly imgThumbnail: string;
@@ -1036,6 +1037,7 @@ declare const styles: {
 	readonly navbarExpandXl: string;
 	readonly navbarLight: string;
 	readonly navbarNav: string;
+	readonly navbarNavScroll: string;
 	readonly navbarText: string;
 	readonly navbarToggler: string;
 	readonly navbarTogglerIcon: string;

@@ -1,7 +1,7 @@
 /*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
+ * Bootstrap v4.6.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
@@ -32,7 +32,7 @@
 	--breakpoint-lg: 992px;
 	--breakpoint-xl: 1200px;
 	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+		Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 		"Liberation Mono", "Courier New", monospace;
@@ -67,8 +67,8 @@ section {
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -248,9 +248,8 @@ button {
 	border-radius: 0;
 }
 
-button:focus {
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color;
+button:focus:not(:focus-visible) {
+	outline: 0;
 }
 
 input,
@@ -2356,6 +2355,11 @@ textarea.formControl {
 	border-radius: 0.25rem;
 }
 
+.formRow > .col > .validTooltip,
+.formRow > [class*="col-"] > .validTooltip {
+	left: 5px;
+}
+
 .wasValidated :valid ~ .validFeedback,
 .wasValidated :valid ~ .validTooltip,
 .isValid ~ .validFeedback,
@@ -2392,10 +2396,11 @@ textarea.formControl.isValid {
 	padding-right: calc(0.75em + 2.3125rem);
 	background:
 		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-			no-repeat right 0.75rem center/8px 10px,
-		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e")
-			#fff no-repeat center right 1.75rem / calc(0.75em + 0.375rem)
-			calc(0.75em + 0.375rem);
+			right 0.75rem center/8px 10px no-repeat,
+		#fff
+			url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e")
+			center right 1.75rem / calc(0.75em + 0.375rem) calc(0.75em + 0.375rem)
+			no-repeat;
 }
 
 .wasValidated .customSelect:valid:focus,
@@ -2479,6 +2484,11 @@ textarea.formControl.isValid {
 	border-radius: 0.25rem;
 }
 
+.formRow > .col > .invalidTooltip,
+.formRow > [class*="col-"] > .invalidTooltip {
+	left: 5px;
+}
+
 .wasValidated :invalid ~ .invalidFeedback,
 .wasValidated :invalid ~ .invalidTooltip,
 .isInvalid ~ .invalidFeedback,
@@ -2515,10 +2525,11 @@ textarea.formControl.isInvalid {
 	padding-right: calc(0.75em + 2.3125rem);
 	background:
 		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-			no-repeat right 0.75rem center/8px 10px,
-		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e")
-			#fff no-repeat center right 1.75rem / calc(0.75em + 0.375rem)
-			calc(0.75em + 0.375rem);
+			right 0.75rem center/8px 10px no-repeat,
+		#fff
+			url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e")
+			center right 1.75rem / calc(0.75em + 0.375rem) calc(0.75em + 0.375rem)
+			no-repeat;
 }
 
 .wasValidated .customSelect:invalid:focus,
@@ -3626,7 +3637,7 @@ input[type="button"].btnBlock {
 .dropdownItem:focus {
 	color: #16181b;
 	text-decoration: none;
-	background-color: #f8f9fa;
+	background-color: #e9ecef;
 }
 
 .dropdownItem.active,
@@ -3638,7 +3649,7 @@ input[type="button"].btnBlock {
 
 .dropdownItem.disabled,
 .dropdownItem:disabled {
-	color: #6c757d;
+	color: #adb5bd;
 	pointer-events: none;
 	background-color: transparent;
 }
@@ -3841,12 +3852,6 @@ input[type="button"].btnBlock {
 	z-index: 4;
 }
 
-.inputGroup > .formControl:not(:last-child),
-.inputGroup > .customSelect:not(:last-child) {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
 .inputGroup > .formControl:not(:first-child),
 .inputGroup > .customSelect:not(:first-child) {
 	border-top-left-radius: 0;
@@ -3861,14 +3866,27 @@ input[type="button"].btnBlock {
 }
 
 .inputGroup > .customFile:not(:last-child) .customFileLabel,
-.inputGroup > .customFile:not(:last-child) .customFileLabel::after {
+.inputGroup > .customFile:not(:first-child) .customFileLabel {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.inputGroup:not(.hasValidation) > .formControl:not(:last-child),
+.inputGroup:not(.hasValidation) > .customSelect:not(:last-child),
+.inputGroup:not(.hasValidation)
+	> .customFile:not(:last-child)
+	.customFileLabel::after {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-.inputGroup > .customFile:not(:first-child) .customFileLabel {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
+.inputGroup.hasValidation > .formControl:nth-last-child(n + 3),
+.inputGroup.hasValidation > .customSelect:nth-last-child(n + 3),
+.inputGroup.hasValidation
+	> .customFile:nth-last-child(n + 3)
+	.customFileLabel::after {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 .inputGroupPrepend,
@@ -3971,8 +3989,14 @@ input[type="button"].btnBlock {
 
 .inputGroup > .inputGroupPrepend > .btn,
 .inputGroup > .inputGroupPrepend > .inputGroupText,
-.inputGroup > .inputGroupAppend:not(:last-child) > .btn,
-.inputGroup > .inputGroupAppend:not(:last-child) > .inputGroupText,
+.inputGroup:not(.hasValidation) > .inputGroupAppend:not(:last-child) > .btn,
+.inputGroup:not(.hasValidation)
+	> .inputGroupAppend:not(:last-child)
+	> .inputGroupText,
+.inputGroup.hasValidation > .inputGroupAppend:nth-last-child(n + 3) > .btn,
+.inputGroup.hasValidation
+	> .inputGroupAppend:nth-last-child(n + 3)
+	> .inputGroupText,
 .inputGroup
 	> .inputGroupAppend:last-child
 	> .btn:not(:last-child):not(.dropdownToggle),
@@ -4075,7 +4099,7 @@ input[type="button"].btnBlock {
 	width: 1rem;
 	height: 1rem;
 	content: "";
-	background: no-repeat 50% / 50% 50%;
+	background: 50% / 50% 50% no-repeat;
 }
 
 .customCheckbox .customControlLabel::before {
@@ -4189,7 +4213,7 @@ input[type="button"].btnBlock {
 	vertical-align: middle;
 	background: #fff
 		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-		no-repeat right 0.75rem center/8px 10px;
+		right 0.75rem center/8px 10px no-repeat;
 	border: 1px solid #ced4da;
 	border-radius: 0.25rem;
 	-webkit-appearance: none;
@@ -4259,6 +4283,7 @@ input[type="button"].btnBlock {
 	width: 100%;
 	height: calc(1.5em + 0.75rem + 2px);
 	margin: 0;
+	overflow: hidden;
 	opacity: 0;
 }
 
@@ -4288,6 +4313,7 @@ input[type="button"].btnBlock {
 	z-index: 1;
 	height: calc(1.5em + 0.75rem + 2px);
 	padding: 0.375rem 0.75rem;
+	overflow: hidden;
 	font-weight: 400;
 	line-height: 1.5;
 	color: #495057;
@@ -4324,7 +4350,7 @@ input[type="button"].btnBlock {
 }
 
 .customRange:focus {
-	outline: none;
+	outline: 0;
 }
 
 .customRange:focus::-webkit-slider-thumb {
@@ -4547,11 +4573,8 @@ input[type="button"].btnBlock {
 	border-bottom: 1px solid #dee2e6;
 }
 
-.navTabs .navItem {
-	margin-bottom: -1px;
-}
-
 .navTabs .navLink {
+	margin-bottom: -1px;
 	border: 1px solid transparent;
 	border-top-left-radius: 0.25rem;
 	border-top-right-radius: 0.25rem;
@@ -4714,8 +4737,12 @@ input[type="button"].btnBlock {
 	height: 1.5em;
 	vertical-align: middle;
 	content: "";
-	background: no-repeat center center;
-	background-size: 100% 100%;
+	background: 50% / 100% 100% no-repeat;
+}
+
+.navbarNavScroll {
+	max-height: 75vh;
+	overflow-y: auto;
 }
 
 @media (max-width: 575.98px) {
@@ -4756,6 +4783,9 @@ input[type="button"].btnBlock {
 	.navbarExpandSm > .containerXl {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
+	}
+	.navbarExpandSm .navbarNavScroll {
+		overflow: visible;
 	}
 	.navbarExpandSm .navbarCollapse {
 		display: -ms-flexbox !important;
@@ -4807,6 +4837,9 @@ input[type="button"].btnBlock {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
 	}
+	.navbarExpandMd .navbarNavScroll {
+		overflow: visible;
+	}
 	.navbarExpandMd .navbarCollapse {
 		display: -ms-flexbox !important;
 		display: flex !important;
@@ -4856,6 +4889,9 @@ input[type="button"].btnBlock {
 	.navbarExpandLg > .containerXl {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
+	}
+	.navbarExpandLg .navbarNavScroll {
+		overflow: visible;
 	}
 	.navbarExpandLg .navbarCollapse {
 		display: -ms-flexbox !important;
@@ -4907,6 +4943,9 @@ input[type="button"].btnBlock {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
 	}
+	.navbarExpandXl .navbarNavScroll {
+		overflow: visible;
+	}
 	.navbarExpandXl .navbarCollapse {
 		display: -ms-flexbox !important;
 		display: flex !important;
@@ -4957,6 +4996,10 @@ input[type="button"].btnBlock {
 .navbarExpand > .containerXl {
 	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
+}
+
+.navbarExpand .navbarNavScroll {
+	overflow: visible;
 }
 
 .navbarExpand .navbarCollapse {
@@ -5329,17 +5372,12 @@ input[type="button"].btnBlock {
 	border-radius: 0.25rem;
 }
 
-.breadcrumbItem {
-	display: -ms-flexbox;
-	display: flex;
-}
-
 .breadcrumbItem + .breadcrumbItem {
 	padding-left: 0.5rem;
 }
 
 .breadcrumbItem + .breadcrumbItem::before {
-	display: inline-block;
+	float: left;
 	padding-right: 0.5rem;
 	color: #6c757d;
 	content: "/";
@@ -5852,8 +5890,8 @@ a.badgeDark.focus {
 }
 
 .progressBarAnimated {
-	-webkit-animation: progress-bar-stripes 1s linear infinite;
-	animation: progress-bar-stripes 1s linear infinite;
+	-webkit-animation: 1s linear infinite progress-bar-stripes;
+	animation: 1s linear infinite progress-bar-stripes;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -6546,8 +6584,8 @@ a.close.disabled {
 	display: block;
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.5;
@@ -6673,8 +6711,8 @@ a.close.disabled {
 	display: block;
 	max-width: 276px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.5;
@@ -6983,7 +7021,7 @@ a.close.disabled {
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	background: no-repeat 50% / 100% 100%;
+	background: 50% / 100% 100% no-repeat;
 }
 
 .carouselControlPrevIcon {
@@ -7072,8 +7110,8 @@ a.close.disabled {
 	border: 0.25em solid currentColor;
 	border-right-color: transparent;
 	border-radius: 50%;
-	-webkit-animation: spinner-border 0.75s linear infinite;
-	animation: spinner-border 0.75s linear infinite;
+	-webkit-animation: 0.75s linear infinite spinner-border;
+	animation: 0.75s linear infinite spinner-border;
 }
 
 .spinnerBorderSm {
@@ -7114,13 +7152,21 @@ a.close.disabled {
 	background-color: currentColor;
 	border-radius: 50%;
 	opacity: 0;
-	-webkit-animation: spinner-grow 0.75s linear infinite;
-	animation: spinner-grow 0.75s linear infinite;
+	-webkit-animation: 0.75s linear infinite spinner-grow;
+	animation: 0.75s linear infinite spinner-grow;
 }
 
 .spinnerGrowSm {
 	width: 1rem;
 	height: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.spinnerBorder,
+	.spinnerGrow {
+		-webkit-animation-duration: 1.5s;
+		animation-duration: 1.5s;
+	}
 }
 
 .alignBaseline {
@@ -8399,7 +8445,6 @@ button.bgDark:focus {
 .userSelectAll {
 	-webkit-user-select: all !important;
 	-moz-user-select: all !important;
-	-ms-user-select: all !important;
 	user-select: all !important;
 }
 
