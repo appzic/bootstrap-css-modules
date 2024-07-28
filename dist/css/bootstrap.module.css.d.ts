@@ -313,6 +313,7 @@ declare const styles: {
 	readonly glyphiconBook: string;
 	readonly glyphiconBookmark: string;
 	readonly glyphiconBriefcase: string;
+	readonly glyphiconBtc: string;
 	readonly glyphiconBullhorn: string;
 	readonly glyphiconCalendar: string;
 	readonly glyphiconCamera: string;
@@ -402,6 +403,7 @@ declare const styles: {
 	readonly glyphiconIndentRight: string;
 	readonly glyphiconInfoSign: string;
 	readonly glyphiconItalic: string;
+	readonly glyphiconJpy: string;
 	readonly glyphiconKing: string;
 	readonly glyphiconKnight: string;
 	readonly glyphiconLamp: string;
@@ -474,6 +476,7 @@ declare const styles: {
 	readonly glyphiconResizeVertical: string;
 	readonly glyphiconRetweet: string;
 	readonly glyphiconRoad: string;
+	readonly glyphiconRub: string;
 	readonly glyphiconRuble: string;
 	readonly glyphiconSave: string;
 	readonly glyphiconSaveFile: string;
@@ -544,6 +547,7 @@ declare const styles: {
 	readonly glyphiconVolumeUp: string;
 	readonly glyphiconWarningSign: string;
 	readonly glyphiconWrench: string;
+	readonly glyphiconXbt: string;
 	readonly glyphiconYen: string;
 	readonly glyphiconZoomIn: string;
 	readonly glyphiconZoomOut: string;
