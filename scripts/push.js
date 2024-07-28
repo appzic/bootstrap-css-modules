@@ -11,8 +11,12 @@ class Push {
 
 		this.ioFiles = [
 			{
-				src: `temp/bootstrap-${this.version}/bootstrap.css`,
+				src: `temp/bootstrap-${this.version}/docs/assets/css/bootstrap.css`,
 				dist: `dist/bootstrap.module.css`,
+			},
+			{
+				src: `temp/bootstrap-${this.version}/docs/assets/css/bootstrap-responsive.css`,
+				dist: `dist/bootstrap-responsive.module.css`,
 			},
 		];
 	}
@@ -52,13 +56,13 @@ class Push {
 		execSync("npm run typed-css");
 		execSync("npm run format");
 		execSync("npm i");
-		execSync("git add .");
-		execSync(`git commit -m "v${this.version}"`);
-		execSync("git push");
-		execSync(`git tag v${this.version}`);
-		execSync("git push --tag");
-		execSync("npm publish --access public");
-		rimrafSync("temp");
+		// execSync("git add .");
+		// execSync(`git commit -m "v${this.version}"`);
+		// execSync("git push");
+		// execSync(`git tag v${this.version}`);
+		// execSync("git push --tag");
+		// execSync("npm publish --access public");
+		// rimrafSync("temp");
 	}
 }
 
