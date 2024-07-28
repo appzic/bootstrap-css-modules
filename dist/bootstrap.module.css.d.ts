@@ -19,6 +19,9 @@ declare const styles: {
 	readonly danger: string;
 	readonly disabled: string;
 	readonly divider: string;
+	readonly dropdown: string;
+	readonly dropdownMenu: string;
+	readonly dropdownToggle: string;
 	readonly error: string;
 	readonly fill: string;
 	readonly focused: string;
@@ -47,6 +50,7 @@ declare const styles: {
 	readonly left: string;
 	readonly medium: string;
 	readonly menu: string;
+	readonly menuDropdown: string;
 	readonly mini: string;
 	readonly modal: string;
 	readonly modalBackdrop: string;
@@ -54,6 +58,7 @@ declare const styles: {
 	readonly modalFooter: string;
 	readonly modalHeader: string;
 	readonly muted: string;
+	readonly nav: string;
 	readonly next: string;
 	readonly offset1: string;
 	readonly offset10: string;
@@ -67,6 +72,8 @@ declare const styles: {
 	readonly offset7: string;
 	readonly offset8: string;
 	readonly offset9: string;
+	readonly offsetOneThird: string;
+	readonly offsetTwoThirds: string;
 	readonly open: string;
 	readonly orange: string;
 	readonly pageHeader: string;
@@ -74,7 +81,6 @@ declare const styles: {
 	readonly pills: string;
 	readonly popover: string;
 	readonly primary: string;
-	readonly primaryNav: string;
 	readonly purple: string;
 	readonly red: string;
 	readonly right: string;
@@ -99,10 +105,13 @@ declare const styles: {
 	readonly span7: string;
 	readonly span8: string;
 	readonly span9: string;
+	readonly spanOneThird: string;
+	readonly spanTwoThirds: string;
 	readonly success: string;
 	readonly tabs: string;
 	readonly title: string;
 	readonly topbar: string;
+	readonly topbarInner: string;
 	readonly twipsy: string;
 	readonly twipsyArrow: string;
 	readonly twipsyInner: string;
