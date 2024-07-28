@@ -220,12 +220,14 @@ declare const styles: {
 	readonly dInline: string;
 	readonly dInlineBlock: string;
 	readonly dInlineFlex: string;
+	readonly dInlineGrid: string;
 	readonly dLgBlock: string;
 	readonly dLgFlex: string;
 	readonly dLgGrid: string;
 	readonly dLgInline: string;
 	readonly dLgInlineBlock: string;
 	readonly dLgInlineFlex: string;
+	readonly dLgInlineGrid: string;
 	readonly dLgNone: string;
 	readonly dLgTable: string;
 	readonly dLgTableCell: string;
@@ -236,6 +238,7 @@ declare const styles: {
 	readonly dMdInline: string;
 	readonly dMdInlineBlock: string;
 	readonly dMdInlineFlex: string;
+	readonly dMdInlineGrid: string;
 	readonly dMdNone: string;
 	readonly dMdTable: string;
 	readonly dMdTableCell: string;
@@ -247,6 +250,7 @@ declare const styles: {
 	readonly dPrintInline: string;
 	readonly dPrintInlineBlock: string;
 	readonly dPrintInlineFlex: string;
+	readonly dPrintInlineGrid: string;
 	readonly dPrintNone: string;
 	readonly dPrintTable: string;
 	readonly dPrintTableCell: string;
@@ -257,6 +261,7 @@ declare const styles: {
 	readonly dSmInline: string;
 	readonly dSmInlineBlock: string;
 	readonly dSmInlineFlex: string;
+	readonly dSmInlineGrid: string;
 	readonly dSmNone: string;
 	readonly dSmTable: string;
 	readonly dSmTableCell: string;
@@ -270,6 +275,7 @@ declare const styles: {
 	readonly dXlInline: string;
 	readonly dXlInlineBlock: string;
 	readonly dXlInlineFlex: string;
+	readonly dXlInlineGrid: string;
 	readonly dXlNone: string;
 	readonly dXlTable: string;
 	readonly dXlTableCell: string;
@@ -280,6 +286,7 @@ declare const styles: {
 	readonly dXxlInline: string;
 	readonly dXxlInlineBlock: string;
 	readonly dXxlInlineFlex: string;
+	readonly dXxlInlineGrid: string;
 	readonly dXxlNone: string;
 	readonly dXxlTable: string;
 	readonly dXxlTableCell: string;

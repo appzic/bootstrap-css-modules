@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap  v5.3.0-alpha2 (https://getbootstrap.com/)
+ * Bootstrap  v5.3.0-alpha3 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -2164,7 +2164,7 @@ progress {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	border-radius: 0.375rem;
+	border-radius: var(--bs-border-radius);
 	transition:
 		border-color 0.15s ease-in-out,
 		box-shadow 0.15s ease-in-out;
@@ -2291,7 +2291,7 @@ progress {
 	min-height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2));
 	padding: 0.25rem 0.5rem;
 	font-size: 0.875rem;
-	border-radius: 0.25rem;
+	border-radius: var(--bs-border-radius-sm);
 }
 .formControlSm::-webkit-file-upload-button {
 	padding: 0.25rem 0.5rem;
@@ -2310,7 +2310,7 @@ progress {
 	min-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
 	padding: 0.5rem 1rem;
 	font-size: 1.25rem;
-	border-radius: 0.5rem;
+	border-radius: var(--bs-border-radius-lg);
 }
 .formControlLg::-webkit-file-upload-button {
 	padding: 0.5rem 1rem;
@@ -2345,11 +2345,11 @@ textarea.formControlLg {
 }
 .formControlColor::-moz-color-swatch {
 	border: 0 !important;
-	border-radius: 0.375rem;
+	border-radius: var(--bs-border-radius);
 }
 .formControlColor::-webkit-color-swatch {
 	border: 0 !important;
-	border-radius: 0.375rem;
+	border-radius: var(--bs-border-radius);
 }
 .formControlColor.formControlSm {
 	height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2));
@@ -2374,7 +2374,7 @@ textarea.formControlLg {
 	background-position: right 0.75rem center;
 	background-size: 16px 12px;
 	border: var(--bs-border-width) solid var(--bs-border-color);
-	border-radius: 0.375rem;
+	border-radius: var(--bs-border-radius);
 	transition:
 		border-color 0.15s ease-in-out,
 		box-shadow 0.15s ease-in-out;
@@ -2410,7 +2410,7 @@ textarea.formControlLg {
 	padding-bottom: 0.25rem;
 	padding-left: 0.5rem;
 	font-size: 0.875rem;
-	border-radius: 0.25rem;
+	border-radius: var(--bs-border-radius-sm);
 }
 
 .formSelectLg {
@@ -2418,7 +2418,7 @@ textarea.formControlLg {
 	padding-bottom: 0.5rem;
 	padding-left: 1rem;
 	font-size: 1.25rem;
-	border-radius: 0.5rem;
+	border-radius: var(--bs-border-radius-lg);
 }
 
 [data-bs-theme="dark"] .formSelect {
@@ -2669,18 +2669,6 @@ textarea.formControlLg {
 .formFloating {
 	position: relative;
 }
-.formFloating:not(.formControl:disabled)::before {
-	position: absolute;
-	top: var(--bs-border-width);
-	left: var(--bs-border-width);
-	width: calc(
-		100% - (calc(calc(0.375em + 0.1875rem) + calc(0.75em + 0.375rem)))
-	);
-	height: 1.875em;
-	content: "";
-	background-color: var(--bs-body-bg);
-	border-radius: 0.375rem;
-}
 .formFloating > .formControl,
 .formFloating > .formControlPlaintext,
 .formFloating > .formSelect {
@@ -2691,7 +2679,7 @@ textarea.formControlLg {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
+	z-index: 2;
 	height: 100%;
 	padding: 1rem 0.75rem;
 	overflow: hidden;
@@ -2744,25 +2732,49 @@ textarea.formControlLg {
 	padding-bottom: 0.625rem;
 }
 .formFloating > .formControl:not(:-moz-placeholder-shown) ~ label {
-	opacity: 0.65;
+	color: rgba(var(--bs-body-color-rgb), 0.65);
 	transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .formFloating > .formControl:focus ~ label,
 .formFloating > .formControl:not(:placeholder-shown) ~ label,
 .formFloating > .formControlPlaintext ~ label,
 .formFloating > .formSelect ~ label {
-	opacity: 0.65;
+	color: rgba(var(--bs-body-color-rgb), 0.65);
 	transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
+.formFloating > .formControl:not(:-moz-placeholder-shown) ~ label::after {
+	position: absolute;
+	inset: 1rem 0.375rem;
+	z-index: -1;
+	height: 1.5em;
+	content: "";
+	background-color: var(--bs-body-bg);
+	border-radius: var(--bs-border-radius);
+}
+.formFloating > .formControl:focus ~ label::after,
+.formFloating > .formControl:not(:placeholder-shown) ~ label::after,
+.formFloating > .formControlPlaintext ~ label::after,
+.formFloating > .formSelect ~ label::after {
+	position: absolute;
+	inset: 1rem 0.375rem;
+	z-index: -1;
+	height: 1.5em;
+	content: "";
+	background-color: var(--bs-body-bg);
+	border-radius: var(--bs-border-radius);
+}
 .formFloating > .formControl:-webkit-autofill ~ label {
-	opacity: 0.65;
+	color: rgba(var(--bs-body-color-rgb), 0.65);
 	transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .formFloating > .formControlPlaintext ~ label {
 	border-width: var(--bs-border-width) 0;
 }
-.formFloating > .formControl:disabled ~ label {
+.formFloating > :disabled ~ label {
 	color: #6c757d;
+}
+.formFloating > :disabled ~ label::after {
+	background-color: var(--bs-secondary-bg);
 }
 
 .inputGroup {
@@ -2805,7 +2817,7 @@ textarea.formControlLg {
 	white-space: nowrap;
 	background-color: var(--bs-tertiary-bg);
 	border: var(--bs-border-width) solid var(--bs-border-color);
-	border-radius: 0.375rem;
+	border-radius: var(--bs-border-radius);
 }
 
 .inputGroupLg > .formControl,
@@ -2814,7 +2826,7 @@ textarea.formControlLg {
 .inputGroupLg > .btn {
 	padding: 0.5rem 1rem;
 	font-size: 1.25rem;
-	border-radius: 0.5rem;
+	border-radius: var(--bs-border-radius-lg);
 }
 
 .inputGroupSm > .formControl,
@@ -2823,7 +2835,7 @@ textarea.formControlLg {
 .inputGroupSm > .btn {
 	padding: 0.25rem 0.5rem;
 	font-size: 0.875rem;
-	border-radius: 0.25rem;
+	border-radius: var(--bs-border-radius-sm);
 }
 
 .inputGroupLg > .formSelect,
@@ -3094,7 +3106,7 @@ textarea.formControl.isInvalid {
 	--bs-btn-bg: transparent;
 	--bs-btn-border-width: var(--bs-border-width);
 	--bs-btn-border-color: transparent;
-	--bs-btn-border-radius: 0.375rem;
+	--bs-btn-border-radius: var(--bs-border-radius);
 	--bs-btn-hover-border-color: transparent;
 	--bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
 		0 1px 1px rgba(0, 0, 0, 0.075);
@@ -3476,7 +3488,7 @@ fieldset:disabled .btn {
 	--bs-btn-padding-y: 0.5rem;
 	--bs-btn-padding-x: 1rem;
 	--bs-btn-font-size: 1.25rem;
-	--bs-btn-border-radius: 0.5rem;
+	--bs-btn-border-radius: var(--bs-border-radius-lg);
 }
 
 .btnSm,
@@ -3484,7 +3496,7 @@ fieldset:disabled .btn {
 	--bs-btn-padding-y: 0.25rem;
 	--bs-btn-padding-x: 0.5rem;
 	--bs-btn-font-size: 0.875rem;
-	--bs-btn-border-radius: 0.25rem;
+	--bs-btn-border-radius: var(--bs-border-radius-sm);
 }
 
 .fade {
@@ -3560,9 +3572,11 @@ fieldset:disabled .btn {
 	--bs-dropdown-color: var(--bs-body-color);
 	--bs-dropdown-bg: var(--bs-body-bg);
 	--bs-dropdown-border-color: var(--bs-border-color-translucent);
-	--bs-dropdown-border-radius: 0.375rem;
+	--bs-dropdown-border-radius: var(--bs-border-radius);
 	--bs-dropdown-border-width: var(--bs-border-width);
-	--bs-dropdown-inner-border-radius: calc(0.375rem - var(--bs-border-width));
+	--bs-dropdown-inner-border-radius: calc(
+		var(--bs-border-radius) - var(--bs-border-width)
+	);
 	--bs-dropdown-divider-bg: var(--bs-border-color-translucent);
 	--bs-dropdown-divider-margin-y: 0.5rem;
 	--bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -3881,7 +3895,7 @@ fieldset:disabled .btn {
 }
 
 .btnGroup {
-	border-radius: 0.375rem;
+	border-radius: var(--bs-border-radius);
 }
 .btnGroup > :not(.btnCheck:first-child) + .btn,
 .btnGroup > .btnGroup:not(:first-child) {
@@ -4039,7 +4053,7 @@ fieldset:disabled .btn {
 }
 
 .navPills {
-	--bs-nav-pills-border-radius: 0.375rem;
+	--bs-nav-pills-border-radius: var(--bs-border-radius);
 	--bs-nav-pills-link-active-color: #fff;
 	--bs-nav-pills-link-active-bg: #0d6efd;
 }
@@ -4122,7 +4136,7 @@ fieldset:disabled .btn {
 	--bs-navbar-toggler-font-size: 1.25rem;
 	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 	--bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
-	--bs-navbar-toggler-border-radius: 0.375rem;
+	--bs-navbar-toggler-border-radius: var(--bs-border-radius);
 	--bs-navbar-toggler-focus-width: 0.25rem;
 	--bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
 	position: relative;
@@ -4994,14 +5008,14 @@ fieldset:disabled .btn {
 	--bs-pagination-padding-x: 1.5rem;
 	--bs-pagination-padding-y: 0.75rem;
 	--bs-pagination-font-size: 1.25rem;
-	--bs-pagination-border-radius: 0.5rem;
+	--bs-pagination-border-radius: var(--bs-border-radius-lg);
 }
 
 .paginationSm {
 	--bs-pagination-padding-x: 0.5rem;
 	--bs-pagination-padding-y: 0.25rem;
 	--bs-pagination-font-size: 0.875rem;
-	--bs-pagination-border-radius: 0.25rem;
+	--bs-pagination-border-radius: var(--bs-border-radius-sm);
 }
 
 .badge {
@@ -5010,7 +5024,7 @@ fieldset:disabled .btn {
 	--bs-badge-font-size: 0.75em;
 	--bs-badge-font-weight: 700;
 	--bs-badge-color: #fff;
-	--bs-badge-border-radius: 0.375rem;
+	--bs-badge-border-radius: var(--bs-border-radius);
 	display: inline-block;
 	padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
 	font-size: var(--bs-badge-font-size);
@@ -5039,7 +5053,7 @@ fieldset:disabled .btn {
 	--bs-alert-color: inherit;
 	--bs-alert-border-color: transparent;
 	--bs-alert-border: var(--bs-border-width) solid var(--bs-alert-border-color);
-	--bs-alert-border-radius: 0.375rem;
+	--bs-alert-border-radius: var(--bs-border-radius);
 	--bs-alert-link-color: inherit;
 	position: relative;
 	padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
@@ -5978,7 +5992,6 @@ fieldset:disabled .btn {
 	--bs-tooltip-arrow-height: 0.4rem;
 	z-index: var(--bs-tooltip-zindex);
 	display: block;
-	padding: var(--bs-tooltip-arrow-height);
 	margin: var(--bs-tooltip-margin);
 	font-family: var(--bs-font-sans-serif);
 	font-style: normal;
@@ -6015,7 +6028,7 @@ fieldset:disabled .btn {
 
 .bsTooltipTop .tooltipArrow,
 .bsTooltipAuto[data-popper-placement^="top"] .tooltipArrow {
-	bottom: 0;
+	bottom: calc(-1 * var(--bs-tooltip-arrow-height));
 }
 .bsTooltipTop .tooltipArrow::before,
 .bsTooltipAuto[data-popper-placement^="top"] .tooltipArrow::before {
@@ -6028,7 +6041,7 @@ fieldset:disabled .btn {
 /* rtl:begin:ignore */
 .bsTooltipEnd .tooltipArrow,
 .bsTooltipAuto[data-popper-placement^="right"] .tooltipArrow {
-	left: 0;
+	left: calc(-1 * var(--bs-tooltip-arrow-height));
 	width: var(--bs-tooltip-arrow-height);
 	height: var(--bs-tooltip-arrow-width);
 }
@@ -6043,7 +6056,7 @@ fieldset:disabled .btn {
 /* rtl:end:ignore */
 .bsTooltipBottom .tooltipArrow,
 .bsTooltipAuto[data-popper-placement^="bottom"] .tooltipArrow {
-	top: 0;
+	top: calc(-1 * var(--bs-tooltip-arrow-height));
 }
 .bsTooltipBottom .tooltipArrow::before,
 .bsTooltipAuto[data-popper-placement^="bottom"] .tooltipArrow::before {
@@ -6056,7 +6069,7 @@ fieldset:disabled .btn {
 /* rtl:begin:ignore */
 .bsTooltipStart .tooltipArrow,
 .bsTooltipAuto[data-popper-placement^="left"] .tooltipArrow {
-	right: 0;
+	right: calc(-1 * var(--bs-tooltip-arrow-height));
 	width: var(--bs-tooltip-arrow-height);
 	height: var(--bs-tooltip-arrow-width);
 }
@@ -7858,6 +7871,10 @@ fieldset:disabled .btn {
 
 .dGrid {
 	display: grid !important;
+}
+
+.dInlineGrid {
+	display: inline-grid !important;
 }
 
 .dTable {
@@ -9861,6 +9878,9 @@ fieldset:disabled .btn {
 	.dSmGrid {
 		display: grid !important;
 	}
+	.dSmInlineGrid {
+		display: inline-grid !important;
+	}
 	.dSmTable {
 		display: table !important;
 	}
@@ -10418,6 +10438,9 @@ fieldset:disabled .btn {
 	}
 	.dMdGrid {
 		display: grid !important;
+	}
+	.dMdInlineGrid {
+		display: inline-grid !important;
 	}
 	.dMdTable {
 		display: table !important;
@@ -10977,6 +11000,9 @@ fieldset:disabled .btn {
 	.dLgGrid {
 		display: grid !important;
 	}
+	.dLgInlineGrid {
+		display: inline-grid !important;
+	}
 	.dLgTable {
 		display: table !important;
 	}
@@ -11534,6 +11560,9 @@ fieldset:disabled .btn {
 	}
 	.dXlGrid {
 		display: grid !important;
+	}
+	.dXlInlineGrid {
+		display: inline-grid !important;
 	}
 	.dXlTable {
 		display: table !important;
@@ -12093,6 +12122,9 @@ fieldset:disabled .btn {
 	.dXxlGrid {
 		display: grid !important;
 	}
+	.dXxlInlineGrid {
+		display: inline-grid !important;
+	}
 	.dXxlTable {
 		display: table !important;
 	}
@@ -12635,6 +12667,9 @@ fieldset:disabled .btn {
 	}
 	.dPrintGrid {
 		display: grid !important;
+	}
+	.dPrintInlineGrid {
+		display: inline-grid !important;
 	}
 	.dPrintTable {
 		display: table !important;
