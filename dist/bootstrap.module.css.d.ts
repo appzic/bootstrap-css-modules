@@ -21,9 +21,12 @@ declare const styles: {
 	readonly breadcrumb: string;
 	readonly btn: string;
 	readonly btnDanger: string;
+	readonly btnDark: string;
 	readonly btnGroup: string;
 	readonly btnInfo: string;
+	readonly btnInverse: string;
 	readonly btnLarge: string;
+	readonly btnMini: string;
 	readonly btnNavbar: string;
 	readonly btnPrimary: string;
 	readonly btnSmall: string;
@@ -37,11 +40,13 @@ declare const styles: {
 	readonly carouselControl: string;
 	readonly carouselInner: string;
 	readonly checkbox: string;
+	readonly clearfix: string;
 	readonly close: string;
 	readonly collapse: string;
 	readonly container: string;
 	readonly containerFluid: string;
 	readonly controlGroup: string;
+	readonly controlLabel: string;
 	readonly controls: string;
 	readonly disabled: string;
 	readonly divider: string;
@@ -60,7 +65,6 @@ declare const styles: {
 	readonly helpInline: string;
 	readonly heroUnit: string;
 	readonly hide: string;
-	readonly icon: string;
 	readonly iconAdjust: string;
 	readonly iconAlignCenter: string;
 	readonly iconAlignJustify: string;
@@ -207,6 +211,7 @@ declare const styles: {
 	readonly modalBackdrop: string;
 	readonly modalBody: string;
 	readonly modalFooter: string;
+	readonly modalForm: string;
 	readonly modalHeader: string;
 	readonly modalOpen: string;
 	readonly muted: string;
@@ -247,6 +252,7 @@ declare const styles: {
 	readonly popoverContent: string;
 	readonly popoverInner: string;
 	readonly popoverTitle: string;
+	readonly preScrollable: string;
 	readonly prettyprint: string;
 	readonly prev: string;
 	readonly previous: string;

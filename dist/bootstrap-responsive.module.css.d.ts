@@ -2,6 +2,7 @@ declare const styles: {
 	readonly brand: string;
 	readonly btnNavbar: string;
 	readonly carouselCaption: string;
+	readonly clearfix: string;
 	readonly close: string;
 	readonly collapse: string;
 	readonly container: string;
@@ -22,6 +23,7 @@ declare const styles: {
 	readonly modalHeader: string;
 	readonly nav: string;
 	readonly navCollapse: string;
+	readonly navHeader: string;
 	readonly navbar: string;
 	readonly navbarFixedTop: string;
 	readonly navbarForm: string;
