@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v3.0.1 by @fat and @mdo
+ * Bootstrap v3.0.2 by @fat and @mdo
  * Copyright 2013 Twitter, Inc.
  * Licensed under http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -996,6 +996,10 @@ pre code {
 	right: 8.333333333333332%;
 }
 
+.colXsPull_0 {
+	right: 0;
+}
+
 .colXsPush_12 {
 	left: 100%;
 }
@@ -1044,6 +1048,10 @@ pre code {
 	left: 8.333333333333332%;
 }
 
+.colXsPush_0 {
+	left: 0;
+}
+
 .colXsOffset_12 {
 	margin-left: 100%;
 }
@@ -1090,6 +1098,10 @@ pre code {
 
 .colXsOffset_1 {
 	margin-left: 8.333333333333332%;
+}
+
+.colXsOffset_0 {
+	margin-left: 0;
 }
 
 @media (min-width: 768px) {
@@ -1181,6 +1193,9 @@ pre code {
 	.colSmPull_1 {
 		right: 8.333333333333332%;
 	}
+	.colSmPull_0 {
+		right: 0;
+	}
 	.colSmPush_12 {
 		left: 100%;
 	}
@@ -1217,6 +1232,9 @@ pre code {
 	.colSmPush_1 {
 		left: 8.333333333333332%;
 	}
+	.colSmPush_0 {
+		left: 0;
+	}
 	.colSmOffset_12 {
 		margin-left: 100%;
 	}
@@ -1252,6 +1270,9 @@ pre code {
 	}
 	.colSmOffset_1 {
 		margin-left: 8.333333333333332%;
+	}
+	.colSmOffset_0 {
+		margin-left: 0;
 	}
 }
 
@@ -1344,6 +1365,9 @@ pre code {
 	.colMdPull_1 {
 		right: 8.333333333333332%;
 	}
+	.colMdPull_0 {
+		right: 0;
+	}
 	.colMdPush_12 {
 		left: 100%;
 	}
@@ -1380,6 +1404,9 @@ pre code {
 	.colMdPush_1 {
 		left: 8.333333333333332%;
 	}
+	.colMdPush_0 {
+		left: 0;
+	}
 	.colMdOffset_12 {
 		margin-left: 100%;
 	}
@@ -1415,6 +1442,9 @@ pre code {
 	}
 	.colMdOffset_1 {
 		margin-left: 8.333333333333332%;
+	}
+	.colMdOffset_0 {
+		margin-left: 0;
 	}
 }
 
@@ -1507,6 +1537,9 @@ pre code {
 	.colLgPull_1 {
 		right: 8.333333333333332%;
 	}
+	.colLgPull_0 {
+		right: 0;
+	}
 	.colLgPush_12 {
 		left: 100%;
 	}
@@ -1543,6 +1576,9 @@ pre code {
 	.colLgPush_1 {
 		left: 8.333333333333332%;
 	}
+	.colLgPush_0 {
+		left: 0;
+	}
 	.colLgOffset_12 {
 		margin-left: 100%;
 	}
@@ -1578,6 +1614,9 @@ pre code {
 	}
 	.colLgOffset_1 {
 		margin-left: 8.333333333333332%;
+	}
+	.colLgOffset_0 {
+		margin-left: 0;
 	}
 }
 
@@ -1882,22 +1921,6 @@ output {
 	vertical-align: middle;
 }
 
-.formControl:-moz-placeholder {
-	color: #999999;
-}
-
-.formControl::-moz-placeholder {
-	color: #999999;
-}
-
-.formControl:-ms-input-placeholder {
-	color: #999999;
-}
-
-.formControl::-webkit-input-placeholder {
-	color: #999999;
-}
-
 .formControl {
 	display: block;
 	width: 100%;
@@ -1930,6 +1953,22 @@ output {
 	box-shadow:
 		inset 0 1px 1px rgba(0, 0, 0, 0.075),
 		0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.formControl:-moz-placeholder {
+	color: #999999;
+}
+
+.formControl::-moz-placeholder {
+	color: #999999;
+}
+
+.formControl:-ms-input-placeholder {
+	color: #999999;
+}
+
+.formControl::-webkit-input-placeholder {
+	color: #999999;
 }
 
 .formControl[disabled],

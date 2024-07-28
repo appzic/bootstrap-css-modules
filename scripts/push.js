@@ -1,4 +1,4 @@
-import fs from "node:fs";
+import fs, { copyFileSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { rimrafSync } from "rimraf";
 import postcss from "postcss";
@@ -12,11 +12,11 @@ class Push {
 		this.ioFiles = [
 			{
 				src: `temp/bootstrap-${this.version}/dist/css/bootstrap.css`,
-				dist: `dist/bootstrap.module.css`,
+				dist: `dist/css/bootstrap.module.css`,
 			},
 			{
 				src: `temp/bootstrap-${this.version}/dist/css/bootstrap-theme.css`,
-				dist: `dist/bootstrap-theme.module.css`,
+				dist: `dist/css/bootstrap-theme.module.css`,
 			},
 		];
 	}
@@ -51,7 +51,8 @@ class Push {
 
 	run() {
 		rimrafSync("dist");
-		execSync("mkdir -p dist");
+		execSync("mkdir -p dist/css");
+		execSync(`cp -r temp/bootstrap-${this.version}/dist/fonts dist/fonts`);
 		this.mkCSSModules();
 		execSync("npm run typed-css");
 		execSync("npm run format");
