@@ -278,6 +278,7 @@ declare const styles: {
 	readonly embedResponsive_16by9: string;
 	readonly embedResponsive_4by3: string;
 	readonly fade: string;
+	readonly focus: string;
 	readonly formControl: string;
 	readonly formControlFeedback: string;
 	readonly formControlStatic: string;
@@ -336,6 +337,7 @@ declare const styles: {
 	readonly glyphiconEdit: string;
 	readonly glyphiconEject: string;
 	readonly glyphiconEnvelope: string;
+	readonly glyphiconEur: string;
 	readonly glyphiconEuro: string;
 	readonly glyphiconExclamationSign: string;
 	readonly glyphiconExpand: string;
@@ -547,9 +549,12 @@ declare const styles: {
 	readonly mark: string;
 	readonly media: string;
 	readonly mediaBody: string;
+	readonly mediaBottom: string;
 	readonly mediaHeading: string;
+	readonly mediaLeft: string;
 	readonly mediaList: string;
-	readonly mediaObject: string;
+	readonly mediaMiddle: string;
+	readonly mediaRight: string;
 	readonly modal: string;
 	readonly modalBackdrop: string;
 	readonly modalBody: string;

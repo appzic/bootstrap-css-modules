@@ -1,10 +1,10 @@
 /*!
- * Bootstrap v3.2.0 (http://getbootstrap.com)
+ * Bootstrap v3.3.0 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -22,6 +22,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -43,7 +44,7 @@ template {
 	display: none;
 }
 a {
-	background: transparent;
+	background-color: transparent;
 }
 a:active,
 a:hover {
@@ -187,8 +188,11 @@ td,
 th {
 	padding: 0;
 }
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
-	* {
+	*,
+	*:before,
+	*:after {
 		color: #000 !important;
 		text-shadow: none !important;
 		background: transparent !important;
@@ -205,8 +209,8 @@ th {
 	abbr[title]:after {
 		content: " (" attr(title) ")";
 	}
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after {
 		content: "";
 	}
 	pre,
@@ -241,10 +245,6 @@ th {
 	.navbar {
 		display: none;
 	}
-	.table td,
-	.table th {
-		background-color: #fff !important;
-	}
 	.btn > .caret,
 	.dropup > .btn > .caret {
 		border-top-color: #000 !important;
@@ -254,6 +254,10 @@ th {
 	}
 	.table {
 		border-collapse: collapse !important;
+	}
+	.table td,
+	.table th {
+		background-color: #fff !important;
 	}
 	.tableBordered th,
 	.tableBordered td {
@@ -290,7 +294,8 @@ th {
 .glyphiconPlus:before {
 	content: "\2b";
 }
-.glyphiconEuro:before {
+.glyphiconEuro:before,
+.glyphiconEur:before {
 	content: "\20ac";
 }
 .glyphiconMinus:before {
@@ -941,7 +946,6 @@ img {
 .carouselInner > .item > img,
 .carouselInner > .item > a > img {
 	display: block;
-	width: 100% \9;
 	max-width: 100%;
 	height: auto;
 }
@@ -950,7 +954,6 @@ img {
 }
 .imgThumbnail {
 	display: inline-block;
-	width: 100% \9;
 	max-width: 100%;
 	height: auto;
 	padding: 4px;
@@ -1122,9 +1125,6 @@ p {
 small,
 .small {
 	font-size: 85%;
-}
-cite {
-	font-style: normal;
 }
 mark,
 .mark {
@@ -1334,10 +1334,6 @@ blockquote.pullRight small:after,
 blockquote.pullRight .small:after {
 	content: "\00A0 \2014";
 }
-blockquote:before,
-blockquote:after {
-	content: "";
-}
 address {
 	margin-bottom: 20px;
 	font-style: normal;
@@ -1368,6 +1364,7 @@ kbd {
 kbd kbd {
 	padding: 0;
 	font-size: 100%;
+	font-weight: bold;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -2157,6 +2154,12 @@ pre code {
 table {
 	background-color: transparent;
 }
+caption {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: #777;
+	text-align: left;
+}
 th {
 	text-align: left;
 }
@@ -2217,12 +2220,10 @@ th {
 .tableBordered > thead > tr > td {
 	border-bottom-width: 2px;
 }
-.tableStriped > tbody > tr:nth-child(odd) > td,
-.tableStriped > tbody > tr:nth-child(odd) > th {
+.tableStriped > tbody > tr:nth-child(odd) {
 	background-color: #f9f9f9;
 }
-.tableHover > tbody > tr:hover > td,
-.tableHover > tbody > tr:hover > th {
+.tableHover > tbody > tr:hover {
 	background-color: #f5f5f5;
 }
 table col[class*="col-"] {
@@ -2341,13 +2342,15 @@ table th[class*="col-"] {
 .tableHover > tbody > tr.danger:hover > th {
 	background-color: #ebcccc;
 }
+.tableResponsive {
+	min-height: 0.01%;
+	overflow-x: auto;
+}
 @media screen and (max-width: 767px) {
 	.tableResponsive {
 		width: 100%;
 		margin-bottom: 15px;
-		overflow-x: auto;
 		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 		border: 1px solid #ddd;
 	}
@@ -2482,14 +2485,14 @@ output {
 		0 0 8px rgba(102, 175, 233, 0.6);
 }
 .formControl::-moz-placeholder {
-	color: #777;
+	color: #999;
 	opacity: 1;
 }
 .formControl:-ms-input-placeholder {
-	color: #777;
+	color: #999;
 }
 .formControl::-webkit-input-placeholder {
-	color: #777;
+	color: #999;
 }
 .formControl[disabled],
 .formControl[readonly],
@@ -2516,12 +2519,44 @@ input[type="time"].inputSm,
 input[type="datetime-local"].inputSm,
 input[type="month"].inputSm {
 	line-height: 30px;
+	line-height: 1.5 \0;
 }
 input[type="date"].inputLg,
 input[type="time"].inputLg,
 input[type="datetime-local"].inputLg,
 input[type="month"].inputLg {
 	line-height: 46px;
+	line-height: 1.33 \0;
+}
+_:-ms-fullscreen,
+:root input[type="date"],
+_:-ms-fullscreen,
+:root input[type="time"],
+_:-ms-fullscreen,
+:root input[type="datetime-local"],
+_:-ms-fullscreen,
+:root input[type="month"] {
+	line-height: 1.42857143;
+}
+_:-ms-fullscreen.inputSm,
+:root input[type="date"].inputSm,
+_:-ms-fullscreen.inputSm,
+:root input[type="time"].inputSm,
+_:-ms-fullscreen.inputSm,
+:root input[type="datetime-local"].inputSm,
+_:-ms-fullscreen.inputSm,
+:root input[type="month"].inputSm {
+	line-height: 1.5;
+}
+_:-ms-fullscreen.inputLg,
+:root input[type="date"].inputLg,
+_:-ms-fullscreen.inputLg,
+:root input[type="time"].inputLg,
+_:-ms-fullscreen.inputLg,
+:root input[type="datetime-local"].inputLg,
+_:-ms-fullscreen.inputLg,
+:root input[type="month"].inputLg {
+	line-height: 1.33;
 }
 .formGroup {
 	margin-bottom: 15px;
@@ -2530,12 +2565,12 @@ input[type="month"].inputLg {
 .checkbox {
 	position: relative;
 	display: block;
-	min-height: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 .radio label,
 .checkbox label {
+	min-height: 20px;
 	padding-left: 20px;
 	margin-bottom: 0;
 	font-weight: normal;
@@ -2598,35 +2633,41 @@ fieldset[disabled] .checkbox label {
 	padding-left: 0;
 }
 .inputSm,
-.formHorizontal .formGroupSm .formControl {
+.formGroupSm .formControl {
 	height: 30px;
 	padding: 5px 10px;
 	font-size: 12px;
 	line-height: 1.5;
 	border-radius: 3px;
 }
-select.inputSm {
+select.inputSm,
+select.formGroupSm .formControl {
 	height: 30px;
 	line-height: 30px;
 }
 textarea.inputSm,
-select[multiple].inputSm {
+textarea.formGroupSm .formControl,
+select[multiple].inputSm,
+select[multiple].formGroupSm .formControl {
 	height: auto;
 }
 .inputLg,
-.formHorizontal .formGroupLg .formControl {
+.formGroupLg .formControl {
 	height: 46px;
 	padding: 10px 16px;
 	font-size: 18px;
 	line-height: 1.33;
 	border-radius: 6px;
 }
-select.inputLg {
+select.inputLg,
+select.formGroupLg .formControl {
 	height: 46px;
 	line-height: 46px;
 }
 textarea.inputLg,
-select[multiple].inputLg {
+textarea.formGroupLg .formControl,
+select[multiple].inputLg,
+select[multiple].formGroupLg .formControl {
 	height: auto;
 }
 .hasFeedback {
@@ -2637,7 +2678,7 @@ select[multiple].inputLg {
 }
 .formControlFeedback {
 	position: absolute;
-	top: 25px;
+	top: 0;
 	right: 0;
 	z-index: 2;
 	display: block;
@@ -2645,6 +2686,7 @@ select[multiple].inputLg {
 	height: 34px;
 	line-height: 34px;
 	text-align: center;
+	pointer-events: none;
 }
 .inputLg + .formControlFeedback {
 	width: 46px;
@@ -2661,7 +2703,11 @@ select[multiple].inputLg {
 .hasSuccess .radio,
 .hasSuccess .checkbox,
 .hasSuccess .radioInline,
-.hasSuccess .checkboxInline {
+.hasSuccess .checkboxInline,
+.hasSuccess.radio label,
+.hasSuccess.checkbox label,
+.hasSuccess.radioInline label,
+.hasSuccess.checkboxInline label {
 	color: #3c763d;
 }
 .hasSuccess .formControl {
@@ -2691,7 +2737,11 @@ select[multiple].inputLg {
 .hasWarning .radio,
 .hasWarning .checkbox,
 .hasWarning .radioInline,
-.hasWarning .checkboxInline {
+.hasWarning .checkboxInline,
+.hasWarning.radio label,
+.hasWarning.checkbox label,
+.hasWarning.radioInline label,
+.hasWarning.checkboxInline label {
 	color: #8a6d3b;
 }
 .hasWarning .formControl {
@@ -2721,7 +2771,11 @@ select[multiple].inputLg {
 .hasError .radio,
 .hasError .checkbox,
 .hasError .radioInline,
-.hasError .checkboxInline {
+.hasError .checkboxInline,
+.hasError.radio label,
+.hasError.checkbox label,
+.hasError.radioInline label,
+.hasError.checkboxInline label {
 	color: #a94442;
 }
 .hasError .formControl {
@@ -2746,6 +2800,9 @@ select[multiple].inputLg {
 .hasError .formControlFeedback {
 	color: #a94442;
 }
+.hasFeedback label ~ .formControlFeedback {
+	top: 25px;
+}
 .hasFeedback label.srOnly ~ .formControlFeedback {
 	top: 0;
 }
@@ -2765,6 +2822,9 @@ select[multiple].inputLg {
 		display: inline-block;
 		width: auto;
 		vertical-align: middle;
+	}
+	.formInline .formControlStatic {
+		display: inline-block;
 	}
 	.formInline .inputGroup {
 		display: inline-table;
@@ -2826,7 +2886,6 @@ select[multiple].inputLg {
 	}
 }
 .formHorizontal .hasFeedback .formControlFeedback {
-	top: 0;
 	right: 15px;
 }
 @media (min-width: 768px) {
@@ -2849,6 +2908,8 @@ select[multiple].inputLg {
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
 	cursor: pointer;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -2860,13 +2921,17 @@ select[multiple].inputLg {
 }
 .btn:focus,
 .btn:active:focus,
-.btn.active:focus {
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
 	outline: thin dotted;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn.focus {
 	color: #333;
 	text-decoration: none;
 }
@@ -2894,6 +2959,7 @@ fieldset[disabled] .btn {
 }
 .btnDefault:hover,
 .btnDefault:focus,
+.btnDefault.focus,
 .btnDefault:active,
 .btnDefault.active,
 .open > .dropdownToggle.btnDefault {
@@ -2915,6 +2981,9 @@ fieldset[disabled] .btnDefault:hover,
 .btnDefault.disabled:focus,
 .btnDefault[disabled]:focus,
 fieldset[disabled] .btnDefault:focus,
+.btnDefault.disabled.focus,
+.btnDefault[disabled].focus,
+fieldset[disabled] .btnDefault.focus,
 .btnDefault.disabled:active,
 .btnDefault[disabled]:active,
 fieldset[disabled] .btnDefault:active,
@@ -2935,6 +3004,7 @@ fieldset[disabled] .btnDefault.active {
 }
 .btnPrimary:hover,
 .btnPrimary:focus,
+.btnPrimary.focus,
 .btnPrimary:active,
 .btnPrimary.active,
 .open > .dropdownToggle.btnPrimary {
@@ -2956,6 +3026,9 @@ fieldset[disabled] .btnPrimary:hover,
 .btnPrimary.disabled:focus,
 .btnPrimary[disabled]:focus,
 fieldset[disabled] .btnPrimary:focus,
+.btnPrimary.disabled.focus,
+.btnPrimary[disabled].focus,
+fieldset[disabled] .btnPrimary.focus,
 .btnPrimary.disabled:active,
 .btnPrimary[disabled]:active,
 fieldset[disabled] .btnPrimary:active,
@@ -2976,6 +3049,7 @@ fieldset[disabled] .btnPrimary.active {
 }
 .btnSuccess:hover,
 .btnSuccess:focus,
+.btnSuccess.focus,
 .btnSuccess:active,
 .btnSuccess.active,
 .open > .dropdownToggle.btnSuccess {
@@ -2997,6 +3071,9 @@ fieldset[disabled] .btnSuccess:hover,
 .btnSuccess.disabled:focus,
 .btnSuccess[disabled]:focus,
 fieldset[disabled] .btnSuccess:focus,
+.btnSuccess.disabled.focus,
+.btnSuccess[disabled].focus,
+fieldset[disabled] .btnSuccess.focus,
 .btnSuccess.disabled:active,
 .btnSuccess[disabled]:active,
 fieldset[disabled] .btnSuccess:active,
@@ -3017,6 +3094,7 @@ fieldset[disabled] .btnSuccess.active {
 }
 .btnInfo:hover,
 .btnInfo:focus,
+.btnInfo.focus,
 .btnInfo:active,
 .btnInfo.active,
 .open > .dropdownToggle.btnInfo {
@@ -3038,6 +3116,9 @@ fieldset[disabled] .btnInfo:hover,
 .btnInfo.disabled:focus,
 .btnInfo[disabled]:focus,
 fieldset[disabled] .btnInfo:focus,
+.btnInfo.disabled.focus,
+.btnInfo[disabled].focus,
+fieldset[disabled] .btnInfo.focus,
 .btnInfo.disabled:active,
 .btnInfo[disabled]:active,
 fieldset[disabled] .btnInfo:active,
@@ -3058,6 +3139,7 @@ fieldset[disabled] .btnInfo.active {
 }
 .btnWarning:hover,
 .btnWarning:focus,
+.btnWarning.focus,
 .btnWarning:active,
 .btnWarning.active,
 .open > .dropdownToggle.btnWarning {
@@ -3079,6 +3161,9 @@ fieldset[disabled] .btnWarning:hover,
 .btnWarning.disabled:focus,
 .btnWarning[disabled]:focus,
 fieldset[disabled] .btnWarning:focus,
+.btnWarning.disabled.focus,
+.btnWarning[disabled].focus,
+fieldset[disabled] .btnWarning.focus,
 .btnWarning.disabled:active,
 .btnWarning[disabled]:active,
 fieldset[disabled] .btnWarning:active,
@@ -3099,6 +3184,7 @@ fieldset[disabled] .btnWarning.active {
 }
 .btnDanger:hover,
 .btnDanger:focus,
+.btnDanger.focus,
 .btnDanger:active,
 .btnDanger.active,
 .open > .dropdownToggle.btnDanger {
@@ -3120,6 +3206,9 @@ fieldset[disabled] .btnDanger:hover,
 .btnDanger.disabled:focus,
 .btnDanger[disabled]:focus,
 fieldset[disabled] .btnDanger:focus,
+.btnDanger.disabled.focus,
+.btnDanger[disabled].focus,
+fieldset[disabled] .btnDanger.focus,
 .btnDanger.disabled:active,
 .btnDanger[disabled]:active,
 fieldset[disabled] .btnDanger:active,
@@ -3136,11 +3225,11 @@ fieldset[disabled] .btnDanger.active {
 .btnLink {
 	font-weight: normal;
 	color: #428bca;
-	cursor: pointer;
 	border-radius: 0;
 }
 .btnLink,
 .btnLink:active,
+.btnLink.active,
 .btnLink[disabled],
 fieldset[disabled] .btnLink {
 	background-color: transparent;
@@ -3210,9 +3299,11 @@ input[type="button"].btnBlock {
 }
 .collapse {
 	display: none;
+	visibility: hidden;
 }
 .collapse.in {
 	display: block;
+	visibility: visible;
 }
 tr.collapse.in {
 	display: table-row;
@@ -3224,9 +3315,15 @@ tbody.collapse.in {
 	position: relative;
 	height: 0;
 	overflow: hidden;
-	-webkit-transition: height 0.35s ease;
-	-o-transition: height 0.35s ease;
-	transition: height 0.35s ease;
+	-webkit-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.35s;
+	-o-transition-duration: 0.35s;
+	transition-duration: 0.35s;
+	-webkit-transition-property: height, visibility;
+	-o-transition-property: height, visibility;
+	transition-property: height, visibility;
 }
 .caret {
 	display: inline-block;
@@ -3532,12 +3629,13 @@ tbody.collapse.in {
 .btnGroupJustified > .btnGroup .dropdownMenu {
 	left: auto;
 }
-[data-toggle="buttons"] > .btn > input[type="radio"],
-[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+[data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btnGroup > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btnGroup > .btn input[type="checkbox"] {
 	position: absolute;
-	z-index: -1;
-	filter: alpha(opacity=0);
-	opacity: 0;
+	clip: rect(0, 0, 0, 0);
+	pointer-events: none;
 }
 .inputGroup {
 	position: relative;
@@ -3876,9 +3974,11 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 }
 .tabContent > .tabPane {
 	display: none;
+	visibility: hidden;
 }
 .tabContent > .active {
 	display: block;
+	visibility: visible;
 }
 .navTabs .dropdownMenu {
 	margin-top: -1px;
@@ -3925,6 +4025,7 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 		height: auto !important;
 		padding-bottom: 0;
 		overflow: visible !important;
+		visibility: visible !important;
 	}
 	.navbarCollapse.in {
 		overflow-y: visible;
@@ -3940,7 +4041,7 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 .navbarFixedBottom .navbarCollapse {
 	max-height: 340px;
 }
-@media (max-width: 480px) and (orientation: landscape) {
+@media (max-device-width: 480px) and (orientation: landscape) {
 	.navbarFixedTop .navbarCollapse,
 	.navbarFixedBottom .navbarCollapse {
 		max-height: 200px;
@@ -3977,9 +4078,6 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 	right: 0;
 	left: 0;
 	z-index: 1030;
-	-webkit-transform: translate3d(0, 0, 0);
-	-o-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
 }
 @media (min-width: 768px) {
 	.navbarFixedTop,
@@ -4006,6 +4104,9 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 .navbarBrand:hover,
 .navbarBrand:focus {
 	text-decoration: none;
+}
+.navbarBrand > img {
+	display: block;
 }
 @media (min-width: 768px) {
 	.navbar > .container .navbarBrand,
@@ -4085,17 +4186,6 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
-	.navbarNav.navbarRight:last-child {
-		margin-right: -15px;
-	}
-}
-@media (min-width: 768px) {
-	.navbarLeft {
-		float: left !important;
-	}
-	.navbarRight {
-		float: right !important;
-	}
 }
 .navbarForm {
 	padding: 10px 15px;
@@ -4122,6 +4212,9 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 		display: inline-block;
 		width: auto;
 		vertical-align: middle;
+	}
+	.navbarForm .formControlStatic {
+		display: inline-block;
 	}
 	.navbarForm .inputGroup {
 		display: inline-table;
@@ -4163,6 +4256,9 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 	.navbarForm .formGroup {
 		margin-bottom: 5px;
 	}
+	.navbarForm .formGroup:last-child {
+		margin-bottom: 0;
+	}
 }
 @media (min-width: 768px) {
 	.navbarForm {
@@ -4174,9 +4270,6 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 		border: 0;
 		-webkit-box-shadow: none;
 		box-shadow: none;
-	}
-	.navbarForm.navbarRight:last-child {
-		margin-right: -15px;
 	}
 }
 .navbarNav > li > .dropdownMenu {
@@ -4210,7 +4303,16 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 		margin-right: 15px;
 		margin-left: 15px;
 	}
-	.navbarText.navbarRight:last-child {
+}
+@media (min-width: 768px) {
+	.navbarLeft {
+		float: left !important;
+	}
+	.navbarRight {
+		float: right !important;
+		margin-right: -15px;
+	}
+	.navbarRight ~ .navbarRight {
 		margin-right: 0;
 	}
 }
@@ -4315,7 +4417,7 @@ fieldset[disabled] .navbarDefault .btnLink:focus {
 	border-color: #080808;
 }
 .navbarInverse .navbarBrand {
-	color: #777;
+	color: #9d9d9d;
 }
 .navbarInverse .navbarBrand:hover,
 .navbarInverse .navbarBrand:focus {
@@ -4323,10 +4425,10 @@ fieldset[disabled] .navbarDefault .btnLink:focus {
 	background-color: transparent;
 }
 .navbarInverse .navbarText {
-	color: #777;
+	color: #9d9d9d;
 }
 .navbarInverse .navbarNav > li > a {
-	color: #777;
+	color: #9d9d9d;
 }
 .navbarInverse .navbarNav > li > a:hover,
 .navbarInverse .navbarNav > li > a:focus {
@@ -4373,7 +4475,7 @@ fieldset[disabled] .navbarDefault .btnLink:focus {
 		background-color: #080808;
 	}
 	.navbarInverse .navbarNav .open .dropdownMenu > li > a {
-		color: #777;
+		color: #9d9d9d;
 	}
 	.navbarInverse .navbarNav .open .dropdownMenu > li > a:hover,
 	.navbarInverse .navbarNav .open .dropdownMenu > li > a:focus {
@@ -4394,13 +4496,13 @@ fieldset[disabled] .navbarDefault .btnLink:focus {
 	}
 }
 .navbarInverse .navbarLink {
-	color: #777;
+	color: #9d9d9d;
 }
 .navbarInverse .navbarLink:hover {
 	color: #fff;
 }
 .navbarInverse .btnLink {
-	color: #777;
+	color: #9d9d9d;
 }
 .navbarInverse .btnLink:hover,
 .navbarInverse .btnLink:focus {
@@ -4668,7 +4770,7 @@ a.listGroupItem.active > .badge,
 	margin-left: 3px;
 }
 .jumbotron {
-	padding: 30px;
+	padding: 30px 15px;
 	margin-bottom: 30px;
 	color: inherit;
 	background-color: #eee;
@@ -4685,7 +4787,8 @@ a.listGroupItem.active > .badge,
 .jumbotron > hr {
 	border-top-color: #d5d5d5;
 }
-.container .jumbotron {
+.container .jumbotron,
+.containerFluid .jumbotron {
 	border-radius: 6px;
 }
 .jumbotron .container {
@@ -4693,8 +4796,7 @@ a.listGroupItem.active > .badge,
 }
 @media screen and (min-width: 768px) {
 	.jumbotron {
-		padding-top: 48px;
-		padding-bottom: 48px;
+		padding: 48px 0;
 	}
 	.container .jumbotron {
 		padding-right: 60px;
@@ -4713,9 +4815,9 @@ a.listGroupItem.active > .badge,
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 4px;
-	-webkit-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	-webkit-transition: border 0.2s ease-in-out;
+	-o-transition: border 0.2s ease-in-out;
+	transition: border 0.2s ease-in-out;
 }
 .thumbnail > img,
 .thumbnail a > img {
@@ -4895,18 +4997,6 @@ a.thumbnail.active {
 	-o-animation: progress-bar-stripes 2s linear infinite;
 	animation: progress-bar-stripes 2s linear infinite;
 }
-.progressBar[aria-valuenow="1"],
-.progressBar[aria-valuenow="2"] {
-	min-width: 30px;
-}
-.progressBar[aria-valuenow="0"] {
-	min-width: 30px;
-	color: #777;
-	background-color: transparent;
-	background-image: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
 .progressBarSuccess {
 	background-color: #5cb85c;
 }
@@ -5047,29 +5137,35 @@ a.thumbnail.active {
 		transparent
 	);
 }
-.media,
-.mediaBody {
-	overflow: hidden;
-	zoom: 1;
-}
-.media,
-.media .media {
+.media {
 	margin-top: 15px;
 }
 .media:first-child {
 	margin-top: 0;
 }
-.mediaObject {
-	display: block;
+.mediaRight,
+.media > .pullRight {
+	padding-left: 10px;
+}
+.mediaLeft,
+.media > .pullLeft {
+	padding-right: 10px;
+}
+.mediaLeft,
+.mediaRight,
+.mediaBody {
+	display: table-cell;
+	vertical-align: top;
+}
+.mediaMiddle {
+	vertical-align: middle;
+}
+.mediaBottom {
+	vertical-align: bottom;
 }
 .mediaHeading {
-	margin: 0 0 5px;
-}
-.media > .pullLeft {
-	margin-right: 10px;
-}
-.media > .pullRight {
-	margin-left: 10px;
+	margin-top: 0;
+	margin-bottom: 5px;
 }
 .mediaList {
 	padding-left: 0;
@@ -5118,6 +5214,7 @@ a.listGroupItem:focus {
 .listGroupItem.disabled:hover,
 .listGroupItem.disabled:focus {
 	color: #777;
+	cursor: not-allowed;
 	background-color: #eee;
 }
 .listGroupItem.disabled .listGroupItemHeading,
@@ -5286,19 +5383,23 @@ a.listGroupItemDanger.active:focus {
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
 }
-.panel > .listGroup {
+.panel > .listGroup,
+.panel > .panelCollapse > .listGroup {
 	margin-bottom: 0;
 }
-.panel > .listGroup .listGroupItem {
+.panel > .listGroup .listGroupItem,
+.panel > .panelCollapse > .listGroup .listGroupItem {
 	border-width: 1px 0;
 	border-radius: 0;
 }
-.panel > .listGroup:first-child .listGroupItem:first-child {
+.panel > .listGroup:first-child .listGroupItem:first-child,
+.panel > .panelCollapse > .listGroup:first-child .listGroupItem:first-child {
 	border-top: 0;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
-.panel > .listGroup:last-child .listGroupItem:last-child {
+.panel > .listGroup:last-child .listGroupItem:last-child,
+.panel > .panelCollapse > .listGroup:last-child .listGroupItem:last-child {
 	border-bottom: 0;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
@@ -5314,8 +5415,29 @@ a.listGroupItemDanger.active:focus {
 .panel > .panelCollapse > .table {
 	margin-bottom: 0;
 }
+.panel > .table caption,
+.panel > .tableResponsive > .table caption,
+.panel > .panelCollapse > .table caption {
+	padding-right: 15px;
+	padding-left: 15px;
+}
 .panel > .table:first-child,
 .panel > .tableResponsive:first-child > .table:first-child {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.panel > .table:first-child > thead:first-child > tr:first-child,
+.panel
+	> .tableResponsive:first-child
+	> .table:first-child
+	> thead:first-child
+	> tr:first-child,
+.panel > .table:first-child > tbody:first-child > tr:first-child,
+.panel
+	> .tableResponsive:first-child
+	> .table:first-child
+	> tbody:first-child
+	> tr:first-child {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
@@ -5384,6 +5506,21 @@ a.listGroupItemDanger.active:focus {
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
 }
+.panel > .table:last-child > tbody:last-child > tr:last-child,
+.panel
+	> .tableResponsive:last-child
+	> .table:last-child
+	> tbody:last-child
+	> tr:last-child,
+.panel > .table:last-child > tfoot:last-child > tr:last-child,
+.panel
+	> .tableResponsive:last-child
+	> .table:last-child
+	> tfoot:last-child
+	> tr:last-child {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
 .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel
 	> .tableResponsive:last-child
@@ -5445,7 +5582,9 @@ a.listGroupItemDanger.active:focus {
 	border-bottom-right-radius: 3px;
 }
 .panel > .panelBody + .table,
-.panel > .panelBody + .tableResponsive {
+.panel > .panelBody + .tableResponsive,
+.panel > .table + .panelBody,
+.panel > .tableResponsive + .panelBody {
 	border-top: 1px solid #ddd;
 }
 .panel > .table > tbody:first-child > tr:first-child th,
@@ -5521,7 +5660,8 @@ a.listGroupItemDanger.active:focus {
 .panelGroup .panelHeading {
 	border-bottom: 0;
 }
-.panelGroup .panelHeading + .panelCollapse > .panelBody {
+.panelGroup .panelHeading + .panelCollapse > .panelBody,
+.panelGroup .panelHeading + .panelCollapse > .listGroup {
 	border-top: 1px solid #ddd;
 }
 .panelGroup .panelFooter {
@@ -5648,7 +5788,8 @@ a.listGroupItemDanger.active:focus {
 .embedResponsive .embedResponsiveItem,
 .embedResponsive iframe,
 .embedResponsive embed,
-.embedResponsive object {
+.embedResponsive object,
+.embedResponsive video {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -5719,7 +5860,7 @@ button.close {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 1050;
+	z-index: 1040;
 	display: none;
 	overflow: hidden;
 	-webkit-overflow-scrolling: touch;
@@ -5729,14 +5870,16 @@ button.close {
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	-o-transition: -o-transform 0.3s ease-out;
 	transition: transform 0.3s ease-out;
-	-webkit-transform: translate3d(0, -25%, 0);
-	-o-transform: translate3d(0, -25%, 0);
-	transform: translate3d(0, -25%, 0);
+	-webkit-transform: translate(0, -25%);
+	-ms-transform: translate(0, -25%);
+	-o-transform: translate(0, -25%);
+	transform: translate(0, -25%);
 }
 .modal.in .modalDialog {
-	-webkit-transform: translate3d(0, 0, 0);
-	-o-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
 }
 .modalOpen .modal {
 	overflow-x: hidden;
@@ -5765,7 +5908,6 @@ button.close {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 1040;
 	background-color: #000;
 }
 .modalBackdrop.fade {
@@ -5938,6 +6080,9 @@ button.close {
 	display: none;
 	max-width: 276px;
 	padding: 1px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
 	text-align: left;
 	white-space: normal;
 	background-color: #fff;
@@ -5965,8 +6110,6 @@ button.close {
 	padding: 8px 14px;
 	margin: 0;
 	font-size: 14px;
-	font-weight: normal;
-	line-height: 18px;
 	background-color: #f7f7f7;
 	border-bottom: 1px solid #ebebeb;
 	border-radius: 5px 5px 0 0;
@@ -6068,6 +6211,37 @@ button.close {
 .carouselInner > .item > img,
 .carouselInner > .item > a > img {
 	line-height: 1;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+	.carouselInner > .item {
+		-webkit-transition: -webkit-transform 0.6s ease-in-out;
+		-o-transition: -o-transform 0.6s ease-in-out;
+		transition: transform 0.6s ease-in-out;
+
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		perspective: 1000;
+	}
+	.carouselInner > .item.next,
+	.carouselInner > .item.active.right {
+		left: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+	.carouselInner > .item.prev,
+	.carouselInner > .item.active.left {
+		left: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+	.carouselInner > .item.next.left,
+	.carouselInner > .item.prev.right,
+	.carouselInner > .item.active {
+		left: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
 }
 .carouselInner > .active,
 .carouselInner > .next,
@@ -6360,9 +6534,6 @@ button.close {
 }
 .affix {
 	position: fixed;
-	-webkit-transform: translate3d(0, 0, 0);
-	-o-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
 }
 @-ms-viewport {
 	width: device-width;

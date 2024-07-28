@@ -5,6 +5,7 @@ declare const styles: {
 	readonly alertInfo: string;
 	readonly alertSuccess: string;
 	readonly alertWarning: string;
+	readonly badge: string;
 	readonly btn: string;
 	readonly btnDanger: string;
 	readonly btnDefault: string;
@@ -23,6 +24,7 @@ declare const styles: {
 	readonly navbarInverse: string;
 	readonly navbarNav: string;
 	readonly navbarStaticTop: string;
+	readonly open: string;
 	readonly panel: string;
 	readonly panelDanger: string;
 	readonly panelDefault: string;
