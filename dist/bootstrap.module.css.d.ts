@@ -1,4 +1,5 @@
 declare const styles: {
+	readonly accordion: string;
 	readonly accordionBody: string;
 	readonly accordionButton: string;
 	readonly accordionCollapse: string;
@@ -156,6 +157,11 @@ declare const styles: {
 	readonly borderEnd_0: string;
 	readonly borderInfo: string;
 	readonly borderLight: string;
+	readonly borderOpacity_10: string;
+	readonly borderOpacity_100: string;
+	readonly borderOpacity_25: string;
+	readonly borderOpacity_50: string;
+	readonly borderOpacity_75: string;
 	readonly borderPrimary: string;
 	readonly borderSecondary: string;
 	readonly borderStart: string;
@@ -422,6 +428,7 @@ declare const styles: {
 	readonly display_5: string;
 	readonly display_6: string;
 	readonly dropdown: string;
+	readonly dropdownCenter: string;
 	readonly dropdownDivider: string;
 	readonly dropdownHeader: string;
 	readonly dropdownItem: string;
@@ -445,6 +452,7 @@ declare const styles: {
 	readonly dropend: string;
 	readonly dropstart: string;
 	readonly dropup: string;
+	readonly dropupCenter: string;
 	readonly end_0: string;
 	readonly end_100: string;
 	readonly end_50: string;
@@ -549,6 +557,7 @@ declare const styles: {
 	readonly formCheckInline: string;
 	readonly formCheckInput: string;
 	readonly formCheckLabel: string;
+	readonly formCheckReverse: string;
 	readonly formControl: string;
 	readonly formControlColor: string;
 	readonly formControlLg: string;
@@ -575,6 +584,7 @@ declare const styles: {
 	readonly fwLight: string;
 	readonly fwLighter: string;
 	readonly fwNormal: string;
+	readonly fwSemibold: string;
 	readonly gLg_0: string;
 	readonly gLg_1: string;
 	readonly gLg_2: string;
@@ -731,6 +741,7 @@ declare const styles: {
 	readonly h_50: string;
 	readonly h_75: string;
 	readonly hasValidation: string;
+	readonly hiding: string;
 	readonly hstack: string;
 	readonly imgFluid: string;
 	readonly imgThumbnail: string;
@@ -1151,7 +1162,6 @@ declare const styles: {
 	readonly navbarExpandSm: string;
 	readonly navbarExpandXl: string;
 	readonly navbarExpandXxl: string;
-	readonly navbarLight: string;
 	readonly navbarNav: string;
 	readonly navbarNavScroll: string;
 	readonly navbarText: string;
@@ -1163,9 +1173,14 @@ declare const styles: {
 	readonly offcanvasBottom: string;
 	readonly offcanvasEnd: string;
 	readonly offcanvasHeader: string;
+	readonly offcanvasLg: string;
+	readonly offcanvasMd: string;
+	readonly offcanvasSm: string;
 	readonly offcanvasStart: string;
 	readonly offcanvasTitle: string;
 	readonly offcanvasTop: string;
+	readonly offcanvasXl: string;
+	readonly offcanvasXxl: string;
 	readonly offsetLg_0: string;
 	readonly offsetLg_1: string;
 	readonly offsetLg_10: string;
@@ -1592,6 +1607,8 @@ declare const styles: {
 	readonly rounded_1: string;
 	readonly rounded_2: string;
 	readonly rounded_3: string;
+	readonly rounded_4: string;
+	readonly rounded_5: string;
 	readonly row: string;
 	readonly rowColsAuto: string;
 	readonly rowColsLgAuto: string;
@@ -1651,11 +1668,17 @@ declare const styles: {
 	readonly start_0: string;
 	readonly start_100: string;
 	readonly start_50: string;
+	readonly stickyBottom: string;
+	readonly stickyLgBottom: string;
 	readonly stickyLgTop: string;
+	readonly stickyMdBottom: string;
 	readonly stickyMdTop: string;
+	readonly stickySmBottom: string;
 	readonly stickySmTop: string;
 	readonly stickyTop: string;
+	readonly stickyXlBottom: string;
 	readonly stickyXlTop: string;
+	readonly stickyXxlBottom: string;
 	readonly stickyXxlTop: string;
 	readonly stretchedLink: string;
 	readonly tabContent: string;
@@ -1666,6 +1689,7 @@ declare const styles: {
 	readonly tableBorderless: string;
 	readonly tableDanger: string;
 	readonly tableDark: string;
+	readonly tableGroupDivider: string;
 	readonly tableHover: string;
 	readonly tableInfo: string;
 	readonly tableLight: string;
@@ -1679,8 +1703,17 @@ declare const styles: {
 	readonly tableSecondary: string;
 	readonly tableSm: string;
 	readonly tableStriped: string;
+	readonly tableStripedColumns: string;
 	readonly tableSuccess: string;
 	readonly tableWarning: string;
+	readonly textBgDanger: string;
+	readonly textBgDark: string;
+	readonly textBgInfo: string;
+	readonly textBgLight: string;
+	readonly textBgPrimary: string;
+	readonly textBgSecondary: string;
+	readonly textBgSuccess: string;
+	readonly textBgWarning: string;
 	readonly textBlack: string;
 	readonly textBlack_50: string;
 	readonly textBody: string;
