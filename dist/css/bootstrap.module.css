@@ -1,6 +1,6 @@
 /*!
- * Bootstrap v3.3.1 (http://getbootstrap.com)
- * Copyright 2011-2014 Twitter, Inc.
+ * Bootstrap v3.3.2 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
@@ -271,6 +271,7 @@ th {
 	src:
 		url("../fonts/glyphicons-halflings-regular.eot?#iefix")
 			format("embedded-opentype"),
+		url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"),
 		url("../fonts/glyphicons-halflings-regular.woff") format("woff"),
 		url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"),
 		url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")
@@ -888,6 +889,180 @@ th {
 }
 .glyphiconTreeDeciduous:before {
 	content: "\e200";
+}
+.glyphiconCd:before {
+	content: "\e201";
+}
+.glyphiconSaveFile:before {
+	content: "\e202";
+}
+.glyphiconOpenFile:before {
+	content: "\e203";
+}
+.glyphiconLevelUp:before {
+	content: "\e204";
+}
+.glyphiconCopy:before {
+	content: "\e205";
+}
+.glyphiconPaste:before {
+	content: "\e206";
+}
+.glyphiconAlert:before {
+	content: "\e209";
+}
+.glyphiconEqualizer:before {
+	content: "\e210";
+}
+.glyphiconKing:before {
+	content: "\e211";
+}
+.glyphiconQueen:before {
+	content: "\e212";
+}
+.glyphiconPawn:before {
+	content: "\e213";
+}
+.glyphiconBishop:before {
+	content: "\e214";
+}
+.glyphiconKnight:before {
+	content: "\e215";
+}
+.glyphiconBabyFormula:before {
+	content: "\e216";
+}
+.glyphiconTent:before {
+	content: "\26fa";
+}
+.glyphiconBlackboard:before {
+	content: "\e218";
+}
+.glyphiconBed:before {
+	content: "\e219";
+}
+.glyphiconApple:before {
+	content: "\f8ff";
+}
+.glyphiconErase:before {
+	content: "\e221";
+}
+.glyphiconHourglass:before {
+	content: "\231b";
+}
+.glyphiconLamp:before {
+	content: "\e223";
+}
+.glyphiconDuplicate:before {
+	content: "\e224";
+}
+.glyphiconPiggyBank:before {
+	content: "\e225";
+}
+.glyphiconScissors:before {
+	content: "\e226";
+}
+.glyphiconBitcoin:before {
+	content: "\e227";
+}
+.glyphiconYen:before {
+	content: "\00a5";
+}
+.glyphiconRuble:before {
+	content: "\20bd";
+}
+.glyphiconScale:before {
+	content: "\e230";
+}
+.glyphiconIceLolly:before {
+	content: "\e231";
+}
+.glyphiconIceLollyTasted:before {
+	content: "\e232";
+}
+.glyphiconEducation:before {
+	content: "\e233";
+}
+.glyphiconOptionHorizontal:before {
+	content: "\e234";
+}
+.glyphiconOptionVertical:before {
+	content: "\e235";
+}
+.glyphiconMenuHamburger:before {
+	content: "\e236";
+}
+.glyphiconModalWindow:before {
+	content: "\e237";
+}
+.glyphiconOil:before {
+	content: "\e238";
+}
+.glyphiconGrain:before {
+	content: "\e239";
+}
+.glyphiconSunglasses:before {
+	content: "\e240";
+}
+.glyphiconTextSize:before {
+	content: "\e241";
+}
+.glyphiconTextColor:before {
+	content: "\e242";
+}
+.glyphiconTextBackground:before {
+	content: "\e243";
+}
+.glyphiconObjectAlignTop:before {
+	content: "\e244";
+}
+.glyphiconObjectAlignBottom:before {
+	content: "\e245";
+}
+.glyphiconObjectAlignHorizontal:before {
+	content: "\e246";
+}
+.glyphiconObjectAlignLeft:before {
+	content: "\e247";
+}
+.glyphiconObjectAlignVertical:before {
+	content: "\e248";
+}
+.glyphiconObjectAlignRight:before {
+	content: "\e249";
+}
+.glyphiconTriangleRight:before {
+	content: "\e250";
+}
+.glyphiconTriangleLeft:before {
+	content: "\e251";
+}
+.glyphiconTriangleBottom:before {
+	content: "\e252";
+}
+.glyphiconTriangleTop:before {
+	content: "\e253";
+}
+.glyphiconConsole:before {
+	content: "\e254";
+}
+.glyphiconSuperscript:before {
+	content: "\e255";
+}
+.glyphiconSubscript:before {
+	content: "\e256";
+}
+.glyphiconMenuLeft:before {
+	content: "\e257";
+}
+.glyphiconMenuRight:before {
+	content: "\e258";
+}
+.glyphiconMenuDown:before {
+	content: "\e259";
+}
+.glyphiconMenuUp:before {
+	content: "\e260";
 }
 * {
 	-webkit-box-sizing: border-box;
@@ -2220,7 +2395,7 @@ th {
 .tableBordered > thead > tr > td {
 	border-bottom-width: 2px;
 }
-.tableStriped > tbody > tr:nth-child(odd) {
+.tableStriped > tbody > tr:nth-of-type(odd) {
 	background-color: #f9f9f9;
 }
 .tableHover > tbody > tr:hover {
@@ -2517,13 +2692,21 @@ input[type="search"] {
 	input[type="date"].inputSm,
 	input[type="time"].inputSm,
 	input[type="datetime-local"].inputSm,
-	input[type="month"].inputSm {
+	input[type="month"].inputSm,
+	.inputGroupSm input[type="date"],
+	.inputGroupSm input[type="time"],
+	.inputGroupSm input[type="datetime-local"],
+	.inputGroupSm input[type="month"] {
 		line-height: 30px;
 	}
 	input[type="date"].inputLg,
 	input[type="time"].inputLg,
 	input[type="datetime-local"].inputLg,
-	input[type="month"].inputLg {
+	input[type="month"].inputLg,
+	.inputGroupLg input[type="date"],
+	.inputGroupLg input[type="time"],
+	.inputGroupLg input[type="datetime-local"],
+	.inputGroupLg input[type="month"] {
 		line-height: 46px;
 	}
 }
@@ -2601,7 +2784,21 @@ fieldset[disabled] .checkbox label {
 	padding-right: 0;
 	padding-left: 0;
 }
-.inputSm,
+.inputSm {
+	height: 30px;
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+select.inputSm {
+	height: 30px;
+	line-height: 30px;
+}
+textarea.inputSm,
+select[multiple].inputSm {
+	height: auto;
+}
 .formGroupSm .formControl {
 	height: 30px;
 	padding: 5px 10px;
@@ -2609,35 +2806,55 @@ fieldset[disabled] .checkbox label {
 	line-height: 1.5;
 	border-radius: 3px;
 }
-select.inputSm,
 select.formGroupSm .formControl {
 	height: 30px;
 	line-height: 30px;
 }
-textarea.inputSm,
 textarea.formGroupSm .formControl,
-select[multiple].inputSm,
 select[multiple].formGroupSm .formControl {
 	height: auto;
 }
-.inputLg,
-.formGroupLg .formControl {
+.formGroupSm .formControlStatic {
+	height: 30px;
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+}
+.inputLg {
 	height: 46px;
 	padding: 10px 16px;
 	font-size: 18px;
-	line-height: 1.33;
+	line-height: 1.3333333;
 	border-radius: 6px;
 }
-select.inputLg,
-select.formGroupLg .formControl {
+select.inputLg {
 	height: 46px;
 	line-height: 46px;
 }
 textarea.inputLg,
+select[multiple].inputLg {
+	height: auto;
+}
+.formGroupLg .formControl {
+	height: 46px;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.3333333;
+	border-radius: 6px;
+}
+select.formGroupLg .formControl {
+	height: 46px;
+	line-height: 46px;
+}
 textarea.formGroupLg .formControl,
-select[multiple].inputLg,
 select[multiple].formGroupLg .formControl {
 	height: auto;
+}
+.formGroupLg .formControlStatic {
+	height: 46px;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.3333333;
 }
 .hasFeedback {
 	position: relative;
@@ -2859,7 +3076,7 @@ select[multiple].formGroupLg .formControl {
 }
 @media (min-width: 768px) {
 	.formHorizontal .formGroupLg .controlLabel {
-		padding-top: 14.3px;
+		padding-top: 14.333333px;
 	}
 }
 @media (min-width: 768px) {
@@ -3228,7 +3445,7 @@ fieldset[disabled] .btnLink:focus {
 .btnGroupLg > .btn {
 	padding: 10px 16px;
 	font-size: 18px;
-	line-height: 1.33;
+	line-height: 1.3333333;
 	border-radius: 6px;
 }
 .btnSm,
@@ -3304,6 +3521,7 @@ tbody.collapse.in {
 	border-right: 4px solid transparent;
 	border-left: 4px solid transparent;
 }
+.dropup,
 .dropdown {
 	position: relative;
 }
@@ -3422,7 +3640,7 @@ tbody.collapse.in {
 .navbarFixedBottom .dropdown .dropdownMenu {
 	top: auto;
 	bottom: 100%;
-	margin-bottom: 1px;
+	margin-bottom: 2px;
 }
 @media (min-width: 768px) {
 	.navbarRight .dropdownMenu {
@@ -3494,12 +3712,12 @@ tbody.collapse.in {
 .btnGroup > .btnGroup:not(:first-child):not(:last-child) > .btn {
 	border-radius: 0;
 }
-.btnGroup > .btnGroup:first-child > .btn:last-child,
-.btnGroup > .btnGroup:first-child > .dropdownToggle {
+.btnGroup > .btnGroup:first-child:not(:last-child) > .btn:last-child,
+.btnGroup > .btnGroup:first-child:not(:last-child) > .dropdownToggle {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
-.btnGroup > .btnGroup:last-child > .btn:first-child {
+.btnGroup > .btnGroup:last-child:not(:first-child) > .btn:first-child {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
@@ -3625,7 +3843,7 @@ tbody.collapse.in {
 	height: 46px;
 	padding: 10px 16px;
 	font-size: 18px;
-	line-height: 1.33;
+	line-height: 1.3333333;
 	border-radius: 6px;
 }
 select.inputGroupLg > .formControl,
@@ -4243,6 +4461,7 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 	border-top-right-radius: 0;
 }
 .navbarFixedBottom .navbarNav > li > .dropdownMenu {
+	margin-bottom: 0;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 0;
@@ -5117,6 +5336,17 @@ a.thumbnail.active {
 .media:first-child {
 	margin-top: 0;
 }
+.media,
+.mediaBody {
+	overflow: hidden;
+	zoom: 1;
+}
+.mediaBody {
+	width: 10000px;
+}
+.mediaObject {
+	display: block;
+}
 .mediaRight,
 .media > .pullRight {
 	padding-left: 10px;
@@ -5341,7 +5571,11 @@ a.listGroupItemDanger.active:focus {
 	font-size: 16px;
 	color: inherit;
 }
-.panelTitle > a {
+.panelTitle > a,
+.panelTitle > small,
+.panelTitle > .small,
+.panelTitle > small > a,
+.panelTitle > .small > a {
 	color: inherit;
 }
 .panelFooter {
@@ -6347,6 +6581,7 @@ button.close {
 	height: 20px;
 	margin-top: -10px;
 	font-family: serif;
+	line-height: 1;
 }
 .carouselControl .iconPrev:before {
 	content: "\2039";
