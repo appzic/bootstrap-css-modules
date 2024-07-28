@@ -15,6 +15,7 @@ declare const styles: {
 	readonly btnWarning: string;
 	readonly disabled: string;
 	readonly dropdownMenu: string;
+	readonly focus: string;
 	readonly imgThumbnail: string;
 	readonly listGroup: string;
 	readonly listGroupItem: string;
