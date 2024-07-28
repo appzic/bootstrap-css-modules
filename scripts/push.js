@@ -46,6 +46,7 @@ class Push {
 	}
 
 	run() {
+		rimrafSync("dist");
 		execSync("mkdir -p dist");
 		this.mkCSSModules();
 		execSync("npm run typed-css");
