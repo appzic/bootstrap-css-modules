@@ -1549,5 +1549,6 @@ declare const styles: {
 	readonly w_50: string;
 	readonly w_75: string;
 	readonly wasValidated: string;
+	readonly width: string;
 };
 export = styles;
