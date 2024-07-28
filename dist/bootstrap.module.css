@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.4.0 (https://getbootstrap.com/)
+ * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2330,7 +2330,8 @@ textarea.formControl {
 	margin-left: -1.25rem;
 }
 
-.formCheckInput[disabled] ~ .formCheckLabel {
+.formCheckInput[disabled] ~ .formCheckLabel,
+.formCheckInput:disabled ~ .formCheckLabel {
 	color: #6c757d;
 }
 
@@ -4052,11 +4053,13 @@ input[type="button"].btnBlock {
 	border-color: #b3d7ff;
 }
 
-.customControlInput[disabled] ~ .customControlLabel {
+.customControlInput[disabled] ~ .customControlLabel,
+.customControlInput:disabled ~ .customControlLabel {
 	color: #6c757d;
 }
 
-.customControlInput[disabled] ~ .customControlLabel::before {
+.customControlInput[disabled] ~ .customControlLabel::before,
+.customControlInput:disabled ~ .customControlLabel::before {
 	background-color: #e9ecef;
 }
 
@@ -4279,7 +4282,8 @@ input[type="button"].btnBlock {
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.customFileInput[disabled] ~ .customFileLabel {
+.customFileInput[disabled] ~ .customFileLabel,
+.customFileInput:disabled ~ .customFileLabel {
 	background-color: #e9ecef;
 }
 
