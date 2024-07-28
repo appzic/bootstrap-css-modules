@@ -127,12 +127,18 @@ declare const styles: {
 	readonly alignTextTop: string;
 	readonly alignTop: string;
 	readonly badge: string;
+	readonly bgBlack: string;
 	readonly bgBody: string;
 	readonly bgDanger: string;
 	readonly bgDark: string;
 	readonly bgGradient: string;
 	readonly bgInfo: string;
 	readonly bgLight: string;
+	readonly bgOpacity_10: string;
+	readonly bgOpacity_100: string;
+	readonly bgOpacity_25: string;
+	readonly bgOpacity_50: string;
+	readonly bgOpacity_75: string;
 	readonly bgPrimary: string;
 	readonly bgSecondary: string;
 	readonly bgSuccess: string;
@@ -328,6 +334,7 @@ declare const styles: {
 	readonly col_8: string;
 	readonly col_9: string;
 	readonly collapse: string;
+	readonly collapseHorizontal: string;
 	readonly collapsed: string;
 	readonly collapsing: string;
 	readonly container: string;
@@ -724,7 +731,7 @@ declare const styles: {
 	readonly h_50: string;
 	readonly h_75: string;
 	readonly hasValidation: string;
-	readonly hide: string;
+	readonly hstack: string;
 	readonly imgFluid: string;
 	readonly imgThumbnail: string;
 	readonly initialism: string;
@@ -1151,6 +1158,7 @@ declare const styles: {
 	readonly navbarToggler: string;
 	readonly navbarTogglerIcon: string;
 	readonly offcanvas: string;
+	readonly offcanvasBackdrop: string;
 	readonly offcanvasBody: string;
 	readonly offcanvasBottom: string;
 	readonly offcanvasEnd: string;
@@ -1229,6 +1237,11 @@ declare const styles: {
 	readonly offset_7: string;
 	readonly offset_8: string;
 	readonly offset_9: string;
+	readonly opacity_0: string;
+	readonly opacity_100: string;
+	readonly opacity_25: string;
+	readonly opacity_50: string;
+	readonly opacity_75: string;
 	readonly orderFirst: string;
 	readonly orderLast: string;
 	readonly orderLgFirst: string;
@@ -1396,6 +1409,14 @@ declare const styles: {
 	readonly pe_3: string;
 	readonly pe_4: string;
 	readonly pe_5: string;
+	readonly placeholder: string;
+	readonly "placeholder-glow": string;
+	readonly "placeholder-wave": string;
+	readonly placeholderGlow: string;
+	readonly placeholderLg: string;
+	readonly placeholderSm: string;
+	readonly placeholderWave: string;
+	readonly placeholderXs: string;
 	readonly pointerEvent: string;
 	readonly popover: string;
 	readonly popoverArrow: string;
@@ -1660,6 +1681,7 @@ declare const styles: {
 	readonly tableStriped: string;
 	readonly tableSuccess: string;
 	readonly tableWarning: string;
+	readonly textBlack: string;
 	readonly textBlack_50: string;
 	readonly textBody: string;
 	readonly textBreak: string;
@@ -1682,6 +1704,10 @@ declare const styles: {
 	readonly textMdStart: string;
 	readonly textMuted: string;
 	readonly textNowrap: string;
+	readonly textOpacity_100: string;
+	readonly textOpacity_25: string;
+	readonly textOpacity_50: string;
+	readonly textOpacity_75: string;
 	readonly textPrimary: string;
 	readonly textReset: string;
 	readonly textSecondary: string;
@@ -1724,6 +1750,8 @@ declare const styles: {
 	readonly visible: string;
 	readonly visuallyHidden: string;
 	readonly visuallyHiddenFocusable: string;
+	readonly vr: string;
+	readonly vstack: string;
 	readonly vw_100: string;
 	readonly wAuto: string;
 	readonly w_100: string;

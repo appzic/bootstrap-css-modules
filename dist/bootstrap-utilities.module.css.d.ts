@@ -107,12 +107,18 @@ declare const styles: {
 	readonly alignTextBottom: string;
 	readonly alignTextTop: string;
 	readonly alignTop: string;
+	readonly bgBlack: string;
 	readonly bgBody: string;
 	readonly bgDanger: string;
 	readonly bgDark: string;
 	readonly bgGradient: string;
 	readonly bgInfo: string;
 	readonly bgLight: string;
+	readonly bgOpacity_10: string;
+	readonly bgOpacity_100: string;
+	readonly bgOpacity_25: string;
+	readonly bgOpacity_50: string;
+	readonly bgOpacity_75: string;
 	readonly bgPrimary: string;
 	readonly bgSecondary: string;
 	readonly bgSuccess: string;
@@ -367,6 +373,7 @@ declare const styles: {
 	readonly h_25: string;
 	readonly h_50: string;
 	readonly h_75: string;
+	readonly hstack: string;
 	readonly invisible: string;
 	readonly justifyContentAround: string;
 	readonly justifyContentBetween: string;
@@ -714,6 +721,11 @@ declare const styles: {
 	readonly my_3: string;
 	readonly my_4: string;
 	readonly my_5: string;
+	readonly opacity_0: string;
+	readonly opacity_100: string;
+	readonly opacity_25: string;
+	readonly opacity_50: string;
+	readonly opacity_75: string;
 	readonly orderFirst: string;
 	readonly orderLast: string;
 	readonly orderLgFirst: string;
@@ -1055,6 +1067,7 @@ declare const styles: {
 	readonly stickyXlTop: string;
 	readonly stickyXxlTop: string;
 	readonly stretchedLink: string;
+	readonly textBlack: string;
 	readonly textBlack_50: string;
 	readonly textBody: string;
 	readonly textBreak: string;
@@ -1077,6 +1090,10 @@ declare const styles: {
 	readonly textMdStart: string;
 	readonly textMuted: string;
 	readonly textNowrap: string;
+	readonly textOpacity_100: string;
+	readonly textOpacity_25: string;
+	readonly textOpacity_50: string;
+	readonly textOpacity_75: string;
 	readonly textPrimary: string;
 	readonly textReset: string;
 	readonly textSecondary: string;
@@ -1110,6 +1127,8 @@ declare const styles: {
 	readonly visible: string;
 	readonly visuallyHidden: string;
 	readonly visuallyHiddenFocusable: string;
+	readonly vr: string;
+	readonly vstack: string;
 	readonly vw_100: string;
 	readonly wAuto: string;
 	readonly w_100: string;
