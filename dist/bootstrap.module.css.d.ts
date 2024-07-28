@@ -84,8 +84,6 @@ declare const styles: {
 	readonly carouselIndicators: string;
 	readonly carouselInner: string;
 	readonly carouselItem: string;
-	readonly checkbox: string;
-	readonly checkboxInline: string;
 	readonly clearfix: string;
 	readonly close: string;
 	readonly colFormLabel: string;
@@ -604,8 +602,6 @@ declare const styles: {
 	readonly pushXs_7: string;
 	readonly pushXs_8: string;
 	readonly pushXs_9: string;
-	readonly radio: string;
-	readonly radioInline: string;
 	readonly right: string;
 	readonly row: string;
 	readonly small: string;

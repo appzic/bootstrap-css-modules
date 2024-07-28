@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+ * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2190,14 +2190,8 @@ select.formControlLg:not([size]):not([multiple]),
 
 .hasSuccess .formControlFeedback,
 .hasSuccess .formControlLabel,
-.hasSuccess .radio,
-.hasSuccess .checkbox,
-.hasSuccess .radioInline,
-.hasSuccess .checkboxInline,
-.hasSuccess.radio label,
-.hasSuccess.checkbox label,
-.hasSuccess.radioInline label,
-.hasSuccess.checkboxInline label,
+.hasSuccess .formCheckLabel,
+.hasSuccess .formCheckInline,
 .hasSuccess .customControl {
 	color: #5cb85c;
 }
@@ -2222,14 +2216,8 @@ select.formControlLg:not([size]):not([multiple]),
 
 .hasWarning .formControlFeedback,
 .hasWarning .formControlLabel,
-.hasWarning .radio,
-.hasWarning .checkbox,
-.hasWarning .radioInline,
-.hasWarning .checkboxInline,
-.hasWarning.radio label,
-.hasWarning.checkbox label,
-.hasWarning.radioInline label,
-.hasWarning.checkboxInline label,
+.hasWarning .formCheckLabel,
+.hasWarning .formCheckInline,
 .hasWarning .customControl {
 	color: #f0ad4e;
 }
@@ -2254,14 +2242,8 @@ select.formControlLg:not([size]):not([multiple]),
 
 .hasDanger .formControlFeedback,
 .hasDanger .formControlLabel,
-.hasDanger .radio,
-.hasDanger .checkbox,
-.hasDanger .radioInline,
-.hasDanger .checkboxInline,
-.hasDanger.radio label,
-.hasDanger.checkbox label,
-.hasDanger.radioInline label,
-.hasDanger.checkboxInline label,
+.hasDanger .formCheckLabel,
+.hasDanger .formCheckInline,
 .hasDanger .customControl {
 	color: #d9534f;
 }
@@ -4538,7 +4520,6 @@ input[type="button"].btnBlock {
 		column-gap: 1.25rem;
 	}
 	.cardColumns .card {
-		display: inline-block;
 		width: 100%;
 	}
 }
@@ -4785,7 +4766,7 @@ a.tag:hover {
 }
 
 .alert {
-	padding: 15px;
+	padding: 1rem;
 	margin-bottom: 1rem;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
@@ -4800,13 +4781,13 @@ a.tag:hover {
 }
 
 .alertDismissible {
-	padding-right: 35px;
+	padding-right: 2rem;
 }
 
 .alertDismissible .close {
 	position: relative;
-	top: -2px;
-	right: -21px;
+	top: -0.125rem;
+	right: -1rem;
 	color: inherit;
 }
 
@@ -5143,14 +5124,6 @@ base::-moz-progress-bar,
 	.progressDanger .progressBar {
 		background-color: #d9534f;
 	}
-}
-
-.media {
-	margin-top: 15px;
-}
-
-.media:first-child {
-	margin-top: 0;
 }
 
 .media,
@@ -5527,9 +5500,7 @@ button.close {
 .modal.fade .modalDialog {
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	transition: -webkit-transform 0.3s ease-out;
-	-o-transition:
-		transform 0.3s ease-out,
-		-o-transform 0.3s ease-out;
+	-o-transition: -o-transform 0.3s ease-out;
 	transition: transform 0.3s ease-out;
 	transition:
 		transform 0.3s ease-out,
@@ -5940,9 +5911,7 @@ button.close {
 	.carouselInner > .carouselItem {
 		-webkit-transition: -webkit-transform 0.6s ease-in-out;
 		transition: -webkit-transform 0.6s ease-in-out;
-		-o-transition:
-			transform 0.6s ease-in-out,
-			-o-transform 0.6s ease-in-out;
+		-o-transition: -o-transform 0.6s ease-in-out;
 		transition: transform 0.6s ease-in-out;
 		transition:
 			transform 0.6s ease-in-out,
@@ -6192,10 +6161,6 @@ button.close {
 	}
 }
 
-.bgInverse {
-	background-color: #373a3c;
-}
-
 .bgFaded {
 	background-color: #f7f7f9;
 }
@@ -6248,6 +6213,16 @@ a.bgWarning:hover {
 a.bgDanger:focus,
 a.bgDanger:hover {
 	background-color: #c9302c !important;
+}
+
+.bgInverse {
+	color: #fff !important;
+	background-color: #373a3c !important;
+}
+
+a.bgInverse:focus,
+a.bgInverse:hover {
+	background-color: #1f2021 !important;
 }
 
 .clearfix::after {
@@ -6710,7 +6685,7 @@ a.bgDanger:hover {
 
 a.textMuted:focus,
 a.textMuted:hover {
-	color: #687077;
+	color: #687077 !important;
 }
 
 .textPrimary {
@@ -6719,7 +6694,7 @@ a.textMuted:hover {
 
 a.textPrimary:focus,
 a.textPrimary:hover {
-	color: #025aa5;
+	color: #025aa5 !important;
 }
 
 .textSuccess {
@@ -6728,7 +6703,7 @@ a.textPrimary:hover {
 
 a.textSuccess:focus,
 a.textSuccess:hover {
-	color: #449d44;
+	color: #449d44 !important;
 }
 
 .textInfo {
@@ -6737,7 +6712,7 @@ a.textSuccess:hover {
 
 a.textInfo:focus,
 a.textInfo:hover {
-	color: #31b0d5;
+	color: #31b0d5 !important;
 }
 
 .textWarning {
@@ -6746,7 +6721,7 @@ a.textInfo:hover {
 
 a.textWarning:focus,
 a.textWarning:hover {
-	color: #ec971f;
+	color: #ec971f !important;
 }
 
 .textDanger {
@@ -6755,7 +6730,7 @@ a.textWarning:hover {
 
 a.textDanger:focus,
 a.textDanger:hover {
-	color: #c9302c;
+	color: #c9302c !important;
 }
 
 .textHide {
