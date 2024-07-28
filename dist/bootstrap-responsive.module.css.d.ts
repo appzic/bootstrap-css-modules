@@ -1,16 +1,20 @@
 declare const styles: {
 	readonly brand: string;
+	readonly btn: string;
+	readonly btnGroup: string;
 	readonly btnNavbar: string;
 	readonly carouselCaption: string;
 	readonly clearfix: string;
 	readonly close: string;
 	readonly collapse: string;
 	readonly container: string;
+	readonly containerFluid: string;
 	readonly controlGroup: string;
 	readonly controlList: string;
 	readonly controls: string;
 	readonly divider: string;
 	readonly dividerVertical: string;
+	readonly dlHorizontal: string;
 	readonly dropdownMenu: string;
 	readonly fade: string;
 	readonly formActions: string;
@@ -23,7 +27,10 @@ declare const styles: {
 	readonly in: string;
 	readonly inputAppend: string;
 	readonly inputBlockLevel: string;
+	readonly inputLarge: string;
 	readonly inputPrepend: string;
+	readonly inputXlarge: string;
+	readonly inputXxlarge: string;
 	readonly modal: string;
 	readonly modalHeader: string;
 	readonly nav: string;

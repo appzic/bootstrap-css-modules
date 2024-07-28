@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Responsive v2.0.2
+ * Bootstrap Responsive v2.0.3
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -7,85 +7,86 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+
 .clearfix {
 	*zoom: 1;
 }
+
 .clearfix:before,
 .clearfix:after {
 	display: table;
 	content: "";
 }
+
 .clearfix:after {
 	clear: both;
 }
+
 .hideText {
-	overflow: hidden;
-	text-indent: 100%;
-	white-space: nowrap;
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
 }
+
 .inputBlockLevel {
 	display: block;
 	width: 100%;
 	min-height: 28px;
-	/* Make inputs at least the height of their button counterpart */
-
-	/* Makes inputs behave like true block-level elements */
-
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 .hidden {
 	display: none;
 	visibility: hidden;
 }
+
 .visiblePhone {
-	display: none;
+	display: none !important;
 }
+
 .visibleTablet {
-	display: none;
+	display: none !important;
 }
-.visibleDesktop {
-	display: block;
-}
-.hiddenPhone {
-	display: block;
-}
-.hiddenTablet {
-	display: block;
-}
+
 .hiddenDesktop {
-	display: none;
+	display: none !important;
 }
+
 @media (max-width: 767px) {
 	.visiblePhone {
-		display: block;
+		display: inherit !important;
 	}
 	.hiddenPhone {
-		display: none;
+		display: none !important;
 	}
 	.hiddenDesktop {
-		display: block;
+		display: inherit !important;
 	}
 	.visibleDesktop {
-		display: none;
+		display: none !important;
 	}
 }
+
 @media (min-width: 768px) and (max-width: 979px) {
 	.visibleTablet {
-		display: block;
+		display: inherit !important;
 	}
 	.hiddenTablet {
-		display: none;
+		display: none !important;
 	}
 	.hiddenDesktop {
-		display: block;
+		display: inherit !important;
 	}
 	.visibleDesktop {
-		display: none;
+		display: none !important ;
 	}
 }
+
 @media (max-width: 480px) {
 	.navCollapse {
 		-webkit-transform: translate3d(0, 0, 0);
@@ -111,14 +112,14 @@
 		padding-top: 0;
 	}
 	.formHorizontal .formActions {
-		padding-left: 10px;
 		padding-right: 10px;
+		padding-left: 10px;
 	}
 	.modal {
 		position: absolute;
 		top: 10px;
-		left: 10px;
 		right: 10px;
+		left: 10px;
 		width: auto;
 		margin: 0;
 	}
@@ -133,14 +134,28 @@
 		position: static;
 	}
 }
+
 @media (max-width: 767px) {
 	body {
-		padding-left: 20px;
 		padding-right: 20px;
+		padding-left: 20px;
 	}
-	.navbarFixedTop {
-		margin-left: -20px;
+	.navbarFixedTop,
+	.navbarFixedBottom {
 		margin-right: -20px;
+		margin-left: -20px;
+	}
+	.containerFluid {
+		padding: 0;
+	}
+	.dlHorizontal dt {
+		float: none;
+		width: auto;
+		clear: none;
+		text-align: left;
+	}
+	.dlHorizontal dd {
+		margin-left: 0;
 	}
 	.container {
 		width: auto;
@@ -148,19 +163,20 @@
 	.rowFluid {
 		width: 100%;
 	}
-	.row {
+	.row,
+	.thumbnails {
 		margin-left: 0;
 	}
-	.row > [class*="span"],
-	.rowFluid > [class*="span"] {
-		float: none;
+	[class*="span"],
+	.rowFluid [class*="span"] {
 		display: block;
+		float: none;
 		width: auto;
-		margin: 0;
+		margin-left: 0;
 	}
-	.thumbnails [class*="span"] {
-		width: auto;
-	}
+	.inputLarge,
+	.inputXlarge,
+	.inputXxlarge,
 	input[class*="span"],
 	select[class*="span"],
 	textarea[class*="span"],
@@ -168,20 +184,20 @@
 		display: block;
 		width: 100%;
 		min-height: 28px;
-		/* Make inputs at least the height of their button counterpart */
-
-		/* Makes inputs behave like true block-level elements */
-
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-ms-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+	.inputPrepend input,
+	.inputAppend input,
 	.inputPrepend input[class*="span"],
 	.inputAppend input[class*="span"] {
+		display: inline-block;
 		width: auto;
 	}
 }
+
 @media (min-width: 768px) and (max-width: 979px) {
 	.row {
 		margin-left: -20px;
@@ -288,48 +304,68 @@
 	.rowFluid:after {
 		clear: both;
 	}
-	.rowFluid > [class*="span"] {
+	.rowFluid [class*="span"] {
+		display: block;
 		float: left;
+		width: 100%;
+		min-height: 28px;
 		margin-left: 2.762430939%;
+		*margin-left: 2.709239449638298%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
 	}
-	.rowFluid > [class*="span"]:first-child {
+	.rowFluid [class*="span"]:first-child {
 		margin-left: 0;
 	}
-	.rowFluid > .span12 {
+	.rowFluid .span12 {
 		width: 99.999999993%;
+		*width: 99.9468085036383%;
 	}
-	.rowFluid > .span11 {
+	.rowFluid .span11 {
 		width: 91.436464082%;
+		*width: 91.38327259263829%;
 	}
-	.rowFluid > .span10 {
+	.rowFluid .span10 {
 		width: 82.87292817100001%;
+		*width: 82.8197366816383%;
 	}
-	.rowFluid > .span9 {
+	.rowFluid .span9 {
 		width: 74.30939226%;
+		*width: 74.25620077063829%;
 	}
-	.rowFluid > .span8 {
+	.rowFluid .span8 {
 		width: 65.74585634900001%;
+		*width: 65.6926648596383%;
 	}
-	.rowFluid > .span7 {
+	.rowFluid .span7 {
 		width: 57.182320438000005%;
+		*width: 57.129128948638304%;
 	}
-	.rowFluid > .span6 {
+	.rowFluid .span6 {
 		width: 48.618784527%;
+		*width: 48.5655930376383%;
 	}
-	.rowFluid > .span5 {
+	.rowFluid .span5 {
 		width: 40.055248616%;
+		*width: 40.0020571266383%;
 	}
-	.rowFluid > .span4 {
+	.rowFluid .span4 {
 		width: 31.491712705%;
+		*width: 31.4385212156383%;
 	}
-	.rowFluid > .span3 {
+	.rowFluid .span3 {
 		width: 22.928176794%;
+		*width: 22.874985304638297%;
 	}
-	.rowFluid > .span2 {
+	.rowFluid .span2 {
 		width: 14.364640883%;
+		*width: 14.311449393638298%;
 	}
-	.rowFluid > .span1 {
+	.rowFluid .span1 {
 		width: 5.801104972%;
+		*width: 5.747913482638298%;
 	}
 	input,
 	textarea,
@@ -397,126 +433,7 @@
 		width: 32px;
 	}
 }
-@media (max-width: 979px) {
-	body {
-		padding-top: 0;
-	}
-	.navbarFixedTop {
-		position: static;
-		margin-bottom: 18px;
-	}
-	.navbarFixedTop .navbarInner {
-		padding: 5px;
-	}
-	.navbar .container {
-		width: auto;
-		padding: 0;
-	}
-	.navbar .brand {
-		padding-left: 10px;
-		padding-right: 10px;
-		margin: 0 0 0 -5px;
-	}
-	.navbar .navCollapse {
-		clear: left;
-	}
-	.navbar .nav {
-		float: none;
-		margin: 0 0 9px;
-	}
-	.navbar .nav > li {
-		float: none;
-	}
-	.navbar .nav > li > a {
-		margin-bottom: 2px;
-	}
-	.navbar .nav > .dividerVertical {
-		display: none;
-	}
-	.navbar .nav .navHeader {
-		color: #999999;
-		text-shadow: none;
-	}
-	.navbar .nav > li > a,
-	.navbar .dropdownMenu a {
-		padding: 6px 15px;
-		font-weight: bold;
-		color: #999999;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-	}
-	.navbar .dropdownMenu li + li a {
-		margin-bottom: 2px;
-	}
-	.navbar .nav > li > a:hover,
-	.navbar .dropdownMenu a:hover {
-		background-color: #222222;
-	}
-	.navbar .dropdownMenu {
-		position: static;
-		top: auto;
-		left: auto;
-		float: none;
-		display: block;
-		max-width: none;
-		margin: 0 15px;
-		padding: 0;
-		background-color: transparent;
-		border: none;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
-		border-radius: 0;
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-		box-shadow: none;
-	}
-	.navbar .dropdownMenu:before,
-	.navbar .dropdownMenu:after {
-		display: none;
-	}
-	.navbar .dropdownMenu .divider {
-		display: none;
-	}
-	.navbarForm,
-	.navbarSearch {
-		float: none;
-		padding: 9px 15px;
-		margin: 9px 0;
-		border-top: 1px solid #222222;
-		border-bottom: 1px solid #222222;
-		-webkit-box-shadow:
-			inset 0 1px 0 rgba(255, 255, 255, 0.1),
-			0 1px 0 rgba(255, 255, 255, 0.1);
-		-moz-box-shadow:
-			inset 0 1px 0 rgba(255, 255, 255, 0.1),
-			0 1px 0 rgba(255, 255, 255, 0.1);
-		box-shadow:
-			inset 0 1px 0 rgba(255, 255, 255, 0.1),
-			0 1px 0 rgba(255, 255, 255, 0.1);
-	}
-	.navbar .nav.pullRight {
-		float: none;
-		margin-left: 0;
-	}
-	.navbarStatic .navbarInner {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.btnNavbar {
-		display: block;
-	}
-	.navCollapse {
-		overflow: hidden;
-		height: 0;
-	}
-}
-@media (min-width: 980px) {
-	.navCollapse.collapse {
-		height: auto !important;
-		overflow: visible !important;
-	}
-}
+
 @media (min-width: 1200px) {
 	.row {
 		margin-left: -30px;
@@ -623,48 +540,68 @@
 	.rowFluid:after {
 		clear: both;
 	}
-	.rowFluid > [class*="span"] {
+	.rowFluid [class*="span"] {
+		display: block;
 		float: left;
+		width: 100%;
+		min-height: 28px;
 		margin-left: 2.564102564%;
+		*margin-left: 2.510911074638298%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
 	}
-	.rowFluid > [class*="span"]:first-child {
+	.rowFluid [class*="span"]:first-child {
 		margin-left: 0;
 	}
-	.rowFluid > .span12 {
+	.rowFluid .span12 {
 		width: 100%;
+		*width: 99.94680851063829%;
 	}
-	.rowFluid > .span11 {
+	.rowFluid .span11 {
 		width: 91.45299145300001%;
+		*width: 91.3997999636383%;
 	}
-	.rowFluid > .span10 {
+	.rowFluid .span10 {
 		width: 82.905982906%;
+		*width: 82.8527914166383%;
 	}
-	.rowFluid > .span9 {
+	.rowFluid .span9 {
 		width: 74.358974359%;
+		*width: 74.30578286963829%;
 	}
-	.rowFluid > .span8 {
+	.rowFluid .span8 {
 		width: 65.81196581200001%;
+		*width: 65.7587743226383%;
 	}
-	.rowFluid > .span7 {
+	.rowFluid .span7 {
 		width: 57.264957265%;
+		*width: 57.2117657756383%;
 	}
-	.rowFluid > .span6 {
+	.rowFluid .span6 {
 		width: 48.717948718%;
+		*width: 48.6647572286383%;
 	}
-	.rowFluid > .span5 {
+	.rowFluid .span5 {
 		width: 40.170940171000005%;
+		*width: 40.117748681638304%;
 	}
-	.rowFluid > .span4 {
+	.rowFluid .span4 {
 		width: 31.623931624%;
+		*width: 31.5707401346383%;
 	}
-	.rowFluid > .span3 {
+	.rowFluid .span3 {
 		width: 23.076923077%;
+		*width: 23.0237315876383%;
 	}
-	.rowFluid > .span2 {
+	.rowFluid .span2 {
 		width: 14.529914530000001%;
+		*width: 14.4767230406383%;
 	}
-	.rowFluid > .span1 {
+	.rowFluid .span1 {
 		width: 5.982905983%;
+		*width: 5.929714493638298%;
 	}
 	input,
 	textarea,
@@ -736,5 +673,142 @@
 	}
 	.thumbnails > li {
 		margin-left: 30px;
+	}
+	.rowFluid .thumbnails {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 979px) {
+	body {
+		padding-top: 0;
+	}
+	.navbarFixedTop {
+		position: static;
+		margin-bottom: 18px;
+	}
+	.navbarFixedTop .navbarInner {
+		padding: 5px;
+	}
+	.navbar .container {
+		width: auto;
+		padding: 0;
+	}
+	.navbar .brand {
+		padding-right: 10px;
+		padding-left: 10px;
+		margin: 0 0 0 -5px;
+	}
+	.navCollapse {
+		clear: both;
+	}
+	.navCollapse .nav {
+		float: none;
+		margin: 0 0 9px;
+	}
+	.navCollapse .nav > li {
+		float: none;
+	}
+	.navCollapse .nav > li > a {
+		margin-bottom: 2px;
+	}
+	.navCollapse .nav > .dividerVertical {
+		display: none;
+	}
+	.navCollapse .nav .navHeader {
+		color: #999999;
+		text-shadow: none;
+	}
+	.navCollapse .nav > li > a,
+	.navCollapse .dropdownMenu a {
+		padding: 6px 15px;
+		font-weight: bold;
+		color: #999999;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	.navCollapse .btn {
+		padding: 4px 10px 4px;
+		font-weight: normal;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+	.navCollapse .dropdownMenu li + li a {
+		margin-bottom: 2px;
+	}
+	.navCollapse .nav > li > a:hover,
+	.navCollapse .dropdownMenu a:hover {
+		background-color: #222222;
+	}
+	.navCollapse.in .btnGroup {
+		padding: 0;
+		margin-top: 5px;
+	}
+	.navCollapse .dropdownMenu {
+		position: static;
+		top: auto;
+		left: auto;
+		display: block;
+		float: none;
+		max-width: none;
+		padding: 0;
+		margin: 0 15px;
+		background-color: transparent;
+		border: none;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	.navCollapse .dropdownMenu:before,
+	.navCollapse .dropdownMenu:after {
+		display: none;
+	}
+	.navCollapse .dropdownMenu .divider {
+		display: none;
+	}
+	.navCollapse .navbarForm,
+	.navCollapse .navbarSearch {
+		float: none;
+		padding: 9px 15px;
+		margin: 9px 0;
+		border-top: 1px solid #222222;
+		border-bottom: 1px solid #222222;
+		-webkit-box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.1),
+			0 1px 0 rgba(255, 255, 255, 0.1);
+		-moz-box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.1),
+			0 1px 0 rgba(255, 255, 255, 0.1);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.1),
+			0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+	.navbar .navCollapse .nav.pullRight {
+		float: none;
+		margin-left: 0;
+	}
+	.navCollapse,
+	.navCollapse.collapse {
+		height: 0;
+		overflow: hidden;
+	}
+	.navbar .btnNavbar {
+		display: block;
+	}
+	.navbarStatic .navbarInner {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+@media (min-width: 980px) {
+	.navCollapse.collapse {
+		height: auto !important;
+		overflow: visible !important;
 	}
 }

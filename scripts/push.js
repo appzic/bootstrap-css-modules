@@ -61,8 +61,8 @@ class Push {
 		execSync("git push");
 		execSync(`git tag v${this.version}`);
 		execSync("git push --tag");
-		// execSync("npm publish --access public");
-		// rimrafSync("temp");
+		execSync("npm publish --access public");
+		rimrafSync("temp");
 	}
 }
 
