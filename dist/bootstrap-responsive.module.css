@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Responsive v2.0.3
+ * Bootstrap Responsive v2.0.4
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -683,11 +683,18 @@
 	body {
 		padding-top: 0;
 	}
-	.navbarFixedTop {
+	.navbarFixedTop,
+	.navbarFixedBottom {
 		position: static;
+	}
+	.navbarFixedTop {
 		margin-bottom: 18px;
 	}
-	.navbarFixedTop .navbarInner {
+	.navbarFixedBottom {
+		margin-top: 18px;
+	}
+	.navbarFixedTop .navbarInner,
+	.navbarFixedBottom .navbarInner {
 		padding: 5px;
 	}
 	.navbar .container {

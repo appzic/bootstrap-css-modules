@@ -237,6 +237,7 @@ declare const styles: {
 	readonly large: string;
 	readonly lead: string;
 	readonly left: string;
+	readonly map_canvas: string;
 	readonly modal: string;
 	readonly modalBackdrop: string;
 	readonly modalBody: string;
