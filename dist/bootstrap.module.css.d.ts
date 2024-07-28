@@ -66,6 +66,7 @@ declare const styles: {
 	readonly dividerVertical: string;
 	readonly dlHorizontal: string;
 	readonly dropdown: string;
+	readonly dropdownBackdrop: string;
 	readonly dropdownMenu: string;
 	readonly dropdownSubmenu: string;
 	readonly dropdownToggle: string;
