@@ -3,6 +3,7 @@ declare const styles: {
 	readonly actions: string;
 	readonly active: string;
 	readonly addOn: string;
+	readonly alertActions: string;
 	readonly alertMessage: string;
 	readonly arrow: string;
 	readonly below: string;
@@ -15,6 +16,7 @@ declare const styles: {
 	readonly container: string;
 	readonly containerFluid: string;
 	readonly content: string;
+	readonly danger: string;
 	readonly disabled: string;
 	readonly divider: string;
 	readonly error: string;
@@ -106,7 +108,6 @@ declare const styles: {
 	readonly twipsyInner: string;
 	readonly uneditableInput: string;
 	readonly unstyled: string;
-	readonly warning: string;
 	readonly well: string;
 	readonly xlarge: string;
 	readonly xxlarge: string;

@@ -56,7 +56,7 @@ npm install @appzic/bootstrap-css-modules
 
 ```jsx
 import React from "react";
-import bs from "@appzic/bootstrap-css-modules/dist/bootstrap-1.0.0.module.css";
+import bs from "@appzic/bootstrap-css-modules/dist/bootstrap.module.css";
 
 const Component = () => {
 	return (
