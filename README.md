@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="bootstrap-css-modules logo" src="./logo/appzic-bootstrap-css-modules.jpg"/>
+    <img alt="bootstrap-css-modules logo" src="https://github.com/user-attachments/assets/16e6aa67-6fd4-422e-ba46-ab2fef1102fd"/>
 </p>
 
 <h1 align="center">Bootstrap CSS Modules</h1>

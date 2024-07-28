@@ -10,10 +10,6 @@ class Push {
 		this.version = this._readVersion();
 
 		this.ioFiles = [
-			// {
-			// 	src: `temp/bootstrap-${this.version}/dist/css/bootstrap-flex.css`,
-			// 	dist: `dist/bootstrap-flex.module.css`,
-			// },
 			{
 				src: `temp/bootstrap-${this.version}/dist/css/bootstrap-grid.css`,
 				dist: `dist/bootstrap-grid.module.css`,
@@ -21,6 +17,10 @@ class Push {
 			{
 				src: `temp/bootstrap-${this.version}/dist/css/bootstrap-reboot.css`,
 				dist: `dist/bootstrap-reboot.module.css`,
+			},
+			{
+				src: `temp/bootstrap-${this.version}/dist/css/bootstrap-utilities.css`,
+				dist: `dist/bootstrap-utilities.module.css`,
 			},
 			{
 				src: `temp/bootstrap-${this.version}/dist/css/bootstrap.css`,
