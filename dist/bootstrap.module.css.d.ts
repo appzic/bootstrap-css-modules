@@ -49,6 +49,7 @@ declare const styles: {
 	readonly carousel: string;
 	readonly carouselCaption: string;
 	readonly carouselControl: string;
+	readonly carouselIndicators: string;
 	readonly carouselInner: string;
 	readonly checkbox: string;
 	readonly clearfix: string;
@@ -353,8 +354,11 @@ declare const styles: {
 	readonly tabsLeft: string;
 	readonly tabsRight: string;
 	readonly tabsStacked: string;
+	readonly textCenter: string;
 	readonly textError: string;
 	readonly textInfo: string;
+	readonly textLeft: string;
+	readonly textRight: string;
 	readonly textSuccess: string;
 	readonly textWarning: string;
 	readonly thumbnail: string;

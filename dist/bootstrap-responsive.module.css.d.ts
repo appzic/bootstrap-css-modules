@@ -23,6 +23,7 @@ declare const styles: {
 	readonly hidden: string;
 	readonly hiddenDesktop: string;
 	readonly hiddenPhone: string;
+	readonly hiddenPrint: string;
 	readonly hiddenTablet: string;
 	readonly hideText: string;
 	readonly in: string;
@@ -82,6 +83,7 @@ declare const styles: {
 	readonly uneditableInput: string;
 	readonly visibleDesktop: string;
 	readonly visiblePhone: string;
+	readonly visiblePrint: string;
 	readonly visibleTablet: string;
 };
 export = styles;
