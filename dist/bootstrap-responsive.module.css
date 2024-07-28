@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Responsive v2.1.1
+ * Bootstrap Responsive v2.2.0
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -214,6 +214,9 @@
 	}
 	.rowFluid [class*="span"]:first-child {
 		margin-left: 0;
+	}
+	.rowFluid .controlsRow [class*="span"] + [class*="span"] {
+		margin-left: 2.564102564102564%;
 	}
 	.rowFluid .span12 {
 		width: 100%;
@@ -562,6 +565,9 @@
 	.rowFluid [class*="span"]:first-child {
 		margin-left: 0;
 	}
+	.rowFluid .controlsRow [class*="span"] + [class*="span"] {
+		margin-left: 2.7624309392265194%;
+	}
 	.rowFluid .span12 {
 		width: 100%;
 		*width: 99.94680851063829%;
@@ -814,6 +820,7 @@
 		margin-left: 0;
 	}
 	[class*="span"],
+	.uneditableInput[class*="span"],
 	.rowFluid [class*="span"] {
 		display: block;
 		float: none;
@@ -829,6 +836,9 @@
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+	}
+	.rowFluid [class*="offset"]:first-child {
+		margin-left: 0;
 	}
 	.inputLarge,
 	.inputXlarge,
@@ -862,8 +872,11 @@
 		width: auto;
 		margin: 0;
 	}
+	.modal.fade {
+		top: -100px;
+	}
 	.modal.fade.in {
-		top: auto;
+		top: 20px;
 	}
 }
 
@@ -894,6 +907,16 @@
 	.formHorizontal .formActions {
 		padding-right: 10px;
 		padding-left: 10px;
+	}
+	.media .pullLeft,
+	.media .pullRight {
+		display: block;
+		float: none;
+		margin-bottom: 10px;
+	}
+	.mediaObject {
+		margin-right: 0;
+		margin-left: 0;
 	}
 	.modal {
 		top: 10px;
@@ -978,6 +1001,10 @@
 	.navCollapse .nav > li > a:hover,
 	.navCollapse .dropdownMenu a:hover {
 		background-color: #f2f2f2;
+	}
+	.navbarInverse .navCollapse .nav > li > a,
+	.navbarInverse .navCollapse .dropdownMenu a {
+		color: #999999;
 	}
 	.navbarInverse .navCollapse .nav > li > a:hover,
 	.navbarInverse .navCollapse .dropdownMenu a:hover {

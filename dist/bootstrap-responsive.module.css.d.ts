@@ -32,6 +32,8 @@ declare const styles: {
 	readonly inputPrepend: string;
 	readonly inputXlarge: string;
 	readonly inputXxlarge: string;
+	readonly media: string;
+	readonly mediaObject: string;
 	readonly modal: string;
 	readonly modalHeader: string;
 	readonly nav: string;
@@ -59,6 +61,7 @@ declare const styles: {
 	readonly offset8: string;
 	readonly offset9: string;
 	readonly pageHeader: string;
+	readonly pullLeft: string;
 	readonly pullRight: string;
 	readonly row: string;
 	readonly rowFluid: string;
