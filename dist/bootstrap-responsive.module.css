@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Responsive v2.1.0
+ * Bootstrap Responsive v2.1.1
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -107,6 +107,7 @@
 	}
 	[class*="span"] {
 		float: left;
+		min-height: 1px;
 		margin-left: 30px;
 	}
 	.container,
@@ -453,6 +454,7 @@
 	}
 	[class*="span"] {
 		float: left;
+		min-height: 1px;
 		margin-left: 20px;
 	}
 	.container,
@@ -780,7 +782,8 @@
 		padding-left: 20px;
 	}
 	.navbarFixedTop,
-	.navbarFixedBottom {
+	.navbarFixedBottom,
+	.navbarStaticTop {
 		margin-right: -20px;
 		margin-left: -20px;
 	}
@@ -814,8 +817,11 @@
 	.rowFluid [class*="span"] {
 		display: block;
 		float: none;
-		width: auto;
+		width: 100%;
 		margin-left: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 	.span12,
 	.rowFluid .span12 {
@@ -845,6 +851,9 @@
 		display: inline-block;
 		width: auto;
 	}
+	.controlsRow [class*="span"] + [class*="span"] {
+		margin-left: 0;
+	}
 	.modal {
 		position: fixed;
 		top: 20px;
@@ -870,7 +879,7 @@
 	input[type="radio"] {
 		border: 1px solid #ccc;
 	}
-	.formHorizontal .controlGroup > label {
+	.formHorizontal .controlLabel {
 		float: none;
 		width: auto;
 		padding-top: 0;
@@ -944,14 +953,14 @@
 		display: none;
 	}
 	.navCollapse .nav .navHeader {
-		color: #555555;
+		color: #777777;
 		text-shadow: none;
 	}
 	.navCollapse .nav > li > a,
 	.navCollapse .dropdownMenu a {
 		padding: 9px 15px;
 		font-weight: bold;
-		color: #555555;
+		color: #777777;
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
 		border-radius: 3px;
@@ -1003,6 +1012,10 @@
 	.navCollapse .dropdownMenu .divider {
 		display: none;
 	}
+	.navCollapse .nav > li > .dropdownMenu:before,
+	.navCollapse .nav > li > .dropdownMenu:after {
+		display: none;
+	}
 	.navCollapse .navbarForm,
 	.navCollapse .navbarSearch {
 		float: none;
@@ -1019,6 +1032,11 @@
 		box-shadow:
 			inset 0 1px 0 rgba(255, 255, 255, 0.1),
 			0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+	.navbarInverse .navCollapse .navbarForm,
+	.navbarInverse .navCollapse .navbarSearch {
+		border-top-color: #111111;
+		border-bottom-color: #111111;
 	}
 	.navbar .navCollapse .nav.pullRight {
 		float: none;

@@ -9,7 +9,7 @@ declare const styles: {
 	readonly collapse: string;
 	readonly container: string;
 	readonly containerFluid: string;
-	readonly controlGroup: string;
+	readonly controlLabel: string;
 	readonly controlList: string;
 	readonly controls: string;
 	readonly controlsRow: string;

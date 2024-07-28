@@ -356,6 +356,10 @@ declare const styles: {
 	readonly tabsLeft: string;
 	readonly tabsRight: string;
 	readonly tabsStacked: string;
+	readonly textError: string;
+	readonly textInfo: string;
+	readonly textSuccess: string;
+	readonly textWarning: string;
 	readonly thumbnail: string;
 	readonly thumbnails: string;
 	readonly tooltip: string;
