@@ -81,10 +81,10 @@ Bootstrap CSS Modules is licensed under the [MIT](https://github.com/appzic/boot
 ## Sponsors
 
 <p align="center" style="align: center;">
-    <a href="https://appzic.com" style="margin-right: 10px">
+    <a href="https://appzic.com" style="margin-right: 30px">
         <img alt="appzic logo" src="https://github.com/user-attachments/assets/e1b84838-7eb7-489f-9460-79fd351051f1">
     </a>
     <a href="https://vecpad.com">
-        <img alt="vecpad logo" src="https://github.com/user-attachments/assets/3d780ecf-e416-4fbc-b918-b01d1b24e392">
+        <img alt="vecpad logo" src="https://github.com/user-attachments/assets/da61ad0d-8bb1-4a36-9759-4bcbe187f499">
     </a>
 </p>
