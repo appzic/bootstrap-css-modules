@@ -61,5 +61,5 @@ class Push {
 	}
 }
 
-const push = Push();
+const push = new Push();
 push.run();
