@@ -45,7 +45,6 @@ declare const styles: {
 	readonly checkboxInline: string;
 	readonly clearfix: string;
 	readonly close: string;
-	readonly col: string;
 	readonly colLgOffset_0: string;
 	readonly colLgOffset_1: string;
 	readonly colLgOffset_10: string;
