@@ -480,8 +480,6 @@ declare const styles: {
 	readonly glyphiconWrench: string;
 	readonly glyphiconZoomIn: string;
 	readonly glyphiconZoomOut: string;
-	readonly glyphiconsChevronLeft: string;
-	readonly glyphiconsChevronRight: string;
 	readonly h1: string;
 	readonly h2: string;
 	readonly h3: string;
