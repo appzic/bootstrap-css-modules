@@ -695,6 +695,7 @@ declare const styles: {
 	readonly radioInline: string;
 	readonly right: string;
 	readonly row: string;
+	readonly rowNoGutters: string;
 	readonly show: string;
 	readonly small: string;
 	readonly srOnly: string;
