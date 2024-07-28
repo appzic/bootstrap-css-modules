@@ -60,6 +60,7 @@ declare const styles: {
 	readonly offset7: string;
 	readonly offset8: string;
 	readonly offset9: string;
+	readonly open: string;
 	readonly pageHeader: string;
 	readonly pullLeft: string;
 	readonly pullRight: string;
