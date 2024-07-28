@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Utilities v5.0.0-alpha1 (https://getbootstrap.com/)
+ * Bootstrap Utilities v5.0.0-alpha2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -48,10 +48,6 @@
 	overflow: hidden !important;
 }
 
-.dNone {
-	display: none !important;
-}
-
 .dInline {
 	display: inline !important;
 }
@@ -82,6 +78,10 @@
 
 .dInlineFlex {
 	display: inline-flex !important;
+}
+
+.dNone {
+	display: none !important;
 }
 
 .shadow {
@@ -119,6 +119,58 @@
 .positionSticky {
 	position: -webkit-sticky !important;
 	position: sticky !important;
+}
+
+.top_0 {
+	top: 0 !important;
+}
+
+.top_50 {
+	top: 50% !important;
+}
+
+.top_100 {
+	top: 100% !important;
+}
+
+.bottom_0 {
+	bottom: 0 !important;
+}
+
+.bottom_50 {
+	bottom: 50% !important;
+}
+
+.bottom_100 {
+	bottom: 100% !important;
+}
+
+.left_0 {
+	left: 0 !important;
+}
+
+.left_50 {
+	left: 50% !important;
+}
+
+.left_100 {
+	left: 100% !important;
+}
+
+.right_0 {
+	right: 0 !important;
+}
+
+.right_50 {
+	right: 50% !important;
+}
+
+.right_100 {
+	right: 100% !important;
+}
+
+.translateMiddle {
+	transform: translateX(-50%) translateY(-50%) !important;
 }
 
 .border {
@@ -170,11 +222,11 @@
 }
 
 .borderSuccess {
-	border-color: #28a745 !important;
+	border-color: #198754 !important;
 }
 
 .borderInfo {
-	border-color: #17a2b8 !important;
+	border-color: #0dcaf0 !important;
 }
 
 .borderWarning {
@@ -195,6 +247,30 @@
 
 .borderWhite {
 	border-color: #fff !important;
+}
+
+.border_0 {
+	border-width: 0 !important;
+}
+
+.border_1 {
+	border-width: 1px !important;
+}
+
+.border_2 {
+	border-width: 2px !important;
+}
+
+.border_3 {
+	border-width: 3px !important;
+}
+
+.border_4 {
+	border-width: 4px !important;
+}
+
+.border_5 {
+	border-width: 5px !important;
 }
 
 .w_25 {
@@ -876,11 +952,11 @@
 }
 
 .textSuccess {
-	color: #28a745 !important;
+	color: #198754 !important;
 }
 
 .textInfo {
-	color: #17a2b8 !important;
+	color: #0dcaf0 !important;
 }
 
 .textWarning {
@@ -948,11 +1024,11 @@
 }
 
 .bgSuccess {
-	background-color: #28a745 !important;
+	background-color: #198754 !important;
 }
 
 .bgInfo {
-	background-color: #17a2b8 !important;
+	background-color: #0dcaf0 !important;
 }
 
 .bgWarning {
@@ -1115,9 +1191,6 @@
 	.floatSmNone {
 		float: none !important;
 	}
-	.dSmNone {
-		display: none !important;
-	}
 	.dSmInline {
 		display: inline !important;
 	}
@@ -1141,6 +1214,9 @@
 	}
 	.dSmInlineFlex {
 		display: inline-flex !important;
+	}
+	.dSmNone {
+		display: none !important;
 	}
 	.flexSmFill {
 		flex: 1 1 auto !important;
@@ -1591,9 +1667,6 @@
 	.floatMdNone {
 		float: none !important;
 	}
-	.dMdNone {
-		display: none !important;
-	}
 	.dMdInline {
 		display: inline !important;
 	}
@@ -1617,6 +1690,9 @@
 	}
 	.dMdInlineFlex {
 		display: inline-flex !important;
+	}
+	.dMdNone {
+		display: none !important;
 	}
 	.flexMdFill {
 		flex: 1 1 auto !important;
@@ -2067,9 +2143,6 @@
 	.floatLgNone {
 		float: none !important;
 	}
-	.dLgNone {
-		display: none !important;
-	}
 	.dLgInline {
 		display: inline !important;
 	}
@@ -2093,6 +2166,9 @@
 	}
 	.dLgInlineFlex {
 		display: inline-flex !important;
+	}
+	.dLgNone {
+		display: none !important;
 	}
 	.flexLgFill {
 		flex: 1 1 auto !important;
@@ -2543,9 +2619,6 @@
 	.floatXlNone {
 		float: none !important;
 	}
-	.dXlNone {
-		display: none !important;
-	}
 	.dXlInline {
 		display: inline !important;
 	}
@@ -2569,6 +2642,9 @@
 	}
 	.dXlInlineFlex {
 		display: inline-flex !important;
+	}
+	.dXlNone {
+		display: none !important;
 	}
 	.flexXlFill {
 		flex: 1 1 auto !important;
@@ -3019,9 +3095,6 @@
 	.floatXxlNone {
 		float: none !important;
 	}
-	.dXxlNone {
-		display: none !important;
-	}
 	.dXxlInline {
 		display: inline !important;
 	}
@@ -3045,6 +3118,9 @@
 	}
 	.dXxlInlineFlex {
 		display: inline-flex !important;
+	}
+	.dXxlNone {
+		display: none !important;
 	}
 	.flexXxlFill {
 		flex: 1 1 auto !important;
@@ -3486,9 +3562,6 @@
 }
 
 @media print {
-	.dPrintNone {
-		display: none !important;
-	}
 	.dPrintInline {
 		display: inline !important;
 	}
@@ -3512,6 +3585,9 @@
 	}
 	.dPrintInlineFlex {
 		display: inline-flex !important;
+	}
+	.dPrintNone {
+		display: none !important;
 	}
 }
 /*# sourceMappingURL=bootstrap-utilities.css.map */

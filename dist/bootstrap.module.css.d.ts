@@ -155,6 +155,14 @@ declare const styles: {
 	readonly borderWarning: string;
 	readonly borderWhite: string;
 	readonly border_0: string;
+	readonly border_1: string;
+	readonly border_2: string;
+	readonly border_3: string;
+	readonly border_4: string;
+	readonly border_5: string;
+	readonly bottom_0: string;
+	readonly bottom_100: string;
+	readonly bottom_50: string;
 	readonly breadcrumb: string;
 	readonly breadcrumbItem: string;
 	readonly bsPopoverAuto: string;
@@ -170,6 +178,8 @@ declare const styles: {
 	readonly btn: string;
 	readonly btnBlock: string;
 	readonly btnCheck: string;
+	readonly btnClose: string;
+	readonly btnCloseWhite: string;
 	readonly btnDanger: string;
 	readonly btnDark: string;
 	readonly btnGroup: string;
@@ -216,6 +226,7 @@ declare const styles: {
 	readonly carouselControlNextIcon: string;
 	readonly carouselControlPrev: string;
 	readonly carouselControlPrevIcon: string;
+	readonly carouselDark: string;
 	readonly carouselFade: string;
 	readonly carouselIndicators: string;
 	readonly carouselInner: string;
@@ -225,7 +236,6 @@ declare const styles: {
 	readonly carouselItemPrev: string;
 	readonly carouselItemRight: string;
 	readonly clearfix: string;
-	readonly close: string;
 	readonly col: string;
 	readonly colAuto: string;
 	readonly colFormLabel: string;
@@ -398,6 +408,7 @@ declare const styles: {
 	readonly dropdownItem: string;
 	readonly dropdownItemText: string;
 	readonly dropdownMenu: string;
+	readonly dropdownMenuDark: string;
 	readonly dropdownMenuLeft: string;
 	readonly dropdownMenuLgLeft: string;
 	readonly dropdownMenuLgRight: string;
@@ -415,12 +426,6 @@ declare const styles: {
 	readonly dropleft: string;
 	readonly dropright: string;
 	readonly dropup: string;
-	readonly embedResponsive: string;
-	readonly embedResponsiveItem: string;
-	readonly embedResponsive_16by9: string;
-	readonly embedResponsive_1by1: string;
-	readonly embedResponsive_21by9: string;
-	readonly embedResponsive_4by3: string;
 	readonly fade: string;
 	readonly figure: string;
 	readonly figureCaption: string;
@@ -717,6 +722,9 @@ declare const styles: {
 	readonly justifyContentXxlEvenly: string;
 	readonly justifyContentXxlStart: string;
 	readonly lead: string;
+	readonly left_0: string;
+	readonly left_100: string;
+	readonly left_50: string;
 	readonly lhBase: string;
 	readonly lhLg: string;
 	readonly lhSm: string;
@@ -1488,6 +1496,14 @@ declare const styles: {
 	readonly py_3: string;
 	readonly py_4: string;
 	readonly py_5: string;
+	readonly ratio: string;
+	readonly ratio_16x9: string;
+	readonly ratio_1x1: string;
+	readonly ratio_21x9: string;
+	readonly ratio_4x3: string;
+	readonly right_0: string;
+	readonly right_100: string;
+	readonly right_50: string;
 	readonly rounded: string;
 	readonly roundedBottom: string;
 	readonly roundedCircle: string;
@@ -1554,8 +1570,6 @@ declare const styles: {
 	readonly spinnerBorderSm: string;
 	readonly spinnerGrow: string;
 	readonly spinnerGrowSm: string;
-	readonly srOnly: string;
-	readonly srOnlyFocusable: string;
 	readonly stickyLgTop: string;
 	readonly stickyMdTop: string;
 	readonly stickySmTop: string;
@@ -1634,6 +1648,10 @@ declare const styles: {
 	readonly tooltip: string;
 	readonly tooltipArrow: string;
 	readonly tooltipInner: string;
+	readonly top_0: string;
+	readonly top_100: string;
+	readonly top_50: string;
+	readonly translateMiddle: string;
 	readonly userSelectAll: string;
 	readonly userSelectAuto: string;
 	readonly userSelectNone: string;
@@ -1641,6 +1659,8 @@ declare const styles: {
 	readonly validTooltip: string;
 	readonly vh_100: string;
 	readonly visible: string;
+	readonly visuallyHidden: string;
+	readonly visuallyHiddenFocusable: string;
 	readonly vw_100: string;
 	readonly wAuto: string;
 	readonly w_100: string;

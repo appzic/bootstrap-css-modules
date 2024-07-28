@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Grid v5.0.0-alpha1 (https://getbootstrap.com/)
+ * Bootstrap Grid v5.0.0-alpha2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -11,9 +11,10 @@
 .containerLg,
 .containerXl,
 .containerXxl {
+	--bs-gutter-x: 1.5rem;
 	width: 100%;
-	padding-right: 1rem;
-	padding-left: 1rem;
+	padding-right: calc(var(--bs-gutter-x) / 2);
+	padding-left: calc(var(--bs-gutter-x) / 2);
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -67,7 +68,6 @@
 	--bs-gutter-x: 1.5rem;
 	--bs-gutter-y: 0;
 	display: flex;
-	flex: 1 0 100%;
 	flex-wrap: wrap;
 	margin-top: calc(var(--bs-gutter-y) * -1);
 	margin-right: calc(var(--bs-gutter-x) / -2);
@@ -1142,10 +1142,6 @@
 	}
 }
 
-.dNone {
-	display: none !important;
-}
-
 .dInline {
 	display: inline !important;
 }
@@ -1178,6 +1174,10 @@
 	display: inline-flex !important;
 }
 
+.dNone {
+	display: none !important;
+}
+
 .flexFill {
 	flex: 1 1 auto !important;
 }
@@ -1204,6 +1204,26 @@
 
 .flexGrow_1 {
 	flex-grow: 1 !important;
+}
+
+.flexShrink_0 {
+	flex-shrink: 0 !important;
+}
+
+.flexShrink_1 {
+	flex-shrink: 1 !important;
+}
+
+.flexWrap {
+	flex-wrap: wrap !important;
+}
+
+.flexNowrap {
+	flex-wrap: nowrap !important;
+}
+
+.flexWrapReverse {
+	flex-wrap: wrap-reverse !important;
 }
 
 .justifyContentStart {
@@ -1721,9 +1741,6 @@
 }
 
 @media (min-width: 576px) {
-	.dSmNone {
-		display: none !important;
-	}
 	.dSmInline {
 		display: inline !important;
 	}
@@ -1748,6 +1765,9 @@
 	.dSmInlineFlex {
 		display: inline-flex !important;
 	}
+	.dSmNone {
+		display: none !important;
+	}
 	.flexSmFill {
 		flex: 1 1 auto !important;
 	}
@@ -1768,6 +1788,21 @@
 	}
 	.flexSmGrow_1 {
 		flex-grow: 1 !important;
+	}
+	.flexSmShrink_0 {
+		flex-shrink: 0 !important;
+	}
+	.flexSmShrink_1 {
+		flex-shrink: 1 !important;
+	}
+	.flexSmWrap {
+		flex-wrap: wrap !important;
+	}
+	.flexSmNowrap {
+		flex-wrap: nowrap !important;
+	}
+	.flexSmWrapReverse {
+		flex-wrap: wrap-reverse !important;
 	}
 	.justifyContentSmStart {
 		justify-content: flex-start !important;
@@ -2164,9 +2199,6 @@
 }
 
 @media (min-width: 768px) {
-	.dMdNone {
-		display: none !important;
-	}
 	.dMdInline {
 		display: inline !important;
 	}
@@ -2191,6 +2223,9 @@
 	.dMdInlineFlex {
 		display: inline-flex !important;
 	}
+	.dMdNone {
+		display: none !important;
+	}
 	.flexMdFill {
 		flex: 1 1 auto !important;
 	}
@@ -2211,6 +2246,21 @@
 	}
 	.flexMdGrow_1 {
 		flex-grow: 1 !important;
+	}
+	.flexMdShrink_0 {
+		flex-shrink: 0 !important;
+	}
+	.flexMdShrink_1 {
+		flex-shrink: 1 !important;
+	}
+	.flexMdWrap {
+		flex-wrap: wrap !important;
+	}
+	.flexMdNowrap {
+		flex-wrap: nowrap !important;
+	}
+	.flexMdWrapReverse {
+		flex-wrap: wrap-reverse !important;
 	}
 	.justifyContentMdStart {
 		justify-content: flex-start !important;
@@ -2607,9 +2657,6 @@
 }
 
 @media (min-width: 992px) {
-	.dLgNone {
-		display: none !important;
-	}
 	.dLgInline {
 		display: inline !important;
 	}
@@ -2634,6 +2681,9 @@
 	.dLgInlineFlex {
 		display: inline-flex !important;
 	}
+	.dLgNone {
+		display: none !important;
+	}
 	.flexLgFill {
 		flex: 1 1 auto !important;
 	}
@@ -2654,6 +2704,21 @@
 	}
 	.flexLgGrow_1 {
 		flex-grow: 1 !important;
+	}
+	.flexLgShrink_0 {
+		flex-shrink: 0 !important;
+	}
+	.flexLgShrink_1 {
+		flex-shrink: 1 !important;
+	}
+	.flexLgWrap {
+		flex-wrap: wrap !important;
+	}
+	.flexLgNowrap {
+		flex-wrap: nowrap !important;
+	}
+	.flexLgWrapReverse {
+		flex-wrap: wrap-reverse !important;
 	}
 	.justifyContentLgStart {
 		justify-content: flex-start !important;
@@ -3050,9 +3115,6 @@
 }
 
 @media (min-width: 1200px) {
-	.dXlNone {
-		display: none !important;
-	}
 	.dXlInline {
 		display: inline !important;
 	}
@@ -3077,6 +3139,9 @@
 	.dXlInlineFlex {
 		display: inline-flex !important;
 	}
+	.dXlNone {
+		display: none !important;
+	}
 	.flexXlFill {
 		flex: 1 1 auto !important;
 	}
@@ -3097,6 +3162,21 @@
 	}
 	.flexXlGrow_1 {
 		flex-grow: 1 !important;
+	}
+	.flexXlShrink_0 {
+		flex-shrink: 0 !important;
+	}
+	.flexXlShrink_1 {
+		flex-shrink: 1 !important;
+	}
+	.flexXlWrap {
+		flex-wrap: wrap !important;
+	}
+	.flexXlNowrap {
+		flex-wrap: nowrap !important;
+	}
+	.flexXlWrapReverse {
+		flex-wrap: wrap-reverse !important;
 	}
 	.justifyContentXlStart {
 		justify-content: flex-start !important;
@@ -3493,9 +3573,6 @@
 }
 
 @media (min-width: 1400px) {
-	.dXxlNone {
-		display: none !important;
-	}
 	.dXxlInline {
 		display: inline !important;
 	}
@@ -3520,6 +3597,9 @@
 	.dXxlInlineFlex {
 		display: inline-flex !important;
 	}
+	.dXxlNone {
+		display: none !important;
+	}
 	.flexXxlFill {
 		flex: 1 1 auto !important;
 	}
@@ -3540,6 +3620,21 @@
 	}
 	.flexXxlGrow_1 {
 		flex-grow: 1 !important;
+	}
+	.flexXxlShrink_0 {
+		flex-shrink: 0 !important;
+	}
+	.flexXxlShrink_1 {
+		flex-shrink: 1 !important;
+	}
+	.flexXxlWrap {
+		flex-wrap: wrap !important;
+	}
+	.flexXxlNowrap {
+		flex-wrap: nowrap !important;
+	}
+	.flexXxlWrapReverse {
+		flex-wrap: wrap-reverse !important;
 	}
 	.justifyContentXxlStart {
 		justify-content: flex-start !important;
@@ -3936,9 +4031,6 @@
 }
 
 @media print {
-	.dPrintNone {
-		display: none !important;
-	}
 	.dPrintInline {
 		display: inline !important;
 	}
@@ -3962,6 +4054,9 @@
 	}
 	.dPrintInlineFlex {
 		display: inline-flex !important;
+	}
+	.dPrintNone {
+		display: none !important;
 	}
 }
 /*# sourceMappingURL=bootstrap-grid.css.map */

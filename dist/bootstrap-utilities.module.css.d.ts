@@ -138,6 +138,14 @@ declare const styles: {
 	readonly borderWarning: string;
 	readonly borderWhite: string;
 	readonly border_0: string;
+	readonly border_1: string;
+	readonly border_2: string;
+	readonly border_3: string;
+	readonly border_4: string;
+	readonly border_5: string;
+	readonly bottom_0: string;
+	readonly bottom_100: string;
+	readonly bottom_50: string;
 	readonly dBlock: string;
 	readonly dFlex: string;
 	readonly dInline: string;
@@ -341,6 +349,9 @@ declare const styles: {
 	readonly justifyContentXxlEnd: string;
 	readonly justifyContentXxlEvenly: string;
 	readonly justifyContentXxlStart: string;
+	readonly left_0: string;
+	readonly left_100: string;
+	readonly left_50: string;
 	readonly lhBase: string;
 	readonly lhLg: string;
 	readonly lhSm: string;
@@ -952,6 +963,9 @@ declare const styles: {
 	readonly py_3: string;
 	readonly py_4: string;
 	readonly py_5: string;
+	readonly right_0: string;
+	readonly right_100: string;
+	readonly right_50: string;
 	readonly rounded: string;
 	readonly roundedBottom: string;
 	readonly roundedCircle: string;
@@ -1007,6 +1021,10 @@ declare const styles: {
 	readonly textXxlCenter: string;
 	readonly textXxlLeft: string;
 	readonly textXxlRight: string;
+	readonly top_0: string;
+	readonly top_100: string;
+	readonly top_50: string;
+	readonly translateMiddle: string;
 	readonly userSelectAll: string;
 	readonly userSelectAuto: string;
 	readonly userSelectNone: string;
