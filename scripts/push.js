@@ -11,12 +11,12 @@ class Push {
 
 		this.ioFiles = [
 			{
-				src: `temp/bootstrap-${this.version}/docs/assets/css/bootstrap.css`,
+				src: `temp/bootstrap-${this.version}/dist/css/bootstrap.css`,
 				dist: `dist/bootstrap.module.css`,
 			},
 			{
-				src: `temp/bootstrap-${this.version}/docs/assets/css/bootstrap-responsive.css`,
-				dist: `dist/bootstrap-responsive.module.css`,
+				src: `temp/bootstrap-${this.version}/dist/css/bootstrap-theme.css`,
+				dist: `dist/bootstrap-theme.module.css`,
 			},
 		];
 	}
