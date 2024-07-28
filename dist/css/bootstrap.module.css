@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v3.3.0 (http://getbootstrap.com)
+ * Bootstrap v3.3.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -921,12 +921,12 @@ textarea {
 	line-height: inherit;
 }
 a {
-	color: #428bca;
+	color: #337ab7;
 	text-decoration: none;
 }
 a:hover,
 a:focus {
-	color: #2a6496;
+	color: #23527c;
 	text-decoration: underline;
 }
 a:focus {
@@ -1159,10 +1159,10 @@ mark,
 	color: #777;
 }
 .textPrimary {
-	color: #428bca;
+	color: #337ab7;
 }
 a.textPrimary:hover {
-	color: #3071a9;
+	color: #286090;
 }
 .textSuccess {
 	color: #3c763d;
@@ -1190,10 +1190,10 @@ a.textDanger:hover {
 }
 .bgPrimary {
 	color: #fff;
-	background-color: #428bca;
+	background-color: #337ab7;
 }
 a.bgPrimary:hover {
-	background-color: #3071a9;
+	background-color: #286090;
 }
 .bgSuccess {
 	background-color: #dff0d8;
@@ -2507,56 +2507,25 @@ textarea.formControl {
 input[type="search"] {
 	-webkit-appearance: none;
 }
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-	line-height: 34px;
-	line-height: 1.42857143 \0;
-}
-input[type="date"].inputSm,
-input[type="time"].inputSm,
-input[type="datetime-local"].inputSm,
-input[type="month"].inputSm {
-	line-height: 30px;
-	line-height: 1.5 \0;
-}
-input[type="date"].inputLg,
-input[type="time"].inputLg,
-input[type="datetime-local"].inputLg,
-input[type="month"].inputLg {
-	line-height: 46px;
-	line-height: 1.33 \0;
-}
-_:-ms-fullscreen,
-:root input[type="date"],
-_:-ms-fullscreen,
-:root input[type="time"],
-_:-ms-fullscreen,
-:root input[type="datetime-local"],
-_:-ms-fullscreen,
-:root input[type="month"] {
-	line-height: 1.42857143;
-}
-_:-ms-fullscreen.inputSm,
-:root input[type="date"].inputSm,
-_:-ms-fullscreen.inputSm,
-:root input[type="time"].inputSm,
-_:-ms-fullscreen.inputSm,
-:root input[type="datetime-local"].inputSm,
-_:-ms-fullscreen.inputSm,
-:root input[type="month"].inputSm {
-	line-height: 1.5;
-}
-_:-ms-fullscreen.inputLg,
-:root input[type="date"].inputLg,
-_:-ms-fullscreen.inputLg,
-:root input[type="time"].inputLg,
-_:-ms-fullscreen.inputLg,
-:root input[type="datetime-local"].inputLg,
-_:-ms-fullscreen.inputLg,
-:root input[type="month"].inputLg {
-	line-height: 1.33;
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	input[type="date"],
+	input[type="time"],
+	input[type="datetime-local"],
+	input[type="month"] {
+		line-height: 34px;
+	}
+	input[type="date"].inputSm,
+	input[type="time"].inputSm,
+	input[type="datetime-local"].inputSm,
+	input[type="month"].inputSm {
+		line-height: 30px;
+	}
+	input[type="date"].inputLg,
+	input[type="time"].inputLg,
+	input[type="datetime-local"].inputLg,
+	input[type="month"].inputLg {
+		line-height: 46px;
+	}
 }
 .formGroup {
 	margin-bottom: 15px;
@@ -2999,8 +2968,8 @@ fieldset[disabled] .btnDefault.active {
 }
 .btnPrimary {
 	color: #fff;
-	background-color: #428bca;
-	border-color: #357ebd;
+	background-color: #337ab7;
+	border-color: #2e6da4;
 }
 .btnPrimary:hover,
 .btnPrimary:focus,
@@ -3009,8 +2978,8 @@ fieldset[disabled] .btnDefault.active {
 .btnPrimary.active,
 .open > .dropdownToggle.btnPrimary {
 	color: #fff;
-	background-color: #3071a9;
-	border-color: #285e8e;
+	background-color: #286090;
+	border-color: #204d74;
 }
 .btnPrimary:active,
 .btnPrimary.active,
@@ -3035,11 +3004,11 @@ fieldset[disabled] .btnPrimary:active,
 .btnPrimary.disabled.active,
 .btnPrimary[disabled].active,
 fieldset[disabled] .btnPrimary.active {
-	background-color: #428bca;
-	border-color: #357ebd;
+	background-color: #337ab7;
+	border-color: #2e6da4;
 }
 .btnPrimary .badge {
-	color: #428bca;
+	color: #337ab7;
 	background-color: #fff;
 }
 .btnSuccess {
@@ -3224,7 +3193,7 @@ fieldset[disabled] .btnDanger.active {
 }
 .btnLink {
 	font-weight: normal;
-	color: #428bca;
+	color: #337ab7;
 	border-radius: 0;
 }
 .btnLink,
@@ -3244,7 +3213,7 @@ fieldset[disabled] .btnLink {
 }
 .btnLink:hover,
 .btnLink:focus {
-	color: #2a6496;
+	color: #23527c;
 	text-decoration: underline;
 	background-color: transparent;
 }
@@ -3393,7 +3362,7 @@ tbody.collapse.in {
 .dropdownMenu > .active > a:focus {
 	color: #fff;
 	text-decoration: none;
-	background-color: #428bca;
+	background-color: #337ab7;
 	outline: 0;
 }
 .dropdownMenu > .disabled > a,
@@ -3485,10 +3454,6 @@ tbody.collapse.in {
 .btnGroup > .btn.active,
 .btnGroupVertical > .btn.active {
 	z-index: 2;
-}
-.btnGroup > .btn:focus,
-.btnGroupVertical > .btn:focus {
-	outline: 0;
 }
 .btnGroup .btn + .btn,
 .btnGroup .btn + .btnGroup,
@@ -3824,7 +3789,7 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
 	background-color: #eee;
-	border-color: #428bca;
+	border-color: #337ab7;
 }
 .nav .navDivider {
 	height: 1px;
@@ -3917,7 +3882,7 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 .navPills > li.active > a:hover,
 .navPills > li.active > a:focus {
 	color: #fff;
-	background-color: #428bca;
+	background-color: #337ab7;
 }
 .navStacked > li {
 	float: none;
@@ -4278,6 +4243,8 @@ select[multiple].inputGroupSm > .inputGroupBtn > .btn {
 	border-top-right-radius: 0;
 }
 .navbarFixedBottom .navbarNav > li > .dropdownMenu {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 }
@@ -4548,7 +4515,7 @@ fieldset[disabled] .navbarInverse .btnLink:focus {
 	padding: 6px 12px;
 	margin-left: -1px;
 	line-height: 1.42857143;
-	color: #428bca;
+	color: #337ab7;
 	text-decoration: none;
 	background-color: #fff;
 	border: 1px solid #ddd;
@@ -4568,7 +4535,7 @@ fieldset[disabled] .navbarInverse .btnLink:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-	color: #2a6496;
+	color: #23527c;
 	background-color: #eee;
 	border-color: #ddd;
 }
@@ -4581,8 +4548,8 @@ fieldset[disabled] .navbarInverse .btnLink:focus {
 	z-index: 2;
 	color: #fff;
 	cursor: default;
-	background-color: #428bca;
-	border-color: #428bca;
+	background-color: #337ab7;
+	border-color: #337ab7;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
@@ -4696,11 +4663,11 @@ a.label:focus {
 	background-color: #5e5e5e;
 }
 .labelPrimary {
-	background-color: #428bca;
+	background-color: #337ab7;
 }
 .labelPrimary[href]:hover,
 .labelPrimary[href]:focus {
-	background-color: #3071a9;
+	background-color: #286090;
 }
 .labelSuccess {
 	background-color: #5cb85c;
@@ -4761,10 +4728,16 @@ a.badge:focus {
 	text-decoration: none;
 	cursor: pointer;
 }
-a.listGroupItem.active > .badge,
+.listGroupItem.active > .badge,
 .navPills > .active > a > .badge {
-	color: #428bca;
+	color: #337ab7;
 	background-color: #fff;
+}
+.listGroupItem > .badge {
+	float: right;
+}
+.listGroupItem > .badge + .badge {
+	margin-right: 5px;
 }
 .navPills > li > a > .badge {
 	margin-left: 3px;
@@ -4798,7 +4771,8 @@ a.listGroupItem.active > .badge,
 	.jumbotron {
 		padding: 48px 0;
 	}
-	.container .jumbotron {
+	.container .jumbotron,
+	.containerFluid .jumbotron {
 		padding-right: 60px;
 		padding-left: 60px;
 	}
@@ -4827,7 +4801,7 @@ a.listGroupItem.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-	border-color: #428bca;
+	border-color: #337ab7;
 }
 .thumbnail .caption {
 	padding: 9px;
@@ -4949,7 +4923,7 @@ a.thumbnail.active {
 	line-height: 20px;
 	color: #fff;
 	text-align: center;
-	background-color: #428bca;
+	background-color: #337ab7;
 	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 	-webkit-transition: width 0.6s ease;
@@ -5192,12 +5166,6 @@ a.thumbnail.active {
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
-.listGroupItem > .badge {
-	float: right;
-}
-.listGroupItem > .badge + .badge {
-	margin-right: 5px;
-}
 a.listGroupItem {
 	color: #555;
 }
@@ -5232,8 +5200,8 @@ a.listGroupItem:focus {
 .listGroupItem.active:focus {
 	z-index: 2;
 	color: #fff;
-	background-color: #428bca;
-	border-color: #428bca;
+	background-color: #337ab7;
+	border-color: #337ab7;
 }
 .listGroupItem.active .listGroupItemHeading,
 .listGroupItem.active:hover .listGroupItemHeading,
@@ -5249,7 +5217,7 @@ a.listGroupItem:focus {
 .listGroupItem.active .listGroupItemText,
 .listGroupItem.active:hover .listGroupItemText,
 .listGroupItem.active:focus .listGroupItemText {
-	color: #e1edf7;
+	color: #c7ddef;
 }
 .listGroupItemSuccess {
 	color: #3c763d;
@@ -5689,22 +5657,22 @@ a.listGroupItemDanger.active:focus {
 	border-bottom-color: #ddd;
 }
 .panelPrimary {
-	border-color: #428bca;
+	border-color: #337ab7;
 }
 .panelPrimary > .panelHeading {
 	color: #fff;
-	background-color: #428bca;
-	border-color: #428bca;
+	background-color: #337ab7;
+	border-color: #337ab7;
 }
 .panelPrimary > .panelHeading + .panelCollapse > .panelBody {
-	border-top-color: #428bca;
+	border-top-color: #337ab7;
 }
 .panelPrimary > .panelHeading .badge {
-	color: #428bca;
+	color: #337ab7;
 	background-color: #fff;
 }
 .panelPrimary > .panelFooter + .panelCollapse > .panelBody {
-	border-bottom-color: #428bca;
+	border-bottom-color: #337ab7;
 }
 .panelSuccess {
 	border-color: #d6e9c6;
@@ -5903,10 +5871,9 @@ button.close {
 	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
 }
 .modalBackdrop {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
-	bottom: 0;
 	left: 0;
 	background-color: #000;
 }
@@ -5978,7 +5945,9 @@ button.close {
 	position: absolute;
 	z-index: 1070;
 	display: block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 12px;
+	font-weight: normal;
 	line-height: 1.4;
 	visibility: visible;
 	filter: alpha(opacity=0);
@@ -6028,14 +5997,16 @@ button.close {
 	border-top-color: #000;
 }
 .tooltip.topLeft .tooltipArrow {
+	right: 5px;
 	bottom: 0;
-	left: 5px;
+	margin-bottom: -5px;
 	border-width: 5px 5px 0;
 	border-top-color: #000;
 }
 .tooltip.topRight .tooltipArrow {
-	right: 5px;
 	bottom: 0;
+	left: 5px;
+	margin-bottom: -5px;
 	border-width: 5px 5px 0;
 	border-top-color: #000;
 }
@@ -6062,13 +6033,15 @@ button.close {
 }
 .tooltip.bottomLeft .tooltipArrow {
 	top: 0;
-	left: 5px;
+	right: 5px;
+	margin-top: -5px;
 	border-width: 0 5px 5px;
 	border-bottom-color: #000;
 }
 .tooltip.bottomRight .tooltipArrow {
 	top: 0;
-	right: 5px;
+	left: 5px;
+	margin-top: -5px;
 	border-width: 0 5px 5px;
 	border-bottom-color: #000;
 }
@@ -6080,6 +6053,7 @@ button.close {
 	display: none;
 	max-width: 276px;
 	padding: 1px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 1.42857143;

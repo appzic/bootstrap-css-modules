@@ -17,6 +17,7 @@ declare const styles: {
 	readonly imgThumbnail: string;
 	readonly listGroup: string;
 	readonly listGroupItem: string;
+	readonly navbar: string;
 	readonly navbarBrand: string;
 	readonly navbarDefault: string;
 	readonly navbarFixedBottom: string;
