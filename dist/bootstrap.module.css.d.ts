@@ -555,18 +555,6 @@ declare const styles: {
 	readonly formSelectSm: string;
 	readonly formSwitch: string;
 	readonly formText: string;
-	readonly fsLg_1: string;
-	readonly fsLg_2: string;
-	readonly fsLg_3: string;
-	readonly fsLg_4: string;
-	readonly fsMd_1: string;
-	readonly fsMd_2: string;
-	readonly fsMd_3: string;
-	readonly fsMd_4: string;
-	readonly fsSm_1: string;
-	readonly fsSm_2: string;
-	readonly fsSm_3: string;
-	readonly fsSm_4: string;
 	readonly fs_1: string;
 	readonly fs_2: string;
 	readonly fs_3: string;
@@ -1159,6 +1147,7 @@ declare const styles: {
 	readonly navbarExpandXxl: string;
 	readonly navbarLight: string;
 	readonly navbarNav: string;
+	readonly navbarNavScroll: string;
 	readonly navbarText: string;
 	readonly navbarToggler: string;
 	readonly navbarTogglerIcon: string;

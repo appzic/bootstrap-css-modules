@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
+ * Bootstrap v5.0.0-beta2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
@@ -340,9 +340,8 @@ button {
 	border-radius: 0;
 }
 
-button:focus {
-	outline: dotted 1px;
-	outline: -webkit-focus-ring-color auto 5px;
+button:focus:not(:focus-visible) {
+	outline: 0;
 }
 
 input,
@@ -1985,11 +1984,8 @@ progress {
 .table > :not(caption) > * > * {
 	padding: 0.5rem 0.5rem;
 	background-color: var(--bs-table-bg);
-	background-image: linear-gradient(
-		var(--bs-table-accent-bg),
-		var(--bs-table-accent-bg)
-	);
 	border-bottom-width: 1px;
+	box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
 .table > tbody {
 	vertical-align: inherit;
@@ -2399,12 +2395,11 @@ textarea.formControlLg {
 .formSelect {
 	display: block;
 	width: 100%;
-	padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+	padding: 0.375rem 2.25rem 0.375rem 0.75rem;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
 	color: #212529;
-	vertical-align: middle;
 	background-color: #fff;
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 	background-repeat: no-repeat;
@@ -2475,16 +2470,6 @@ textarea.formControlLg {
 	appearance: none;
 	-webkit-print-color-adjust: exact;
 	color-adjust: exact;
-	transition:
-		background-color 0.15s ease-in-out,
-		background-position 0.15s ease-in-out,
-		border-color 0.15s ease-in-out,
-		box-shadow 0.15s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-	.formCheckInput {
-		transition: none;
-	}
 }
 .formCheckInput[type="checkbox"] {
 	border-radius: 0.25em;
@@ -2534,6 +2519,12 @@ textarea.formControlLg {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
 	background-position: left center;
 	border-radius: 2em;
+	transition: background-position 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+	.formSwitch .formCheckInput {
+		transition: none;
+	}
 }
 .formSwitch .formCheckInput:focus {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
@@ -2570,7 +2561,7 @@ textarea.formControlLg {
 	appearance: none;
 }
 .formRange:focus {
-	outline: none;
+	outline: 0;
 }
 .formRange:focus::-webkit-slider-thumb {
 	box-shadow:
@@ -2794,7 +2785,7 @@ textarea.formControlLg {
 
 .inputGroupLg > .formSelect,
 .inputGroupSm > .formSelect {
-	padding-right: 1.75rem;
+	padding-right: 3rem;
 }
 
 .inputGroup:not(.hasValidation)
@@ -2872,12 +2863,12 @@ textarea.formControl.isValid {
 .wasValidated .formSelect:valid,
 .formSelect.isValid {
 	border-color: #198754;
-	padding-right: calc(0.75em + 2.3125rem);
+	padding-right: 4.125rem;
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"),
 		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
 	background-position:
 		right 0.75rem center,
-		center right 1.75rem;
+		center right 2.25rem;
 	background-size:
 		16px 12px,
 		calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -2963,12 +2954,12 @@ textarea.formControl.isInvalid {
 .wasValidated .formSelect:invalid,
 .formSelect.isInvalid {
 	border-color: #dc3545;
-	padding-right: calc(0.75em + 2.3125rem);
+	padding-right: 4.125rem;
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"),
 		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
 	background-position:
 		right 0.75rem center,
-		center right 1.75rem;
+		center right 2.25rem;
 	background-size:
 		16px 12px,
 		calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -3724,12 +3715,11 @@ fieldset:disabled .btn {
 .dropdownMenu {
 	position: absolute;
 	top: 100%;
-	left: 0;
 	z-index: 1000;
 	display: none;
 	min-width: 10rem;
 	padding: 0.5rem 0;
-	margin: 0.125rem 0 0;
+	margin: 0;
 	font-size: 1rem;
 	color: #212529;
 	text-align: left;
@@ -3739,18 +3729,23 @@ fieldset:disabled .btn {
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	border-radius: 0.25rem;
 }
-.dropdownMenu[style] {
-	right: auto !important;
+.dropdownMenu[data-bs-popper] {
+	left: 0;
+	margin-top: 0.125rem;
 }
 
 .dropdownMenuStart {
 	--bs-position: start;
+}
+.dropdownMenuStart[data-bs-popper] {
 	right: auto /* rtl:ignore */;
 	left: 0 /* rtl:ignore */;
 }
 
 .dropdownMenuEnd {
 	--bs-position: end;
+}
+.dropdownMenuEnd[data-bs-popper] {
 	right: 0 /* rtl:ignore */;
 	left: auto /* rtl:ignore */;
 }
@@ -3758,12 +3753,16 @@ fieldset:disabled .btn {
 @media (min-width: 576px) {
 	.dropdownMenuSmStart {
 		--bs-position: start;
+	}
+	.dropdownMenuSmStart[data-bs-popper] {
 		right: auto /* rtl:ignore */;
 		left: 0 /* rtl:ignore */;
 	}
 
 	.dropdownMenuSmEnd {
 		--bs-position: end;
+	}
+	.dropdownMenuSmEnd[data-bs-popper] {
 		right: 0 /* rtl:ignore */;
 		left: auto /* rtl:ignore */;
 	}
@@ -3771,12 +3770,16 @@ fieldset:disabled .btn {
 @media (min-width: 768px) {
 	.dropdownMenuMdStart {
 		--bs-position: start;
+	}
+	.dropdownMenuMdStart[data-bs-popper] {
 		right: auto /* rtl:ignore */;
 		left: 0 /* rtl:ignore */;
 	}
 
 	.dropdownMenuMdEnd {
 		--bs-position: end;
+	}
+	.dropdownMenuMdEnd[data-bs-popper] {
 		right: 0 /* rtl:ignore */;
 		left: auto /* rtl:ignore */;
 	}
@@ -3784,12 +3787,16 @@ fieldset:disabled .btn {
 @media (min-width: 992px) {
 	.dropdownMenuLgStart {
 		--bs-position: start;
+	}
+	.dropdownMenuLgStart[data-bs-popper] {
 		right: auto /* rtl:ignore */;
 		left: 0 /* rtl:ignore */;
 	}
 
 	.dropdownMenuLgEnd {
 		--bs-position: end;
+	}
+	.dropdownMenuLgEnd[data-bs-popper] {
 		right: 0 /* rtl:ignore */;
 		left: auto /* rtl:ignore */;
 	}
@@ -3797,12 +3804,16 @@ fieldset:disabled .btn {
 @media (min-width: 1200px) {
 	.dropdownMenuXlStart {
 		--bs-position: start;
+	}
+	.dropdownMenuXlStart[data-bs-popper] {
 		right: auto /* rtl:ignore */;
 		left: 0 /* rtl:ignore */;
 	}
 
 	.dropdownMenuXlEnd {
 		--bs-position: end;
+	}
+	.dropdownMenuXlEnd[data-bs-popper] {
 		right: 0 /* rtl:ignore */;
 		left: auto /* rtl:ignore */;
 	}
@@ -3810,12 +3821,16 @@ fieldset:disabled .btn {
 @media (min-width: 1400px) {
 	.dropdownMenuXxlStart {
 		--bs-position: start;
+	}
+	.dropdownMenuXxlStart[data-bs-popper] {
 		right: auto /* rtl:ignore */;
 		left: 0 /* rtl:ignore */;
 	}
 
 	.dropdownMenuXxlEnd {
 		--bs-position: end;
+	}
+	.dropdownMenuXxlEnd[data-bs-popper] {
 		right: 0 /* rtl:ignore */;
 		left: auto /* rtl:ignore */;
 	}
@@ -3823,6 +3838,8 @@ fieldset:disabled .btn {
 .dropup .dropdownMenu {
 	top: auto;
 	bottom: 100%;
+}
+.dropup .dropdownMenu[data-bs-popper] {
 	margin-top: 0;
 	margin-bottom: 0.125rem;
 }
@@ -3844,6 +3861,8 @@ fieldset:disabled .btn {
 	top: 0;
 	right: auto;
 	left: 100%;
+}
+.dropend .dropdownMenu[data-bs-popper] {
 	margin-top: 0;
 	margin-left: 0.125rem;
 }
@@ -3868,6 +3887,8 @@ fieldset:disabled .btn {
 	top: 0;
 	right: 100%;
 	left: auto;
+}
+.dropstart .dropdownMenu[data-bs-popper] {
 	margin-top: 0;
 	margin-right: 0.125rem;
 }
@@ -3919,7 +3940,7 @@ fieldset:disabled .btn {
 .dropdownItem:hover,
 .dropdownItem:focus {
 	color: #1e2125;
-	background-color: #f8f9fa;
+	background-color: #e9ecef;
 }
 .dropdownItem.active,
 .dropdownItem:active {
@@ -3929,7 +3950,7 @@ fieldset:disabled .btn {
 }
 .dropdownItem.disabled,
 .dropdownItem:disabled {
-	color: #6c757d;
+	color: #adb5bd;
 	pointer-events: none;
 	background-color: transparent;
 }
@@ -4118,6 +4139,7 @@ fieldset:disabled .btn {
 }
 .navTabs .navLink {
 	margin-bottom: -1px;
+	background: none;
 	border: 1px solid transparent;
 	border-top-left-radius: 0.25rem;
 	border-top-right-radius: 0.25rem;
@@ -4125,6 +4147,7 @@ fieldset:disabled .btn {
 .navTabs .navLink:hover,
 .navTabs .navLink:focus {
 	border-color: #e9ecef #e9ecef #dee2e6;
+	isolation: isolate;
 }
 .navTabs .navLink.disabled {
 	color: #6c757d;
@@ -4144,6 +4167,8 @@ fieldset:disabled .btn {
 }
 
 .navPills .navLink {
+	background: none;
+	border: 0;
 	border-radius: 0.25rem;
 }
 .navPills .navLink.active,
@@ -4222,8 +4247,9 @@ fieldset:disabled .btn {
 }
 
 .navbarCollapse {
+	flex-basis: 100%;
+	flex-grow: 1;
 	align-items: center;
-	width: 100%;
 }
 
 .navbarToggler {
@@ -4259,6 +4285,11 @@ fieldset:disabled .btn {
 	background-size: 100%;
 }
 
+.navbarNavScroll {
+	max-height: var(--bs-scroll-height, 75vh);
+	overflow-y: auto;
+}
+
 @media (min-width: 576px) {
 	.navbarExpandSm {
 		flex-wrap: nowrap;
@@ -4274,8 +4305,12 @@ fieldset:disabled .btn {
 		padding-right: 0.5rem;
 		padding-left: 0.5rem;
 	}
+	.navbarExpandSm .navbarNavScroll {
+		overflow: visible;
+	}
 	.navbarExpandSm .navbarCollapse {
 		display: flex !important;
+		flex-basis: auto;
 	}
 	.navbarExpandSm .navbarToggler {
 		display: none;
@@ -4296,8 +4331,12 @@ fieldset:disabled .btn {
 		padding-right: 0.5rem;
 		padding-left: 0.5rem;
 	}
+	.navbarExpandMd .navbarNavScroll {
+		overflow: visible;
+	}
 	.navbarExpandMd .navbarCollapse {
 		display: flex !important;
+		flex-basis: auto;
 	}
 	.navbarExpandMd .navbarToggler {
 		display: none;
@@ -4318,8 +4357,12 @@ fieldset:disabled .btn {
 		padding-right: 0.5rem;
 		padding-left: 0.5rem;
 	}
+	.navbarExpandLg .navbarNavScroll {
+		overflow: visible;
+	}
 	.navbarExpandLg .navbarCollapse {
 		display: flex !important;
+		flex-basis: auto;
 	}
 	.navbarExpandLg .navbarToggler {
 		display: none;
@@ -4340,8 +4383,12 @@ fieldset:disabled .btn {
 		padding-right: 0.5rem;
 		padding-left: 0.5rem;
 	}
+	.navbarExpandXl .navbarNavScroll {
+		overflow: visible;
+	}
 	.navbarExpandXl .navbarCollapse {
 		display: flex !important;
+		flex-basis: auto;
 	}
 	.navbarExpandXl .navbarToggler {
 		display: none;
@@ -4362,8 +4409,12 @@ fieldset:disabled .btn {
 		padding-right: 0.5rem;
 		padding-left: 0.5rem;
 	}
+	.navbarExpandXxl .navbarNavScroll {
+		overflow: visible;
+	}
 	.navbarExpandXxl .navbarCollapse {
 		display: flex !important;
+		flex-basis: auto;
 	}
 	.navbarExpandXxl .navbarToggler {
 		display: none;
@@ -4383,8 +4434,12 @@ fieldset:disabled .btn {
 	padding-right: 0.5rem;
 	padding-left: 0.5rem;
 }
+.navbarExpand .navbarNavScroll {
+	overflow: visible;
+}
 .navbarExpand .navbarCollapse {
 	display: flex !important;
+	flex-basis: auto;
 }
 .navbarExpand .navbarToggler {
 	display: none;
@@ -4632,6 +4687,7 @@ fieldset:disabled .btn {
 	padding: 1rem 1.25rem;
 	font-size: 1rem;
 	color: #212529;
+	text-align: left;
 	background-color: transparent;
 	border: 1px solid rgba(0, 0, 0, 0.125);
 	border-radius: 0;
@@ -5382,7 +5438,7 @@ fieldset:disabled .btn {
 	opacity: 0.75;
 }
 .btnClose:focus {
-	outline: none;
+	outline: 0;
 	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 	opacity: 1;
 }
@@ -5446,6 +5502,7 @@ fieldset:disabled .btn {
 
 .toastBody {
 	padding: 0.75rem;
+	word-wrap: break-word;
 }
 
 .modalOpen {
@@ -5890,7 +5947,6 @@ fieldset:disabled .btn {
 	display: block;
 	width: 1rem;
 	height: 0.5rem;
-	margin: 0 0.3rem;
 }
 .popover .popoverArrow::before,
 .popover .popoverArrow::after {
@@ -5901,10 +5957,6 @@ fieldset:disabled .btn {
 	border-style: solid;
 }
 
-.bsPopoverTop,
-.bsPopoverAuto[data-popper-placement^="top"] {
-	margin-bottom: 0.5rem !important;
-}
 .bsPopoverTop > .popoverArrow,
 .bsPopoverAuto[data-popper-placement^="top"] > .popoverArrow {
 	bottom: calc(-0.5rem - 1px);
@@ -5922,16 +5974,11 @@ fieldset:disabled .btn {
 	border-top-color: #fff;
 }
 
-.bsPopoverEnd,
-.bsPopoverAuto[data-popper-placement^="right"] {
-	margin-left: 0.5rem !important;
-}
 .bsPopoverEnd > .popoverArrow,
 .bsPopoverAuto[data-popper-placement^="right"] > .popoverArrow {
 	left: calc(-0.5rem - 1px);
 	width: 0.5rem;
 	height: 1rem;
-	margin: 0.3rem 0;
 }
 .bsPopoverEnd > .popoverArrow::before,
 .bsPopoverAuto[data-popper-placement^="right"] > .popoverArrow::before {
@@ -5946,10 +5993,6 @@ fieldset:disabled .btn {
 	border-right-color: #fff;
 }
 
-.bsPopoverBottom,
-.bsPopoverAuto[data-popper-placement^="bottom"] {
-	margin-top: 0.5rem !important;
-}
 .bsPopoverBottom > .popoverArrow,
 .bsPopoverAuto[data-popper-placement^="bottom"] > .popoverArrow {
 	top: calc(-0.5rem - 1px);
@@ -5978,16 +6021,11 @@ fieldset:disabled .btn {
 	border-bottom: 1px solid #f0f0f0;
 }
 
-.bsPopoverStart,
-.bsPopoverAuto[data-popper-placement^="left"] {
-	margin-right: 0.5rem !important;
-}
 .bsPopoverStart > .popoverArrow,
 .bsPopoverAuto[data-popper-placement^="left"] > .popoverArrow {
 	right: calc(-0.5rem - 1px);
 	width: 0.5rem;
 	height: 1rem;
-	margin: 0.3rem 0;
 }
 .bsPopoverStart > .popoverArrow::before,
 .bsPopoverAuto[data-popper-placement^="left"] > .popoverArrow::before {
@@ -6107,8 +6145,11 @@ fieldset:disabled .btn {
 	align-items: center;
 	justify-content: center;
 	width: 15%;
+	padding: 0;
 	color: #fff;
 	text-align: center;
+	background: none;
+	border: 0;
 	opacity: 0.5;
 	transition: opacity 0.15s ease;
 }
@@ -6170,29 +6211,32 @@ fieldset:disabled .btn {
 	z-index: 2;
 	display: flex;
 	justify-content: center;
-	padding-left: 0;
+	padding: 0;
 	margin-right: 15%;
+	margin-bottom: 1rem;
 	margin-left: 15%;
 	list-style: none;
 }
-.carouselIndicators li {
+.carouselIndicators [data-bs-target] {
 	box-sizing: content-box;
 	flex: 0 1 auto;
 	width: 30px;
 	height: 3px;
+	padding: 0;
 	margin-right: 3px;
 	margin-left: 3px;
 	text-indent: -999px;
 	cursor: pointer;
 	background-color: #fff;
 	background-clip: padding-box;
+	border: 0;
 	border-top: 10px solid transparent;
 	border-bottom: 10px solid transparent;
 	opacity: 0.5;
 	transition: opacity 0.6s ease;
 }
 @media (prefers-reduced-motion: reduce) {
-	.carouselIndicators li {
+	.carouselIndicators [data-bs-target] {
 		transition: none;
 	}
 }
@@ -6215,7 +6259,7 @@ fieldset:disabled .btn {
 .carouselDark .carouselControlNextIcon {
 	filter: invert(1) grayscale(100);
 }
-.carouselDark .carouselIndicators li {
+.carouselDark .carouselIndicators [data-bs-target] {
 	background-color: #000;
 }
 .carouselDark .carouselCaption {
@@ -6370,7 +6414,7 @@ fieldset:disabled .btn {
 }
 .ratio::before {
 	display: block;
-	padding-top: var(--aspect-ratio);
+	padding-top: var(--bs-aspect-ratio);
 	content: "";
 }
 .ratio > * {
@@ -6382,19 +6426,19 @@ fieldset:disabled .btn {
 }
 
 .ratio_1x1 {
-	--aspect-ratio: 100%;
+	--bs-aspect-ratio: 100%;
 }
 
 .ratio_4x3 {
-	--aspect-ratio: calc(3 / 4 * 100%);
+	--bs-aspect-ratio: calc(3 / 4 * 100%);
 }
 
 .ratio_16x9 {
-	--aspect-ratio: calc(9 / 16 * 100%);
+	--bs-aspect-ratio: calc(9 / 16 * 100%);
 }
 
 .ratio_21x9 {
-	--aspect-ratio: calc(9 / 21 * 100%);
+	--bs-aspect-ratio: calc(9 / 21 * 100%);
 }
 
 .fixedTop {
@@ -6461,7 +6505,7 @@ fieldset:disabled .btn {
 	}
 }
 .visuallyHidden,
-.visuallyHiddenFocusable:not(:focus) {
+.visuallyHiddenFocusable:not(:focus):not(:focus-within) {
 	position: absolute !important;
 	width: 1px !important;
 	height: 1px !important;
@@ -11006,54 +11050,6 @@ fieldset:disabled .btn {
 	}
 
 	.fs_4 {
-		font-size: 1.5rem !important;
-	}
-
-	.fsSm_1 {
-		font-size: 2.5rem !important;
-	}
-
-	.fsSm_2 {
-		font-size: 2rem !important;
-	}
-
-	.fsSm_3 {
-		font-size: 1.75rem !important;
-	}
-
-	.fsSm_4 {
-		font-size: 1.5rem !important;
-	}
-
-	.fsMd_1 {
-		font-size: 2.5rem !important;
-	}
-
-	.fsMd_2 {
-		font-size: 2rem !important;
-	}
-
-	.fsMd_3 {
-		font-size: 1.75rem !important;
-	}
-
-	.fsMd_4 {
-		font-size: 1.5rem !important;
-	}
-
-	.fsLg_1 {
-		font-size: 2.5rem !important;
-	}
-
-	.fsLg_2 {
-		font-size: 2rem !important;
-	}
-
-	.fsLg_3 {
-		font-size: 1.75rem !important;
-	}
-
-	.fsLg_4 {
 		font-size: 1.5rem !important;
 	}
 }
