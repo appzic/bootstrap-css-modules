@@ -85,6 +85,6 @@ Bootstrap CSS Modules is licensed under the [MIT](https://github.com/appzic/boot
         <img alt="appzic logo" src="https://github.com/user-attachments/assets/e1b84838-7eb7-489f-9460-79fd351051f1">
     </a>
     <a href="https://vecpad.com">
-        <img alt="vecpad logo" src="https://github.com/user-attachments/assets/da61ad0d-8bb1-4a36-9759-4bcbe187f499">
+        <img alt="vecpad logo" src="https://github.com/user-attachments/assets/83df861e-151e-42fa-a35b-262adcf8e7d0">
     </a>
 </p>
