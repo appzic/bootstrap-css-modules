@@ -1533,6 +1533,9 @@ declare const styles: {
 	readonly toastHeader: string;
 	readonly tooltip: string;
 	readonly tooltipInner: string;
+	readonly userSelectAll: string;
+	readonly userSelectAuto: string;
+	readonly userSelectNone: string;
 	readonly validFeedback: string;
 	readonly validTooltip: string;
 	readonly vh_100: string;
