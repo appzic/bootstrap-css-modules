@@ -16,8 +16,13 @@ declare const styles: {
 	readonly formActions: string;
 	readonly formHorizontal: string;
 	readonly hidden: string;
+	readonly hiddenDesktop: string;
+	readonly hiddenPhone: string;
+	readonly hiddenTablet: string;
+	readonly hideText: string;
 	readonly in: string;
 	readonly inputAppend: string;
+	readonly inputBlockLevel: string;
 	readonly inputPrepend: string;
 	readonly modal: string;
 	readonly modalHeader: string;
@@ -25,6 +30,7 @@ declare const styles: {
 	readonly navCollapse: string;
 	readonly navHeader: string;
 	readonly navbar: string;
+	readonly navbarFixedBottom: string;
 	readonly navbarFixedTop: string;
 	readonly navbarForm: string;
 	readonly navbarInner: string;
@@ -33,6 +39,7 @@ declare const styles: {
 	readonly offset1: string;
 	readonly offset10: string;
 	readonly offset11: string;
+	readonly offset12: string;
 	readonly offset2: string;
 	readonly offset3: string;
 	readonly offset4: string;
@@ -59,5 +66,8 @@ declare const styles: {
 	readonly span9: string;
 	readonly thumbnails: string;
 	readonly uneditableInput: string;
+	readonly visibleDesktop: string;
+	readonly visiblePhone: string;
+	readonly visibleTablet: string;
 };
 export = styles;

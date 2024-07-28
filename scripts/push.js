@@ -58,9 +58,9 @@ class Push {
 		execSync("npm i");
 		execSync("git add .");
 		execSync(`git commit -m "v${this.version}"`);
-		// execSync("git push");
-		// execSync(`git tag v${this.version}`);
-		// execSync("git push --tag");
+		execSync("git push");
+		execSync(`git tag v${this.version}`);
+		execSync("git push --tag");
 		// execSync("npm publish --access public");
 		// rimrafSync("temp");
 	}
